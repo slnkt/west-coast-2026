@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Запад США — путеводитель по маршруту</title>
+<meta name="description" content="Дорожное путешествие по западу США: Сан-Франциско, Биг-Сур, Лос-Анджелес, Сан-Диего, Лас-Вегас, Зайон и Гранд-Каньон. 23 сентября – 11 октября, около 2 500 км.">
+<meta name="theme-color" content="#1b1714">
+<link rel="canonical" href="https://slnkt.github.io/west-coast-2026/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://slnkt.github.io/west-coast-2026/">
+<meta property="og:title" content="Запад США — путеводитель по маршруту">
+<meta property="og:description" content="Семь остановок от Тихого океана до Гранд-Каньона. 23 сентября – 11 октября, три человека, около 2 500 км.">
+<meta property="og:image" content="https://slnkt.github.io/west-coast-2026/img/hero-golden-gate.jpg">
+<meta property="og:image:width" content="2560">
+<meta property="og:image:height" content="1706">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Запад США — путеводитель по маршруту">
+<meta name="twitter:description" content="Семь остановок от Тихого океана до Гранд-Каньона. 23 сентября – 11 октября, около 2 500 км.">
+<meta name="twitter:image" content="https://slnkt.github.io/west-coast-2026/img/hero-golden-gate.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-golden-gate.jpg" fetchpriority="high">
+
+<style>
+  :root{
+    --paper:#f7f3ec;
+    --paper-2:#efe9df;
+    --ink:#1f1a15;
+    --ink-soft:#6a6055;
+    --line:rgba(31,26,21,.14);
+    --line-soft:rgba(31,26,21,.08);
+    --accent:#a76a3c;
+    --accent-deep:#7c4d29;
+    --maxw:1280px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth} }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Inter",system-ui,Arial,sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  ::selection{background:var(--accent);color:#fff}
+
+  h1,h2,h3,.serif{font-family:"Fraunces",Georgia,serif;font-weight:400;font-optical-sizing:auto}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+  .kicker{
+    font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--accent-deep);font-weight:600;margin:0 0 .9rem
+  }
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:clamp(14px,2.4vw,22px) clamp(20px,5vw,64px);
+    color:#fff;transition:background .5s var(--ease),color .5s var(--ease),box-shadow .5s var(--ease),padding .5s var(--ease);
+  }
+  .nav__brand{font-size:.78rem;letter-spacing:.34em;text-transform:uppercase;font-weight:600}
+  .nav__meta{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+  .nav.scrolled{
+    background:rgba(247,243,236,.86);backdrop-filter:saturate(140%) blur(12px);
+    color:var(--ink);box-shadow:0 1px 0 var(--line);padding-top:12px;padding-bottom:12px;
+  }
+  @media(max-width:640px){ .nav__meta{display:none} }
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;height:100svh;min-height:560px;overflow:hidden;display:flex;align-items:flex-end}
+  .hero__media{position:absolute;inset:0;z-index:0}
+  .hero__media img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
+  @media (prefers-reduced-motion: no-preference){
+    .hero__media img{animation:kenburns 26s ease-out forwards}
+  }
+  @keyframes kenburns{from{transform:scale(1.08)}to{transform:scale(1)}}
+  .hero__scrim{position:absolute;inset:0;z-index:1;
+    background:
+      linear-gradient(to top, rgba(15,12,9,.78) 0%, rgba(15,12,9,.30) 38%, rgba(15,12,9,.12) 62%, rgba(15,12,9,.34) 100%);
+  }
+  .hero__inner{position:relative;z-index:2;width:100%;color:#fff;padding-bottom:clamp(40px,7vw,90px)}
+  .hero__kicker{font-size:.74rem;letter-spacing:.4em;text-transform:uppercase;font-weight:600;
+    opacity:0;transform:translateY(14px);animation:rise .9s var(--ease) .15s forwards}
+  .hero h1{
+    font-size:clamp(3.4rem,15vw,12rem);line-height:.92;font-weight:300;letter-spacing:-.01em;
+    margin:.12em 0 .28em;text-wrap:balance;
+    opacity:0;transform:translateY(22px);animation:rise 1s var(--ease) .28s forwards
+  }
+  .hero__sub{max-width:46ch;font-size:clamp(1rem,1.5vw,1.18rem);font-weight:300;color:rgba(255,255,255,.9);
+    margin:0 0 clamp(24px,3.5vw,38px);
+    opacity:0;transform:translateY(18px);animation:rise 1s var(--ease) .42s forwards}
+  .badges{display:flex;flex-wrap:wrap;gap:10px;
+    opacity:0;transform:translateY(16px);animation:rise 1s var(--ease) .56s forwards}
+  .badge{
+    border:1px solid rgba(255,255,255,.42);border-radius:100px;
+    padding:.5em 1.15em;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
+    color:#fff;backdrop-filter:blur(2px)
+  }
+  @keyframes rise{to{opacity:1;transform:none}}
+  .scrolldown{position:absolute;right:clamp(20px,5vw,64px);bottom:28px;z-index:2;
+    display:flex;flex-direction:column;align-items:center;gap:10px;color:rgba(255,255,255,.8);text-decoration:none}
+  .scrolldown span{font-size:.62rem;letter-spacing:.34em;text-transform:uppercase}
+  .scrolldown i{width:1px;height:46px;background:linear-gradient(to bottom,rgba(255,255,255,.1),rgba(255,255,255,.9))}
+  @media (prefers-reduced-motion: no-preference){
+    .scrolldown i{animation:pulse 2.2s ease-in-out infinite;transform-origin:top}
+  }
+  @keyframes pulse{0%,100%{transform:scaleY(.3);opacity:.4}50%{transform:scaleY(1);opacity:1}}
+  @media(max-width:640px){ .scrolldown{display:none} }
+
+  /* ---------- INTRO / ROUTE INDEX ---------- */
+  .intro{padding:clamp(70px,11vw,150px) 0 clamp(40px,6vw,70px)}
+  .intro__lead{
+    font-family:"Fraunces",serif;font-weight:300;
+    font-size:clamp(1.5rem,3.4vw,2.6rem);line-height:1.32;letter-spacing:-.01em;
+    max-width:24ch;margin:0
+  }
+  .intro__lead em{font-style:italic;color:var(--accent-deep)}
+  .route{margin-top:clamp(44px,6vw,80px);border-top:1px solid var(--line)}
+  .route a{
+    display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:clamp(14px,3vw,40px);
+    text-decoration:none;padding:clamp(18px,2.4vw,26px) 0;border-bottom:1px solid var(--line);
+    transition:padding-left .5s var(--ease),color .4s var(--ease)
+  }
+  .route a:hover{padding-left:clamp(6px,1.4vw,18px);color:var(--accent-deep)}
+  .route__n{font-family:"Fraunces",serif;font-size:.9rem;color:var(--accent);width:2.4ch}
+  .route__name{font-family:"Fraunces",serif;font-size:clamp(1.3rem,3vw,2rem);font-weight:400;line-height:1.1}
+  .route__name small{display:block;font-family:"Inter",sans-serif;font-size:.74rem;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--ink-soft);margin-top:.4em;font-weight:500}
+  .route__date{font-size:.82rem;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase;white-space:nowrap}
+  @media(max-width:640px){
+    .route a{grid-template-columns:auto 1fr;gap:14px}
+    .route__date{grid-column:2;justify-self:start;margin-top:.2em}
+  }
+
+  /* ---------- STOPS ---------- */
+  .stop{padding:clamp(64px,10vw,140px) 0;border-top:1px solid var(--line);position:relative}
+  .stop.alt{background:var(--paper-2)}
+  .stop-head{display:flex;align-items:flex-start;gap:clamp(16px,3vw,40px);margin-bottom:clamp(34px,5vw,60px)}
+  .stop.alt .stop-head{flex-direction:row-reverse;text-align:right}
+  .stop.alt .stop-head .stop-titles{align-items:flex-end}
+  .stop-num{
+    font-family:"Fraunces",serif;font-weight:300;line-height:.8;
+    font-size:clamp(4.5rem,15vw,12rem);
+    color:transparent;-webkit-text-stroke:1.2px var(--accent);
+    letter-spacing:-.02em;flex:none;opacity:.9
+  }
+  .stop-titles{display:flex;flex-direction:column;align-items:flex-start;padding-top:clamp(6px,1vw,18px)}
+  .stop-titles h2{font-size:clamp(2.2rem,6vw,4.6rem);line-height:1;font-weight:400;margin:.06em 0 .3em;letter-spacing:-.015em;text-wrap:balance}
+  .stop-meta{margin:0;font-size:.92rem;letter-spacing:.04em;color:var(--ink)}
+  .stop-leg{margin:.55em 0 0;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep);font-weight:600}
+  @media(max-width:640px){
+    .stop-head,.stop.alt .stop-head{flex-direction:column;text-align:left;gap:6px}
+    .stop.alt .stop-head{text-align:left}
+    .stop.alt .stop-head .stop-titles{align-items:flex-start}
+    .stop-num{font-size:clamp(4rem,22vw,7rem)}
+  }
+
+  /* ---------- COLLAGE ---------- */
+  .collage{display:grid;grid-template-columns:1fr;gap:clamp(10px,1.2vw,16px)}
+  .cell{position:relative;margin:0;overflow:hidden;border-radius:5px;background:var(--paper-2);aspect-ratio:4/3}
+  .cell.tall{aspect-ratio:3/4}
+  .cell.wide{aspect-ratio:16/9}
+  .cell img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+  .cell:hover img{transform:scale(1.06)}
+  .cell figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:30px 16px 12px;
+    font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;
+    background:linear-gradient(to top,rgba(10,8,6,.6),transparent);
+    opacity:0;transform:translateY(6px);transition:opacity .5s var(--ease),transform .5s var(--ease);pointer-events:none
+  }
+  .cell:hover figcaption,.cell:focus-within figcaption{opacity:1;transform:none}
+  .cell button.zoom{position:absolute;inset:0;border:0;background:transparent;cursor:zoom-in;padding:0;width:100%;height:100%}
+  .cell button.zoom:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+  @media(min-width:720px){
+    .collage{grid-template-columns:1fr 1fr;grid-auto-rows:clamp(190px,23vw,310px)}
+    .cell{aspect-ratio:auto;height:100%}
+    .cell.wide{grid-column:1 / -1;aspect-ratio:auto}
+    .cell.tall{grid-row:span 2;aspect-ratio:auto}
+  }
+
+  /* ---------- ACTIVITIES ---------- */
+  .acts{margin-top:clamp(40px,6vw,72px);display:grid;grid-template-columns:repeat(2,1fr);gap:0 clamp(34px,5vw,72px)}
+  .act{padding:clamp(20px,2.4vw,28px) 0;border-top:1px solid var(--line)}
+  .act h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:500;margin:0 0 .35em;line-height:1.15}
+  .act p{margin:0;color:var(--ink-soft);font-size:.98rem;font-weight:300;max-width:42ch}
+  @media(max-width:680px){ .acts{grid-template-columns:1fr} }
+
+  /* ---------- FOOTER ---------- */
+  .foot{background:var(--ink);color:#efe7da;padding:clamp(80px,13vw,180px) 0 clamp(40px,6vw,70px);text-align:center}
+  .foot__line{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(1.7rem,5vw,3.6rem);
+    line-height:1.18;letter-spacing:-.01em;max-width:18ch;margin:0 auto;text-wrap:balance}
+  .foot__meta{margin:clamp(34px,5vw,56px) 0 0;display:flex;justify-content:center;gap:clamp(18px,4vw,48px);
+    flex-wrap:wrap;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(239,231,218,.62)}
+  .foot details{max-width:760px;margin:clamp(46px,7vw,72px) auto 0;text-align:left;
+    border-top:1px solid rgba(239,231,218,.16);padding-top:18px}
+  .foot summary{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(239,231,218,.6);
+    cursor:pointer;list-style:none}
+  .foot summary::-webkit-details-marker{display:none}
+  .foot summary::before{content:"+ ";color:var(--accent)}
+  .foot details[open] summary::before{content:"− "}
+  .credits{margin:18px 0 0;padding:0;list-style:none;column-gap:48px;columns:2;font-size:.78rem;color:rgba(239,231,218,.55);line-height:1.7}
+  .credits li{break-inside:avoid}
+  .credits a{color:rgba(239,231,218,.78);text-decoration:none;border-bottom:1px solid rgba(239,231,218,.2)}
+  @media(max-width:600px){ .credits{columns:1} }
+
+  /* ---------- REVEAL ---------- */
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+    .reveal.in{opacity:1;transform:none}
+    .stagger>*{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+    .stagger.in>*{opacity:1;transform:none}
+    .stagger.in>*:nth-child(2){transition-delay:.07s}
+    .stagger.in>*:nth-child(3){transition-delay:.14s}
+    .stagger.in>*:nth-child(4){transition-delay:.21s}
+    .stagger.in>*:nth-child(5){transition-delay:.28s}
+  }
+
+  /* ---------- LIGHTBOX ---------- */
+  .lb{position:fixed;inset:0;z-index:100;background:rgba(12,10,8,.94);
+    display:flex;align-items:center;justify-content:center;
+    opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s}
+  .lb.open{opacity:1;visibility:visible}
+  .lb img{max-width:92vw;max-height:86vh;object-fit:contain;border-radius:4px;
+    transform:scale(.96);transition:transform .4s var(--ease);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+  .lb.open img{transform:scale(1)}
+  .lb__cap{position:absolute;left:0;right:0;bottom:24px;text-align:center;color:rgba(255,255,255,.78);
+    font-size:.74rem;letter-spacing:.16em;text-transform:uppercase}
+  .lb__btn{position:absolute;background:transparent;border:0;color:#fff;cursor:pointer;
+    width:64px;height:64px;display:flex;align-items:center;justify-content:center;opacity:.7;transition:opacity .3s}
+  .lb__btn:hover{opacity:1}
+  .lb__close{top:14px;right:14px;font-size:1.6rem}
+  .lb__prev{left:6px;top:50%;transform:translateY(-50%)}
+  .lb__next{right:6px;top:50%;transform:translateY(-50%)}
+  .lb__btn svg{width:30px;height:30px}
+  @media(max-width:640px){ .lb__prev,.lb__next{width:48px} }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav" aria-label="Шапка">
+  <span class="nav__brand">Запад&nbsp;США</span>
+  <span class="nav__meta">23.09 – 11.10 · 2 500 км</span>
+</nav>
+
+<header class="hero">
+  <div class="hero__media">
+    <img src="img/hero-golden-gate.jpg" width="2560" height="1706" alt="Мост Золотые Ворота в Сан-Франциско на закате" fetchpriority="high">
+  </div>
+  <div class="hero__scrim"></div>
+  <div class="hero__inner">
+    <div class="wrap">
+      <p class="hero__kicker">Дорожное путешествие · Калифорния — Невада — Юта — Аризона</p>
+      <h1>Запад США</h1>
+      <p class="hero__sub">Сан-Франциско, Биг-Сур, Лос-Анджелес, Сан-Диего, Лас-Вегас, Зайон и Гранд-Каньон. Семь остановок от Тихого океана до края пустыни.</p>
+      <div class="badges">
+        <span class="badge">23 сент – 11 окт</span>
+        <span class="badge">3 человека</span>
+        <span class="badge">≈ 2 500 км</span>
+      </div>
+    </div>
+  </div>
+  <a class="scrolldown" href="#intro" aria-label="К маршруту"><span>Вниз</span><i></i></a>
+</header>
+
+<main>
+
+<section class="intro" id="intro">
+  <div class="wrap">
+    <p class="intro__lead reveal">Один океан слева, пустыня впереди и <em>дорога</em>, которая ни разу не повторяется.</p>
+    <nav class="route reveal" aria-label="Маршрут">
+      <a href="#s01"><span class="route__n">01</span><span class="route__name">Сан-Франциско<small>Старт маршрута</small></span><span class="route__date">23–27 сент</span></a>
+      <a href="#s02"><span class="route__n">02</span><span class="route__name">Биг-Сур<small>Хайвей 1</small></span><span class="route__date">28 сент</span></a>
+      <a href="#s03"><span class="route__n">03</span><span class="route__name">Лос-Анджелес<small>Побережье и холмы</small></span><span class="route__date">29 сент – 1 окт</span></a>
+      <a href="#s04"><span class="route__n">04</span><span class="route__name">Сан-Диего<small>Юг Калифорнии</small></span><span class="route__date">1–3 окт</span></a>
+      <a href="#s05"><span class="route__n">05</span><span class="route__name">Лас-Вегас<small>Невада и пустыня</small></span><span class="route__date">3–5 окт</span></a>
+      <a href="#s06"><span class="route__n">06</span><span class="route__name">Зайон и Гранд-Каньон<small>Юта и Аризона</small></span><span class="route__date">5–8 окт</span></a>
+      <a href="#s07"><span class="route__n">07</span><span class="route__name">Финиш у океана<small>Возвращение и вылет</small></span><span class="route__date">9–11 окт</span></a>
+    </nav>
+  </div>
+</section>
+
+<!-- 01 -->
+<section class="stop reveal" id="s01">
+  <div class="wrap">
+    <header class="stop-head">
+      <span class="stop-num">01</span>
+      <div class="stop-titles">
+        <p class="kicker">Остановка первая</p>
+        <h2>Сан-Франциско</h2>
+        <p class="stop-meta">23–27 сентября · 4 ночи</p>
+        <p class="stop-leg">Старт маршрута</p>
+      </div>
+    </header>
+    <div class="collage reveal">
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/01-sf-golden-gate.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Мост Золотые Ворота из Марин-Хедлендс уходит в туман"><figcaption>Golden Gate Bridge</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/01-sf-alcatraz.jpg" width="2000" height="1332" loading="lazy" decoding="async" alt="Остров и тюрьма Алькатрас с высоты"><figcaption>Остров Алькатрас</figcaption></figure>
+      <figure class="cell tall"><button class="zoom" aria-label="Открыть фото"></button><img src="img/01-sf-muir-woods.jpg" width="1500" height="2000" loading="lazy" decoding="async" alt="Гигантские секвойи в лесу Muir Woods"><figcaption>Секвойи Muir Woods</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/01-sf-ferry-building.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Часовая башня Ferry Building со стороны залива"><figcaption>Ferry Building</figcaption></figure>
+    </div>
+    <div class="acts stagger">
+      <div class="act"><h3>Алькатрас</h3><p>Ночной тур по тюрьме на острове. Бронировать за две-три недели до даты.</p></div>
+      <div class="act"><h3>Велосипед через Золотые Ворота</h3><p>По мосту до Саусалито, обратно — на пароме через залив.</p></div>
+      <div class="act"><h3>Секвойи Muir Woods</h3><p>Гигантские деревья в тридцати минутах от города. Утром здесь пусто.</p></div>
+      <div class="act"><h3>Бейсбол Giants — Dodgers</h3><p>Финал сезона на Oracle Park: мяч улетает прямо в залив.</p></div>
+      <div class="act"><h3>Ferry Building</h3><p>Фуд-маркет на набережной: крабовый сэндвич и свежие устрицы.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="stop alt reveal" id="s02">
+  <div class="wrap">
+    <header class="stop-head">
+      <span class="stop-num">02</span>
+      <div class="stop-titles">
+        <p class="kicker">Остановка вторая</p>
+        <h2>Биг-Сур</h2>
+        <p class="stop-meta">28 сентября · 1 ночь · хайвей 1</p>
+        <p class="stop-leg">Перегон от Сан-Франциско · ≈ 200 км · ~3 часа</p>
+      </div>
+    </header>
+    <div class="collage reveal">
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/02-bigsur-bixby.jpg" width="2000" height="990" loading="lazy" decoding="async" alt="Мост Bixby Creek Bridge над океанским обрывом"><figcaption>Bixby Creek Bridge</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/02-bigsur-mcway.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Водопад McWay Falls падает на пляж в бухте"><figcaption>McWay Falls</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/02-bigsur-pfeiffer.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Скала-арка Keyhole на пляже Pfeiffer Beach"><figcaption>Pfeiffer Beach</figcaption></figure>
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/02-bigsur-coast.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Кипарисы и скалистый берег Point Lobos"><figcaption>Point Lobos</figcaption></figure>
+    </div>
+    <div class="acts stagger">
+      <div class="act"><h3>Bixby Bridge</h3><p>Главный мост Калифорнии: бетонная арка над океанским обрывом.</p></div>
+      <div class="act"><h3>McWay Falls</h3><p>Водопад высотой двадцать четыре метра падает прямо на укромный пляж.</p></div>
+      <div class="act"><h3>Pfeiffer Beach</h3><p>Пляж с фиолетовым песком и каменной аркой Keyhole.</p></div>
+      <div class="act"><h3>Point Lobos</h3><p>Морские львы и каланы прямо с прибрежной тропы.</p></div>
+      <div class="act"><h3>Ночёвка</h3><p>Останавливаемся в Монтерее или Кармеле на берегу.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="stop reveal" id="s03">
+  <div class="wrap">
+    <header class="stop-head">
+      <span class="stop-num">03</span>
+      <div class="stop-titles">
+        <p class="kicker">Остановка третья</p>
+        <h2>Лос-Анджелес</h2>
+        <p class="stop-meta">29 сентября – 1 октября · 2 ночи</p>
+        <p class="stop-leg">Перегон через Биг-Сур · ≈ 330 км · ~5 часов</p>
+      </div>
+    </header>
+    <div class="collage reveal">
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-santa-monica.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Пирс Санта-Моника с колесом обозрения на закате"><figcaption>Santa Monica Pier</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-venice.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Скейт-парк Venice Beach на закате, скейтер в прыжке"><figcaption>Venice Beach</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-hollywood.jpg" width="2000" height="1360" loading="lazy" decoding="async" alt="Знак Hollywood на склоне холма"><figcaption>Hollywood</figcaption></figure>
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-el-matador.jpg" width="2000" height="1335" loading="lazy" decoding="async" alt="Скальная арка на пляже El Matador в Малибу"><figcaption>El Matador Beach</figcaption></figure>
+    </div>
+    <div class="acts stagger">
+      <div class="act"><h3>Santa Monica Pier</h3><p>Колесо обозрения над океаном и официальный конец Route 66.</p></div>
+      <div class="act"><h3>Venice Beach</h3><p>Уличная качалка, скейт-парк и артисты на набережной.</p></div>
+      <div class="act"><h3>El Matador Beach</h3><p>Закат среди скал и гротов дикого пляжа Малибу.</p></div>
+      <div class="act"><h3>Griffith Observatory</h3><p>Панорама города и знак Hollywood в ночной подсветке.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="stop alt reveal" id="s04">
+  <div class="wrap">
+    <header class="stop-head">
+      <span class="stop-num">04</span>
+      <div class="stop-titles">
+        <p class="kicker">Остановка четвёртая</p>
+        <h2>Сан-Диего</h2>
+        <p class="stop-meta">1–3 октября · 2 ночи</p>
+        <p class="stop-leg">Перегон от Лос-Анджелеса · ≈ 195 км · ~2 часа</p>
+      </div>
+    </header>
+    <div class="collage reveal">
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/04-sd-coronado.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Отель del Coronado отражается в мокром золотом песке"><figcaption>Coronado Beach</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/04-sd-la-jolla.jpg" width="2000" height="1500" loading="lazy" decoding="async" alt="Морские львы на скалах La Jolla Cove"><figcaption>La Jolla Cove</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/04-sd-sunset-cliffs.jpg" width="2000" height="1335" loading="lazy" decoding="async" alt="Закат на обрывах Sunset Cliffs над океаном"><figcaption>Sunset Cliffs</figcaption></figure>
+    </div>
+    <div class="acts stagger">
+      <div class="act"><h3>La Jolla Cove</h3><p>Морские львы лежат буквально в метре от тебя.</p></div>
+      <div class="act"><h3>Снорклинг</h3><p>Прозрачная бухта с тёплой водой и стаями рыбы.</p></div>
+      <div class="act"><h3>Sunset Cliffs</h3><p>Закат на обрывах над Тихим океаном.</p></div>
+      <div class="act"><h3>Coronado Beach</h3><p>Золотой пляж у легендарного отеля del Coronado.</p></div>
+      <div class="act"><h3>Old Town</h3><p>Рыбные тако и крафтовое пиво в старом городе.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="stop reveal" id="s05">
+  <div class="wrap">
+    <header class="stop-head">
+      <span class="stop-num">05</span>
+      <div class="stop-titles">
+        <p class="kicker">Остановка пятая</p>
+        <h2>Лас-Вегас</h2>
+        <p class="stop-meta">3–5 октября · 2 ночи</p>
+        <p class="stop-leg">Перегон от Сан-Диего · ≈ 540 км · ~5 часов</p>
+      </div>
+    </header>
+    <div class="collage reveal">
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/05-vegas-valley-fire.jpg" width="2000" height="1170" loading="lazy" decoding="async" alt="Красные скалы парка Valley of Fire"><figcaption>Valley of Fire</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/05-vegas-fire-wave.jpg" width="2000" height="1500" loading="lazy" decoding="async" alt="Полосатая скала Fire Wave в Долине Огня"><figcaption>Fire Wave</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/05-vegas-strip.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Las Vegas Strip в огнях"><figcaption>The Strip</figcaption></figure>
+    </div>
+    <div class="acts stagger">
+      <div class="act"><h3>Фонтаны Bellagio</h3><p>Ночное водное шоу под музыку в центре Стрипа.</p></div>
+      <div class="act"><h3>NASCAR · 4 октября</h3><p>Гонка South Point 400 на Las Vegas Motor Speedway.</p></div>
+      <div class="act"><h3>Valley of Fire</h3><p>Красные скалы, волна Fire Wave и древние петроглифы в часе езды.</p></div>
+      <div class="act"><h3>High Roller</h3><p>Самое большое колесо обозрения в мире.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="stop alt reveal" id="s06">
+  <div class="wrap">
+    <header class="stop-head">
+      <span class="stop-num">06</span>
+      <div class="stop-titles">
+        <p class="kicker">Остановка шестая</p>
+        <h2>Зайон и Гранд-Каньон</h2>
+        <p class="stop-meta">5–8 октября · 2–3 ночи</p>
+        <p class="stop-leg">Перегон от Лас-Вегаса · ≈ 260 км · ~2 ч 45 мин</p>
+      </div>
+    </header>
+    <div class="collage reveal">
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/06-zion-canyon.jpg" width="2000" height="769" loading="lazy" decoding="async" alt="Панорама каньона Зайон со смотровой тропы"><figcaption>Каньон Зайон</figcaption></figure>
+      <figure class="cell tall"><button class="zoom" aria-label="Открыть фото"></button><img src="img/06-zion-narrows.jpg" width="1500" height="2000" loading="lazy" decoding="async" alt="Отвесные стены каньона над рекой в The Narrows"><figcaption>The Narrows</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/06-zion-angels-landing.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Вид с гребня Angels Landing на долину"><figcaption>Angels Landing</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/06-grand-canyon.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Гранд-Каньон со стороны South Rim"><figcaption>Grand Canyon · South Rim</figcaption></figure>
+    </div>
+    <div class="acts stagger">
+      <div class="act"><h3>The Narrows</h3><p>Идёшь вброд по реке между отвесными стенами каньона.</p></div>
+      <div class="act"><h3>Angels Landing</h3><p>Гребень с цепями и видом на всю долину. Нужен пермит.</p></div>
+      <div class="act"><h3>Canyon Overlook</h3><p>Короткая тропа к лучшему закатному виду Зайона.</p></div>
+      <div class="act"><h3>Гранд-Каньон · South Rim</h3><p>Опциональный бросок к пропасти глубиной 1,6 километра.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="stop reveal" id="s07">
+  <div class="wrap">
+    <header class="stop-head">
+      <span class="stop-num">07</span>
+      <div class="stop-titles">
+        <p class="kicker">Остановка седьмая</p>
+        <h2>Финиш у океана</h2>
+        <p class="stop-meta">9–11 октября</p>
+        <p class="stop-leg">Возвращение к побережью · дорога разбита на два дня</p>
+      </div>
+    </header>
+    <div class="collage reveal">
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/07-malibu-sunset.jpg" width="2000" height="1329" loading="lazy" decoding="async" alt="Сёрфер на пляже Малибу в золотом закатном свете"><figcaption>Закат в Малибу</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/07-pacific-coast.jpg" width="2000" height="1428" loading="lazy" decoding="async" alt="Скалистое тихоокеанское побережье Калифорнии"><figcaption>Тихий океан</figcaption></figure>
+    </div>
+    <div class="acts stagger">
+      <div class="act"><h3>Дорога домой</h3><p>Перегон из каньонов делим на два дня с ночёвкой в St. George или Вегасе.</p></div>
+      <div class="act"><h3>Последний день на пляже</h3><p>Малибу или Санта-Моника — прощание с океаном.</p></div>
+      <div class="act"><h3>Вылет</h3><p>Сдаём машину в аэропорту LAX и летим домой через Стамбул.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot__line reveal">Семь остановок. Около 2 500 километров. Ни одного повтора по пейзажу.</p>
+    <div class="foot__meta">
+      <span>23 сент – 11 окт 2026</span>
+      <span>3 человека</span>
+      <span>Сан-Франциско → LAX</span>
+    </div>
+    <details>
+      <summary>Источники фотографий</summary>
+      <ul class="credits">
+        <li>Golden Gate (hero) — Weegee010, CC BY-SA 4.0</li>
+        <li>Golden Gate Bridge — Radomianin, CC BY-SA 4.0</li>
+        <li>Alcatraz — Christopher Michel, CC BY-SA 4.0</li>
+        <li>Muir Woods — Fred Hsu, CC BY-SA 3.0</li>
+        <li>Ferry Building — Frank Schulenburg, CC BY-SA 4.0</li>
+        <li>Bixby Bridge — Diliff, CC BY-SA 3.0</li>
+        <li>McWay Falls — adrian aows, CC0</li>
+        <li>Pfeiffer Beach — Levi Bare, CC0</li>
+        <li>Point Lobos — NOAA Photo Library, Public domain</li>
+        <li>Santa Monica Pier — GillyBerlin, CC BY 2.0</li>
+        <li>Venice Beach — Matteo Paganelli, CC0</li>
+        <li>Hollywood — Thomas Wolf / foto-tw.de, CC BY-SA 3.0</li>
+        <li>El Matador — Sitao Xiang, CC BY-SA 4.0</li>
+        <li>Coronado — Dirk Hansen, CC BY-SA 3.0</li>
+        <li>La Jolla Cove — Rhododendrites, CC BY-SA 4.0</li>
+        <li>Sunset Cliffs — Taylor L. Spurgeon, CC0</li>
+        <li>Valley of Fire — Mike McBey, CC BY 2.0</li>
+        <li>Fire Wave — Fabio Achilli, CC BY 2.0</li>
+        <li>Las Vegas Strip — Matt Kieffer, CC BY-SA 2.0</li>
+        <li>Zion Canyon — The Cosmonaut, CC BY-SA 2.5</li>
+        <li>The Narrows — Gillfoto, CC BY-SA 4.0</li>
+        <li>Angels Landing — KadenMP, CC BY-SA 4.0</li>
+        <li>Grand Canyon — Dietmar Rabich, CC BY-SA 4.0</li>
+        <li>Malibu — Cam Adams, CC0</li>
+        <li>Pacific coast — King of Hearts, CC BY-SA 4.0</li>
+      </ul>
+      <p style="font-size:.72rem;color:rgba(239,231,218,.4);margin-top:16px">Все снимки — Wikimedia Commons, лицензии Creative Commons и общественное достояние.</p>
+    </details>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+  <button class="lb__btn lb__close" id="lbClose" aria-label="Закрыть">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="lb__btn lb__prev" id="lbPrev" aria-label="Предыдущее">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb__btn lb__next" id="lbNext" aria-label="Следующее">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <p class="lb__cap" id="lbCap"></p>
+</div>
+
+<script>
+(function(){
+  // Nav background on scroll
+  var nav=document.getElementById('nav');
+  var onScroll=function(){ nav.classList.toggle('scrolled', window.scrollY>40); };
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  // Reveal on scroll
+  var io;
+  if('IntersectionObserver' in window){
+    io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -10% 0px',threshold:0.08});
+    document.querySelectorAll('.reveal,.stagger').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal,.stagger').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // Lightbox
+  var imgs=[].slice.call(document.querySelectorAll('.collage img'));
+  var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'),
+      lbCap=document.getElementById('lbCap'), idx=0;
+  function show(i){
+    idx=(i+imgs.length)%imgs.length;
+    var im=imgs[idx];
+    lbImg.src=im.src; lbImg.alt=im.alt; lbCap.textContent=im.alt;
+  }
+  function open(i){ show(i); lb.classList.add('open'); document.body.style.overflow='hidden'; }
+  function close(){ lb.classList.remove('open'); document.body.style.overflow=''; }
+  imgs.forEach(function(im,i){
+    var btn=im.parentNode.querySelector('button.zoom');
+    if(btn) btn.addEventListener('click',function(){ open(i); });
+  });
+  document.getElementById('lbClose').addEventListener('click',close);
+  document.getElementById('lbNext').addEventListener('click',function(){ show(idx+1); });
+  document.getElementById('lbPrev').addEventListener('click',function(){ show(idx-1); });
+  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') close();
+    else if(e.key==='ArrowRight') show(idx+1);
+    else if(e.key==='ArrowLeft') show(idx-1);
+  });
+})();
+</script>
+</body>
+</html>
