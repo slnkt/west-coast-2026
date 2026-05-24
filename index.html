@@ -182,8 +182,8 @@
   .stop.alt .stop-facts{justify-content:flex-end}
   .fact{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:100px;padding:.5em .95em;font-size:.82rem;line-height:1.2;color:var(--ink);background:rgba(255,255,255,.45)}
   .fact svg{width:16px;height:16px;flex:none;color:var(--ink-soft)}
-  .fact--swim{border-color:var(--accent);color:var(--accent-deep);background:rgba(167,106,60,.09);font-weight:500}
-  .fact--swim svg{color:var(--accent)}
+  .fact--swim,.fact--end{border-color:var(--accent);color:var(--accent-deep);background:rgba(167,106,60,.09);font-weight:500}
+  .fact--swim svg,.fact--end svg{color:var(--accent)}
   @media(max-width:640px){ .stop.alt .stop-facts{justify-content:flex-start} }
   @media(max-width:640px){
     .stop-head,.stop.alt .stop-head{flex-direction:column;text-align:left;gap:6px}
@@ -536,6 +536,7 @@
         <div class="stop-facts">
           <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Долина Смерти: очень жарко, около 37°</span>
           <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Джошуа-Три: днём около 29°, ночью около 14°</span>
+          <span class="fact fact--end"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15.5 13 11V4.5a1.5 1.5 0 0 0-3 0V11l-8 4.5v1.8l8-2.3v3.6l-2.2 1.5v1.3L12 21l3.2.9v-1.3L13 18.6V15l8 2.3z"/></svg>Вылет домой из Лос-Анджелеса (~4–5 ч от Долины Смерти)</span>
         </div>
       </div>
     </header>
