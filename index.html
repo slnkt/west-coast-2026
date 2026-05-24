@@ -129,6 +129,7 @@
     max-width:24ch;margin:0
   }
   .intro__lead em{font-style:italic;color:var(--accent-deep)}
+  .hint{margin:clamp(30px,4vw,46px) 0 0;font-size:.84rem;letter-spacing:.03em;color:var(--ink-soft);font-style:italic}
   .route{margin-top:clamp(44px,6vw,80px);border-top:1px solid var(--line)}
   .route a{
     display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:clamp(14px,3vw,40px);
@@ -162,6 +163,7 @@
   .stop-titles h2{font-size:clamp(2.2rem,6vw,4.6rem);line-height:1;font-weight:400;margin:.06em 0 .3em;letter-spacing:-.015em;text-wrap:balance}
   .stop-meta{margin:0;font-size:.92rem;letter-spacing:.04em;color:var(--ink)}
   .stop-leg{margin:.55em 0 0;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep);font-weight:600}
+  .stop-lede{margin:1em 0 0;font-size:clamp(1.02rem,1.5vw,1.2rem);font-weight:300;line-height:1.5;color:var(--ink-soft);max-width:46ch}
   @media(max-width:640px){
     .stop-head,.stop.alt .stop-head{flex-direction:column;text-align:left;gap:6px}
     .stop.alt .stop-head{text-align:left}
@@ -183,8 +185,10 @@
     opacity:0;transform:translateY(6px);transition:opacity .5s var(--ease),transform .5s var(--ease);pointer-events:none
   }
   .cell:hover figcaption,.cell:focus-within figcaption{opacity:1;transform:none}
-  .cell button.zoom{position:absolute;inset:0;border:0;background:transparent;cursor:zoom-in;padding:0;width:100%;height:100%}
+  .cell button.zoom{position:absolute;inset:0;border:0;background:transparent;cursor:zoom-in;padding:0;width:100%;height:100%;z-index:1}
   .cell button.zoom:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+  .cell::after{content:"";position:absolute;top:11px;right:11px;z-index:2;width:38px;height:38px;border-radius:50%;background:rgba(18,14,10,.42) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='M21 21l-4.2-4.2M10.5 7.7v5.6M7.7 10.5h5.6'/%3E%3C/svg%3E") center/19px no-repeat;backdrop-filter:blur(3px);opacity:.92;transition:opacity .35s var(--ease),transform .35s var(--ease);pointer-events:none}
+  @media(hover:hover){.cell::after{opacity:0;transform:scale(.82)}.cell:hover::after{opacity:1;transform:none}}
   @media(min-width:720px){
     .collage{grid-template-columns:1fr 1fr;grid-auto-rows:clamp(190px,23vw,310px)}
     .cell{aspect-ratio:auto;height:100%}
@@ -267,8 +271,8 @@
       <h1>Запад США</h1>
       <p class="hero__sub">Сан-Франциско, Биг-Сур, Лос-Анджелес, Сан-Диего, Лас-Вегас, Зайон и Гранд-Каньон. Семь остановок от Тихого океана до края пустыни.</p>
       <div class="badges">
-        <span class="badge">23 сент – 11 окт</span>
-        <span class="badge">3 человека</span>
+        <span class="badge">23 сентября – 11 октября</span>
+        <span class="badge">7 остановок</span>
         <span class="badge">≈ 2 500 км</span>
       </div>
     </div>
@@ -282,14 +286,15 @@
   <div class="wrap">
     <p class="intro__lead reveal">Один океан слева, пустыня впереди и <em>дорога</em>, которая ни разу не повторяется.</p>
     <nav class="route reveal" aria-label="Маршрут">
-      <a href="#s01"><span class="route__n">01</span><span class="route__name">Сан-Франциско<small>Старт маршрута</small></span><span class="route__date">23–27 сент</span></a>
-      <a href="#s02"><span class="route__n">02</span><span class="route__name">Биг-Сур<small>Хайвей 1</small></span><span class="route__date">28 сент</span></a>
-      <a href="#s03"><span class="route__n">03</span><span class="route__name">Лос-Анджелес<small>Побережье и холмы</small></span><span class="route__date">29 сент – 1 окт</span></a>
-      <a href="#s04"><span class="route__n">04</span><span class="route__name">Сан-Диего<small>Юг Калифорнии</small></span><span class="route__date">1–3 окт</span></a>
-      <a href="#s05"><span class="route__n">05</span><span class="route__name">Лас-Вегас<small>Невада и пустыня</small></span><span class="route__date">3–5 окт</span></a>
-      <a href="#s06"><span class="route__n">06</span><span class="route__name">Зайон и Гранд-Каньон<small>Юта и Аризона</small></span><span class="route__date">5–8 окт</span></a>
-      <a href="#s07"><span class="route__n">07</span><span class="route__name">Финиш у океана<small>Возвращение и вылет</small></span><span class="route__date">9–11 окт</span></a>
+      <a href="#s01"><span class="route__n">01</span><span class="route__name">Сан-Франциско<small>Город у океана, старт пути</small></span><span class="route__date">23–27 сент</span></a>
+      <a href="#s02"><span class="route__n">02</span><span class="route__name">Биг-Сур<small>Дикое побережье океана</small></span><span class="route__date">28 сент</span></a>
+      <a href="#s03"><span class="route__n">03</span><span class="route__name">Лос-Анджелес<small>Пляжи, холмы и кино</small></span><span class="route__date">29 сент – 1 окт</span></a>
+      <a href="#s04"><span class="route__n">04</span><span class="route__name">Сан-Диего<small>Тёплый юг у океана</small></span><span class="route__date">1–3 окт</span></a>
+      <a href="#s05"><span class="route__n">05</span><span class="route__name">Лас-Вегас<small>Огни города и пустыня</small></span><span class="route__date">3–5 окт</span></a>
+      <a href="#s06"><span class="route__n">06</span><span class="route__name">Зайон и Гранд-Каньон<small>Огромные каньоны</small></span><span class="route__date">5–8 окт</span></a>
+      <a href="#s07"><span class="route__n">07</span><span class="route__name">Финиш у океана<small>Последние дни и вылет</small></span><span class="route__date">9–11 окт</span></a>
     </nav>
+    <p class="hint">Нажмите на любое фото, чтобы открыть его крупно.</p>
   </div>
 </section>
 
@@ -303,20 +308,21 @@
         <h2>Сан-Франциско</h2>
         <p class="stop-meta">23–27 сентября · 4 ночи</p>
         <p class="stop-leg">Старт маршрута</p>
+        <p class="stop-lede">Холмистый город на берегу океана — отсюда начинается путешествие.</p>
       </div>
     </header>
     <div class="collage reveal">
-      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/01-sf-golden-gate.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Мост Золотые Ворота из Марин-Хедлендс уходит в туман"><figcaption>Golden Gate Bridge</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/01-sf-alcatraz.jpg" width="2000" height="1332" loading="lazy" decoding="async" alt="Остров и тюрьма Алькатрас с высоты"><figcaption>Остров Алькатрас</figcaption></figure>
-      <figure class="cell tall"><button class="zoom" aria-label="Открыть фото"></button><img src="img/01-sf-muir-woods.jpg" width="1500" height="2000" loading="lazy" decoding="async" alt="Гигантские секвойи в лесу Muir Woods"><figcaption>Секвойи Muir Woods</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/01-sf-ferry-building.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Часовая башня Ferry Building со стороны залива"><figcaption>Ferry Building</figcaption></figure>
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/01-sf-golden-gate.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Мост Золотые Ворота в тумане"><figcaption>Мост Золотые Ворота</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/01-sf-alcatraz.jpg" width="2000" height="1332" loading="lazy" decoding="async" alt="Остров-тюрьма Алькатрас посреди залива"><figcaption>Остров Алькатрас</figcaption></figure>
+      <figure class="cell tall"><button class="zoom" aria-label="Открыть фото"></button><img src="img/01-sf-muir-woods.jpg" width="1500" height="2000" loading="lazy" decoding="async" alt="Гигантские деревья секвойи в лесу"><figcaption>Лес секвой</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/01-sf-ferry-building.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Старое здание рынка с часовой башней у воды"><figcaption>Рынок у воды</figcaption></figure>
     </div>
     <div class="acts stagger">
-      <div class="act"><h3>Алькатрас</h3><p>Ночной тур по тюрьме на острове. Бронировать за две-три недели до даты.</p></div>
-      <div class="act"><h3>Велосипед через Золотые Ворота</h3><p>По мосту до Саусалито, обратно — на пароме через залив.</p></div>
-      <div class="act"><h3>Секвойи Muir Woods</h3><p>Гигантские деревья в тридцати минутах от города. Утром здесь пусто.</p></div>
-      <div class="act"><h3>Бейсбол Giants — Dodgers</h3><p>Финал сезона на Oracle Park: мяч улетает прямо в залив.</p></div>
-      <div class="act"><h3>Ferry Building</h3><p>Фуд-маркет на набережной: крабовый сэндвич и свежие устрицы.</p></div>
+      <div class="act"><h3>Остров-тюрьма Алькатрас</h3><p>Бывшая тюрьма на острове посреди залива. Вечерняя экскурсия — самая интересная.</p></div>
+      <div class="act"><h3>Велосипед по красному мосту</h3><p>Проехать по знаменитому мосту Золотые Ворота, обратно — на пароме.</p></div>
+      <div class="act"><h3>Лес гигантских секвой</h3><p>Деревья высотой с дом, в получасе от города. Лучше приехать утром.</p></div>
+      <div class="act"><h3>Матч по бейсболу</h3><p>Американский бейсбол на стадионе у воды — шумно и весело.</p></div>
+      <div class="act"><h3>Рынок с едой у воды</h3><p>Старое здание с часами, внутри — морепродукты, сыры и кофе.</p></div>
     </div>
   </div>
 </section>
@@ -329,22 +335,23 @@
       <div class="stop-titles">
         <p class="kicker">Остановка вторая</p>
         <h2>Биг-Сур</h2>
-        <p class="stop-meta">28 сентября · 1 ночь · хайвей 1</p>
+        <p class="stop-meta">28 сентября · 1 ночь · дорога вдоль океана</p>
         <p class="stop-leg">Перегон от Сан-Франциско · ≈ 200 км · ~3 часа</p>
+        <p class="stop-lede">Самая красивая дорога вдоль океана: скалы, мосты над обрывами и пляжи. Городов почти нет — только природа.</p>
       </div>
     </header>
     <div class="collage reveal">
-      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/02-bigsur-bixby.jpg" width="2000" height="990" loading="lazy" decoding="async" alt="Мост Bixby Creek Bridge над океанским обрывом"><figcaption>Bixby Creek Bridge</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/02-bigsur-mcway.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Водопад McWay Falls падает на пляж в бухте"><figcaption>McWay Falls</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/02-bigsur-pfeiffer.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Скала-арка Keyhole на пляже Pfeiffer Beach"><figcaption>Pfeiffer Beach</figcaption></figure>
-      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/02-bigsur-coast.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Кипарисы и скалистый берег Point Lobos"><figcaption>Point Lobos</figcaption></figure>
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/02-bigsur-bixby.jpg" width="2000" height="990" loading="lazy" decoding="async" alt="Мост над океанским обрывом"><figcaption>Мост над обрывом</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/02-bigsur-mcway.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Водопад падает на пляж в бухте"><figcaption>Водопад на пляже</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/02-bigsur-pfeiffer.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Скала с каменной аркой на пляже"><figcaption>Пляж со скалой-аркой</figcaption></figure>
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/02-bigsur-coast.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Кипарисы на скалистом берегу океана"><figcaption>Скалистый берег</figcaption></figure>
     </div>
     <div class="acts stagger">
-      <div class="act"><h3>Bixby Bridge</h3><p>Главный мост Калифорнии: бетонная арка над океанским обрывом.</p></div>
-      <div class="act"><h3>McWay Falls</h3><p>Водопад высотой двадцать четыре метра падает прямо на укромный пляж.</p></div>
-      <div class="act"><h3>Pfeiffer Beach</h3><p>Пляж с фиолетовым песком и каменной аркой Keyhole.</p></div>
-      <div class="act"><h3>Point Lobos</h3><p>Морские львы и каланы прямо с прибрежной тропы.</p></div>
-      <div class="act"><h3>Ночёвка</h3><p>Останавливаемся в Монтерее или Кармеле на берегу.</p></div>
+      <div class="act"><h3>Мост над обрывом</h3><p>Изящная арка над океаном — самая известная фотография всего побережья.</p></div>
+      <div class="act"><h3>Водопад на пляже</h3><p>Водопад падает прямо на песок маленькой бухты с бирюзовой водой.</p></div>
+      <div class="act"><h3>Пляж со скалой-аркой</h3><p>Пляж с тёмным песком и каменной аркой, сквозь которую бьют волны.</p></div>
+      <div class="act"><h3>Скалы с морскими львами</h3><p>Тропы вдоль берега среди деревьев; в воде видно морских львов.</p></div>
+      <div class="act"><h3>Где ночуем</h3><p>Остановка в маленьком приморском городке — Монтерей или Кармел.</p></div>
     </div>
   </div>
 </section>
@@ -359,19 +366,20 @@
         <h2>Лос-Анджелес</h2>
         <p class="stop-meta">29 сентября – 1 октября · 2 ночи</p>
         <p class="stop-leg">Перегон через Биг-Сур · ≈ 330 км · ~5 часов</p>
+        <p class="stop-lede">Огромный город кино и пляжей: знаменитая надпись на холме и набережные с аттракционами.</p>
       </div>
     </header>
     <div class="collage reveal">
-      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-santa-monica.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Пирс Санта-Моника с колесом обозрения на закате"><figcaption>Santa Monica Pier</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-venice.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Скейт-парк Venice Beach на закате, скейтер в прыжке"><figcaption>Venice Beach</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-hollywood.jpg" width="2000" height="1360" loading="lazy" decoding="async" alt="Знак Hollywood на склоне холма"><figcaption>Hollywood</figcaption></figure>
-      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-el-matador.jpg" width="2000" height="1335" loading="lazy" decoding="async" alt="Скальная арка на пляже El Matador в Малибу"><figcaption>El Matador Beach</figcaption></figure>
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-santa-monica.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Пирс с колесом обозрения на закате"><figcaption>Пирс Санта-Моника</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-venice.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Скейтер в прыжке на закате"><figcaption>Пляж Венис</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-hollywood.jpg" width="2000" height="1360" loading="lazy" decoding="async" alt="Надпись Hollywood на склоне холма"><figcaption>Надпись Hollywood</figcaption></figure>
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-el-matador.jpg" width="2000" height="1335" loading="lazy" decoding="async" alt="Скала с аркой на диком пляже"><figcaption>Дикий пляж Малибу</figcaption></figure>
     </div>
     <div class="acts stagger">
-      <div class="act"><h3>Santa Monica Pier</h3><p>Колесо обозрения над океаном и официальный конец Route 66.</p></div>
-      <div class="act"><h3>Venice Beach</h3><p>Уличная качалка, скейт-парк и артисты на набережной.</p></div>
-      <div class="act"><h3>El Matador Beach</h3><p>Закат среди скал и гротов дикого пляжа Малибу.</p></div>
-      <div class="act"><h3>Griffith Observatory</h3><p>Панорама города и знак Hollywood в ночной подсветке.</p></div>
+      <div class="act"><h3>Пирс с колесом обозрения</h3><p>Парк аттракционов прямо над океаном на длинном деревянном пирсе.</p></div>
+      <div class="act"><h3>Пляж с уличной жизнью</h3><p>Набережная с артистами, скейт-парком и уличными тренажёрами.</p></div>
+      <div class="act"><h3>Закат среди скал</h3><p>Дикий пляж Малибу с большими камнями и гротами — лучшее место для заката.</p></div>
+      <div class="act"><h3>Смотровая над городом</h3><p>Площадка на холме: вид на весь город и надпись Hollywood.</p></div>
     </div>
   </div>
 </section>
@@ -386,19 +394,20 @@
         <h2>Сан-Диего</h2>
         <p class="stop-meta">1–3 октября · 2 ночи</p>
         <p class="stop-leg">Перегон от Лос-Анджелеса · ≈ 195 км · ~2 часа</p>
+        <p class="stop-lede">Самый южный и тёплый город маршрута: спокойный океан, морские львы и длинные пляжи.</p>
       </div>
     </header>
     <div class="collage reveal">
-      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/04-sd-coronado.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Отель del Coronado отражается в мокром золотом песке"><figcaption>Coronado Beach</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/04-sd-la-jolla.jpg" width="2000" height="1500" loading="lazy" decoding="async" alt="Морские львы на скалах La Jolla Cove"><figcaption>La Jolla Cove</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/04-sd-sunset-cliffs.jpg" width="2000" height="1335" loading="lazy" decoding="async" alt="Закат на обрывах Sunset Cliffs над океаном"><figcaption>Sunset Cliffs</figcaption></figure>
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/04-sd-coronado.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Старинный отель отражается в мокром песке"><figcaption>Золотой пляж у отеля</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/04-sd-la-jolla.jpg" width="2000" height="1500" loading="lazy" decoding="async" alt="Морские львы на скалах у бухты"><figcaption>Бухта с морскими львами</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/04-sd-sunset-cliffs.jpg" width="2000" height="1335" loading="lazy" decoding="async" alt="Закат на высоких обрывах над океаном"><figcaption>Обрывы на закате</figcaption></figure>
     </div>
     <div class="acts stagger">
-      <div class="act"><h3>La Jolla Cove</h3><p>Морские львы лежат буквально в метре от тебя.</p></div>
-      <div class="act"><h3>Снорклинг</h3><p>Прозрачная бухта с тёплой водой и стаями рыбы.</p></div>
-      <div class="act"><h3>Sunset Cliffs</h3><p>Закат на обрывах над Тихим океаном.</p></div>
-      <div class="act"><h3>Coronado Beach</h3><p>Золотой пляж у легендарного отеля del Coronado.</p></div>
-      <div class="act"><h3>Old Town</h3><p>Рыбные тако и крафтовое пиво в старом городе.</p></div>
+      <div class="act"><h3>Морские львы у бухты</h3><p>Десятки морских львов лежат на камнях в паре метров от людей.</p></div>
+      <div class="act"><h3>Плавание с маской</h3><p>Прозрачная тёплая бухта, где под водой хорошо видно рыбу.</p></div>
+      <div class="act"><h3>Обрывы на закате</h3><p>Высокие скалы над океаном, особенно красивые вечером.</p></div>
+      <div class="act"><h3>Золотой пляж у отеля</h3><p>Широкий песчаный пляж рядом со старинным знаменитым отелем.</p></div>
+      <div class="act"><h3>Старый город и тако</h3><p>Исторический квартал: рыбные тако и местное пиво.</p></div>
     </div>
   </div>
 </section>
@@ -413,18 +422,19 @@
         <h2>Лас-Вегас</h2>
         <p class="stop-meta">3–5 октября · 2 ночи</p>
         <p class="stop-leg">Перегон от Сан-Диего · ≈ 540 км · ~5 часов</p>
+        <p class="stop-lede">Город огней и шоу посреди пустыни, а в часе езды — красные скалы, будто с другой планеты.</p>
       </div>
     </header>
     <div class="collage reveal">
-      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/05-vegas-valley-fire.jpg" width="2000" height="1170" loading="lazy" decoding="async" alt="Красные скалы парка Valley of Fire"><figcaption>Valley of Fire</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/05-vegas-fire-wave.jpg" width="2000" height="1500" loading="lazy" decoding="async" alt="Полосатая скала Fire Wave в Долине Огня"><figcaption>Fire Wave</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/05-vegas-strip.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Las Vegas Strip в огнях"><figcaption>The Strip</figcaption></figure>
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/05-vegas-valley-fire.jpg" width="2000" height="1170" loading="lazy" decoding="async" alt="Красные скалы в пустынном парке"><figcaption>Долина красных скал</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/05-vegas-fire-wave.jpg" width="2000" height="1500" loading="lazy" decoding="async" alt="Полосатая красно-оранжевая скала"><figcaption>Скала «огненная волна»</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/05-vegas-strip.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Огни Лас-Вегаса вечером"><figcaption>Лас-Вегас вечером</figcaption></figure>
     </div>
     <div class="acts stagger">
-      <div class="act"><h3>Фонтаны Bellagio</h3><p>Ночное водное шоу под музыку в центре Стрипа.</p></div>
-      <div class="act"><h3>NASCAR · 4 октября</h3><p>Гонка South Point 400 на Las Vegas Motor Speedway.</p></div>
-      <div class="act"><h3>Valley of Fire</h3><p>Красные скалы, волна Fire Wave и древние петроглифы в часе езды.</p></div>
-      <div class="act"><h3>High Roller</h3><p>Самое большое колесо обозрения в мире.</p></div>
+      <div class="act"><h3>Шоу фонтанов</h3><p>Танцующие под музыку фонтаны у отеля Bellagio. Бесплатно, каждый вечер.</p></div>
+      <div class="act"><h3>Автогонки, 4 октября</h3><p>Большие американские гонки на трассе под Вегасом.</p></div>
+      <div class="act"><h3>Долина красных скал</h3><p>Парк причудливых камней в часе езды; есть и древние рисунки на скалах.</p></div>
+      <div class="act"><h3>Огромное колесо обозрения</h3><p>Самое большое в мире — весь город как на ладони.</p></div>
     </div>
   </div>
 </section>
@@ -437,21 +447,22 @@
       <div class="stop-titles">
         <p class="kicker">Остановка шестая</p>
         <h2>Зайон и Гранд-Каньон</h2>
-        <p class="stop-meta">5–8 октября · 2–3 ночи</p>
+        <p class="stop-meta">5–8 октября · 2–3 ночи · национальные парки</p>
         <p class="stop-leg">Перегон от Лас-Вегаса · ≈ 260 км · ~2 ч 45 мин</p>
+        <p class="stop-lede">Два парка с огромными каньонами: Зайон — узкое ущелье с рекой, Гранд-Каньон — самая известная пропасть мира.</p>
       </div>
     </header>
     <div class="collage reveal">
-      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/06-zion-canyon.jpg" width="2000" height="769" loading="lazy" decoding="async" alt="Панорама каньона Зайон со смотровой тропы"><figcaption>Каньон Зайон</figcaption></figure>
-      <figure class="cell tall"><button class="zoom" aria-label="Открыть фото"></button><img src="img/06-zion-narrows.jpg" width="1500" height="2000" loading="lazy" decoding="async" alt="Отвесные стены каньона над рекой в The Narrows"><figcaption>The Narrows</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/06-zion-angels-landing.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Вид с гребня Angels Landing на долину"><figcaption>Angels Landing</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/06-grand-canyon.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Гранд-Каньон со стороны South Rim"><figcaption>Grand Canyon · South Rim</figcaption></figure>
+      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/06-zion-canyon.jpg" width="2000" height="769" loading="lazy" decoding="async" alt="Красные скалы каньона Зайон"><figcaption>Каньон Зайон</figcaption></figure>
+      <figure class="cell tall"><button class="zoom" aria-label="Открыть фото"></button><img src="img/06-zion-narrows.jpg" width="1500" height="2000" loading="lazy" decoding="async" alt="Высокие стены ущелья над рекой"><figcaption>Ущелье с рекой</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/06-zion-angels-landing.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Вид сверху на долину в каньоне"><figcaption>Вид с вершины</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/06-grand-canyon.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Гранд-Каньон с края обрыва"><figcaption>Гранд-Каньон</figcaption></figure>
     </div>
     <div class="acts stagger">
-      <div class="act"><h3>The Narrows</h3><p>Идёшь вброд по реке между отвесными стенами каньона.</p></div>
-      <div class="act"><h3>Angels Landing</h3><p>Гребень с цепями и видом на всю долину. Нужен пермит.</p></div>
-      <div class="act"><h3>Canyon Overlook</h3><p>Короткая тропа к лучшему закатному виду Зайона.</p></div>
-      <div class="act"><h3>Гранд-Каньон · South Rim</h3><p>Опциональный бросок к пропасти глубиной 1,6 километра.</p></div>
+      <div class="act"><h3>Прогулка по реке в ущелье</h3><p>Идёшь прямо по мелкой реке между высокими отвесными стенами.</p></div>
+      <div class="act"><h3>Тропа к вершине</h3><p>Крутой подъём по гребню с цепями и видом на всю долину. Разрешение берут заранее.</p></div>
+      <div class="act"><h3>Смотровая площадка</h3><p>Короткая тропа к лучшему виду на каньон, особенно на закате.</p></div>
+      <div class="act"><h3>Гранд-Каньон</h3><p>Самый известный каньон мира — пропасть глубиной полтора километра.</p></div>
     </div>
   </div>
 </section>
@@ -466,16 +477,17 @@
         <h2>Финиш у океана</h2>
         <p class="stop-meta">9–11 октября</p>
         <p class="stop-leg">Возвращение к побережью · дорога разбита на два дня</p>
+        <p class="stop-lede">Возвращаемся к океану: последний день на пляже — и домой.</p>
       </div>
     </header>
     <div class="collage reveal">
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/07-malibu-sunset.jpg" width="2000" height="1329" loading="lazy" decoding="async" alt="Сёрфер на пляже Малибу в золотом закатном свете"><figcaption>Закат в Малибу</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/07-pacific-coast.jpg" width="2000" height="1428" loading="lazy" decoding="async" alt="Скалистое тихоокеанское побережье Калифорнии"><figcaption>Тихий океан</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/07-malibu-sunset.jpg" width="2000" height="1329" loading="lazy" decoding="async" alt="Сёрфер на пляже Малибу на закате"><figcaption>Закат в Малибу</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/07-pacific-coast.jpg" width="2000" height="1428" loading="lazy" decoding="async" alt="Скалистое побережье океана"><figcaption>Тихий океан</figcaption></figure>
     </div>
     <div class="acts stagger">
-      <div class="act"><h3>Дорога домой</h3><p>Перегон из каньонов делим на два дня с ночёвкой в St. George или Вегасе.</p></div>
-      <div class="act"><h3>Последний день на пляже</h3><p>Малибу или Санта-Моника — прощание с океаном.</p></div>
-      <div class="act"><h3>Вылет</h3><p>Сдаём машину в аэропорту LAX и летим домой через Стамбул.</p></div>
+      <div class="act"><h3>Дорога обратно</h3><p>Возвращаемся к побережью за два дня с ночёвкой в пути.</p></div>
+      <div class="act"><h3>Последний день на пляже</h3><p>Прощаемся с океаном на пляжах Малибу или Санта-Моники.</p></div>
+      <div class="act"><h3>Вылет домой</h3><p>Сдаём машину в аэропорту Лос-Анджелеса и летим домой с пересадкой в Стамбуле.</p></div>
     </div>
   </div>
 </section>
@@ -487,8 +499,8 @@
     <p class="foot__line reveal">Семь остановок. Около 2 500 километров. Ни одного повтора по пейзажу.</p>
     <div class="foot__meta">
       <span>23 сент – 11 окт 2026</span>
-      <span>3 человека</span>
-      <span>Сан-Франциско → LAX</span>
+      <span>7 остановок</span>
+      <span>Сан-Франциско → Лос-Анджелес</span>
     </div>
     <details>
       <summary>Источники фотографий</summary>
