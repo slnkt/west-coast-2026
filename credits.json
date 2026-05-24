@@ -276,27 +276,51 @@
     "bytes": 11074259
   },
   {
-    "file": "07-malibu-sunset.jpg",
-    "query": "Malibu beach sunset",
-    "title": "File:Surfer in Malibu (Unsplash).jpg",
-    "width": 6016,
-    "height": 4000,
-    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Surfer_in_Malibu_%28Unsplash%29.jpg",
-    "descUrl": "https://commons.wikimedia.org/wiki/File:Surfer_in_Malibu_(Unsplash).jpg",
-    "artist": "Cam Adams camadams",
-    "license": "CC0",
-    "bytes": 6353481
+    "file": "07-death-valley-dunes.jpg",
+    "query": "Mesquite Flat Sand Dunes Death Valley sunrise",
+    "title": "File:Mesquite Dunes at sunrise (22471740508).jpg",
+    "width": 4896,
+    "height": 2039,
+    "url": "https://commons.wikimedia.org/wiki/File:Mesquite_Dunes_at_sunrise_(22471740508).jpg",
+    "descUrl": "https://commons.wikimedia.org/wiki/File:Mesquite_Dunes_at_sunrise_(22471740508).jpg",
+    "artist": "Mac H (media601)",
+    "license": "CC BY-SA 2.0",
+    "bytes": 262144
   },
   {
-    "file": "07-pacific-coast.jpg",
-    "query": "California Pacific coast sunset ocean",
-    "title": "File:Chimney Rock Trail Point Reyes December 2016 009.jpg",
-    "width": 5600,
-    "height": 4000,
-    "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Chimney_Rock_Trail_Point_Reyes_December_2016_009.jpg",
-    "descUrl": "https://commons.wikimedia.org/wiki/File:Chimney_Rock_Trail_Point_Reyes_December_2016_009.jpg",
+    "file": "07-death-valley-zabriskie.jpg",
+    "query": "Zabriskie Point Death Valley",
+    "title": "File:Zabriskie Point Death Valley December 2013 001.jpg",
+    "width": 4928,
+    "height": 3264,
+    "url": "https://commons.wikimedia.org/wiki/File:Zabriskie_Point_Death_Valley_December_2013_001.jpg",
+    "descUrl": "https://commons.wikimedia.org/wiki/File:Zabriskie_Point_Death_Valley_December_2013_001.jpg",
     "artist": "King of Hearts",
-    "license": "CC BY-SA 4.0",
-    "bytes": 7937602
+    "license": "CC BY-SA 3.0",
+    "bytes": 1153434
+  },
+  {
+    "file": "07-joshua-trees.jpg",
+    "query": "Joshua Tree National Park sunset",
+    "title": "File:Sunset at Joshua Tree National Park (20492887024).jpg",
+    "width": 7360,
+    "height": 4912,
+    "url": "https://commons.wikimedia.org/wiki/File:Sunset_at_Joshua_Tree_National_Park_(20492887024).jpg",
+    "descUrl": "https://commons.wikimedia.org/wiki/File:Sunset_at_Joshua_Tree_National_Park_(20492887024).jpg",
+    "artist": "Joshua Tree National Park",
+    "license": "Public domain",
+    "bytes": 937984
+  },
+  {
+    "file": "07-joshua-boulders.jpg",
+    "query": "Joshua Tree National Park boulders Jumbo Rocks",
+    "title": "File:Joshua trees and boulders at Jumbo Rocks campground (16304035905).jpg",
+    "width": 5184,
+    "height": 3456,
+    "url": "https://commons.wikimedia.org/wiki/File:Joshua_trees_and_boulders_at_Jumbo_Rocks_campground_(16304035905).jpg",
+    "descUrl": "https://commons.wikimedia.org/wiki/File:Joshua_trees_and_boulders_at_Jumbo_Rocks_campground_(16304035905).jpg",
+    "artist": "Joshua Tree National Park",
+    "license": "Public domain",
+    "bytes": 819200
   }
 ]
