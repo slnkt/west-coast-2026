@@ -173,6 +173,13 @@
   .stop-meta{margin:0;font-size:.92rem;letter-spacing:.04em;color:var(--ink)}
   .stop-leg{margin:.55em 0 0;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep);font-weight:600}
   .stop-lede{margin:1em 0 0;font-size:clamp(1.02rem,1.5vw,1.2rem);font-weight:300;line-height:1.5;color:var(--ink-soft);max-width:46ch}
+  .stop-facts{display:flex;flex-wrap:wrap;gap:9px;margin:1.15em 0 0}
+  .stop.alt .stop-facts{justify-content:flex-end}
+  .fact{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:100px;padding:.5em .95em;font-size:.82rem;line-height:1.2;color:var(--ink);background:rgba(255,255,255,.45)}
+  .fact svg{width:16px;height:16px;flex:none;color:var(--ink-soft)}
+  .fact--swim{border-color:var(--accent);color:var(--accent-deep);background:rgba(167,106,60,.09);font-weight:500}
+  .fact--swim svg{color:var(--accent)}
+  @media(max-width:640px){ .stop.alt .stop-facts{justify-content:flex-start} }
   @media(max-width:640px){
     .stop-head,.stop.alt .stop-head{flex-direction:column;text-align:left;gap:6px}
     .stop.alt .stop-head{text-align:left}
@@ -304,6 +311,7 @@
       <a href="#s07"><span class="route__n">07</span><span class="route__name">Долина Смерти и Джошуа-Три<small>Пустыни и вылет домой</small></span><span class="route__date">9–11 окт</span></a>
     </nav>
     <p class="hint">Нажмите на любое фото, чтобы открыть его крупно.</p>
+    <p class="hint">Температуры на каждой остановке — примерные, обычные для конца сентября и октября.</p>
   </div>
 </section>
 
@@ -327,6 +335,10 @@
         <p class="stop-meta">23–27 сентября · 4 ночи</p>
         <p class="stop-leg">Старт маршрута</p>
         <p class="stop-lede">Холмистый город на берегу океана — отсюда начинается путешествие.</p>
+        <div class="stop-facts">
+          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 21°, ночью около 13°</span>
+          <span class="fact"><svg viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c1.8 0 1.8 1.4 3.6 1.4S7.4 6 9.2 6s1.8 1.4 3.6 1.4S14.6 6 16.4 6 18.2 7.4 20 7.4"/><path d="M2 11.5c1.8 0 1.8 1.4 3.6 1.4S7.4 11.5 9.2 11.5s1.8 1.4 3.6 1.4S14.6 11.5 16.4 11.5 18.2 12.9 20 12.9"/><path d="M2 17c1.8 0 1.8 1.4 3.6 1.4S7.4 17 9.2 17s1.8 1.4 3.6 1.4S14.6 17 16.4 17 18.2 18.4 20 18.4"/></svg>Океан холодный, около 15°</span>
+        </div>
       </div>
     </header>
     <div class="collage reveal">
@@ -356,6 +368,10 @@
         <p class="stop-meta">28 сентября · 1 ночь · дорога вдоль океана</p>
         <p class="stop-leg">Перегон от Сан-Франциско · ≈ 200 км · ~3 часа</p>
         <p class="stop-lede">Самая красивая дорога вдоль океана: скалы, мосты над обрывами и пляжи. Городов почти нет — только природа.</p>
+        <div class="stop-facts">
+          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 20°, ночью около 11°</span>
+          <span class="fact"><svg viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c1.8 0 1.8 1.4 3.6 1.4S7.4 6 9.2 6s1.8 1.4 3.6 1.4S14.6 6 16.4 6 18.2 7.4 20 7.4"/><path d="M2 11.5c1.8 0 1.8 1.4 3.6 1.4S7.4 11.5 9.2 11.5s1.8 1.4 3.6 1.4S14.6 11.5 16.4 11.5 18.2 12.9 20 12.9"/><path d="M2 17c1.8 0 1.8 1.4 3.6 1.4S7.4 17 9.2 17s1.8 1.4 3.6 1.4S14.6 17 16.4 17 18.2 18.4 20 18.4"/></svg>Вода около 14°, купаться опасно</span>
+        </div>
       </div>
     </header>
     <div class="collage reveal">
@@ -385,6 +401,10 @@
         <p class="stop-meta">29 сентября – 1 октября · 2 ночи</p>
         <p class="stop-leg">Перегон через Биг-Сур · ≈ 330 км · ~5 часов</p>
         <p class="stop-lede">Огромный город кино и пляжей: знаменитая надпись на холме и набережные с аттракционами.</p>
+        <div class="stop-facts">
+          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 27°, ночью около 16°</span>
+          <span class="fact fact--swim"><svg viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c1.8 0 1.8 1.4 3.6 1.4S7.4 6 9.2 6s1.8 1.4 3.6 1.4S14.6 6 16.4 6 18.2 7.4 20 7.4"/><path d="M2 11.5c1.8 0 1.8 1.4 3.6 1.4S7.4 11.5 9.2 11.5s1.8 1.4 3.6 1.4S14.6 11.5 16.4 11.5 18.2 12.9 20 12.9"/><path d="M2 17c1.8 0 1.8 1.4 3.6 1.4S7.4 17 9.2 17s1.8 1.4 3.6 1.4S14.6 17 16.4 17 18.2 18.4 20 18.4"/></svg>Можно купаться · вода около 18°</span>
+        </div>
       </div>
     </header>
     <div class="collage reveal">
@@ -413,6 +433,10 @@
         <p class="stop-meta">1–3 октября · 2 ночи</p>
         <p class="stop-leg">Перегон от Лос-Анджелеса · ≈ 195 км · ~2 часа</p>
         <p class="stop-lede">Самый южный и тёплый город маршрута: спокойный океан, морские львы и длинные пляжи.</p>
+        <div class="stop-facts">
+          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 25°, ночью около 17°</span>
+          <span class="fact fact--swim"><svg viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c1.8 0 1.8 1.4 3.6 1.4S7.4 6 9.2 6s1.8 1.4 3.6 1.4S14.6 6 16.4 6 18.2 7.4 20 7.4"/><path d="M2 11.5c1.8 0 1.8 1.4 3.6 1.4S7.4 11.5 9.2 11.5s1.8 1.4 3.6 1.4S14.6 11.5 16.4 11.5 18.2 12.9 20 12.9"/><path d="M2 17c1.8 0 1.8 1.4 3.6 1.4S7.4 17 9.2 17s1.8 1.4 3.6 1.4S14.6 17 16.4 17 18.2 18.4 20 18.4"/></svg>Лучшее место купаться · вода около 20°</span>
+        </div>
       </div>
     </header>
     <div class="collage reveal">
@@ -441,6 +465,10 @@
         <p class="stop-meta">3–5 октября · 2 ночи</p>
         <p class="stop-leg">Перегон от Сан-Диего · ≈ 540 км · ~5 часов</p>
         <p class="stop-lede">Город огней и шоу посреди пустыни, а в часе езды — красные скалы, будто с другой планеты.</p>
+        <div class="stop-facts">
+          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 31°, ночью около 17°</span>
+          <span class="fact"><svg viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c1.8 0 1.8 1.4 3.6 1.4S7.4 6 9.2 6s1.8 1.4 3.6 1.4S14.6 6 16.4 6 18.2 7.4 20 7.4"/><path d="M2 11.5c1.8 0 1.8 1.4 3.6 1.4S7.4 11.5 9.2 11.5s1.8 1.4 3.6 1.4S14.6 11.5 16.4 11.5 18.2 12.9 20 12.9"/><path d="M2 17c1.8 0 1.8 1.4 3.6 1.4S7.4 17 9.2 17s1.8 1.4 3.6 1.4S14.6 17 16.4 17 18.2 18.4 20 18.4"/></svg>Купаться — в бассейне отеля</span>
+        </div>
       </div>
     </header>
     <div class="collage reveal">
@@ -468,6 +496,10 @@
         <p class="stop-meta">5–8 октября · 2–3 ночи · национальные парки</p>
         <p class="stop-leg">Перегон от Лас-Вегаса · ≈ 260 км · ~2 ч 45 мин</p>
         <p class="stop-lede">Два парка с огромными каньонами: Зайон — узкое ущелье с рекой, Гранд-Каньон — самая известная пропасть мира.</p>
+        <div class="stop-facts">
+          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Зайон: днём около 27°, ночью около 12°</span>
+          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Гранд-Каньон прохладнее, около 18°</span>
+        </div>
       </div>
     </header>
     <div class="collage reveal">
@@ -496,6 +528,10 @@
         <p class="stop-meta">9–11 октября · пустыни по пути домой</p>
         <p class="stop-leg">Возвращение через Лас-Вегас · дорога разбита на два дня</p>
         <p class="stop-lede">Вместо океана — два пустынных парка по дороге в аэропорт: самая жаркая долина страны и причудливые деревья среди огромных валунов.</p>
+        <div class="stop-facts">
+          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Долина Смерти: очень жарко, около 37°</span>
+          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Джошуа-Три: днём около 29°, ночью около 14°</span>
+        </div>
       </div>
     </header>
     <div class="collage reveal">
