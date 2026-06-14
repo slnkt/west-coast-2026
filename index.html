@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Запад США — путеводитель по маршруту</title>
-<meta name="description" content="Дорожное путешествие по западу США: Сан-Франциско, Биг-Сур, Лос-Анджелес, Сан-Диего, Лас-Вегас, Зайон и Гранд-Каньон. 30 сентября – 18 октября, около 3 400 км.">
+<meta name="description" content="Дорожное путешествие по западу США: Сан-Франциско, Биг-Сур, Лос-Анджелес, Сан-Диего, Лас-Вегас, Зайон и Гранд-Каньон. 30 сентября – 16 октября, около 3 000 км.">
 <meta name="theme-color" content="#1b1714">
 <link rel="canonical" href="https://slnkt.github.io/west-coast-2026/">
 
@@ -12,13 +12,13 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:url" content="https://slnkt.github.io/west-coast-2026/">
 <meta property="og:title" content="Запад США — путеводитель по маршруту">
-<meta property="og:description" content="Семь остановок от Тихого океана до Гранд-Каньона. 30 сентября – 18 октября, около 3 400 км.">
+<meta property="og:description" content="Семь остановок от Тихого океана до Гранд-Каньона. 30 сентября – 16 октября, около 3 000 км.">
 <meta property="og:image" content="https://slnkt.github.io/west-coast-2026/img/hero-golden-gate.jpg">
 <meta property="og:image:width" content="2560">
 <meta property="og:image:height" content="1706">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Запад США — путеводитель по маршруту">
-<meta name="twitter:description" content="Семь остановок от Тихого океана до Гранд-Каньона. 30 сентября – 18 октября, около 3 400 км.">
+<meta name="twitter:description" content="Семь остановок от Тихого океана до Гранд-Каньона. 30 сентября – 16 октября, около 3 000 км.">
 <meta name="twitter:image" content="https://slnkt.github.io/west-coast-2026/img/hero-golden-gate.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -143,7 +143,26 @@
   .mp strong{display:block;font-family:"Fraunces",serif;font-size:1.08rem;font-weight:500;line-height:1.15;margin-bottom:4px}
   .mp span{display:block;color:var(--ink-soft);font-size:.82rem;margin-bottom:8px}
   .mp a{color:var(--accent-deep);font-weight:600;font-size:.82rem;text-decoration:none;border-bottom:1px solid var(--accent)}
-  .stop,.mapsec,#intro{scroll-margin-top:74px}
+  .stop,.mapsec,#intro,#budget{scroll-margin-top:74px}
+
+  /* ---------- BUDGET ---------- */
+  .budget{padding:clamp(56px,9vw,120px) 0;border-top:1px solid var(--line)}
+  .budget h2{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(2rem,5vw,3.4rem);line-height:1;letter-spacing:-.015em;margin:.1em 0 .45em}
+  .budget .note{margin:0 0 clamp(28px,4vw,44px);color:var(--ink-soft);font-weight:300;max-width:54ch;font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.5}
+  .bud-rows{border-top:1px solid var(--line)}
+  .bud-row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:clamp(15px,2vw,20px) 0;border-bottom:1px solid var(--line)}
+  .bud-row .l{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(1.05rem,1.7vw,1.3rem);line-height:1.15}
+  .bud-row .l small{display:block;font-family:"Inter",sans-serif;font-size:.8rem;color:var(--ink-soft);font-weight:400;margin-top:.3em}
+  .bud-row .v{text-align:right;font-size:clamp(1rem,1.5vw,1.15rem);white-space:nowrap;color:var(--accent-deep);font-weight:600}
+  .bud-row .v small{display:block;color:var(--ink-soft);font-weight:400;font-size:.82rem;margin-top:.25em}
+  .bud-totals{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,20px);margin-top:clamp(30px,4vw,44px)}
+  .bud-total{border:1px solid var(--accent);border-radius:8px;padding:clamp(20px,2.5vw,30px);background:rgba(167,106,60,.06)}
+  .bud-total .tl{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep);font-weight:600;margin:0 0 .8em}
+  .bud-total .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:.4em 0}
+  .bud-total .row span:first-child{color:var(--ink-soft);font-size:.92rem}
+  .bud-total .row span:last-child{font-family:"Fraunces",serif;font-size:clamp(1.25rem,2.6vw,1.8rem);font-weight:500;white-space:nowrap}
+  .bud-foot{margin:clamp(24px,3vw,34px) 0 0;font-size:.82rem;color:var(--ink-soft);font-style:italic;line-height:1.6;max-width:62ch}
+  @media(max-width:640px){ .bud-totals{grid-template-columns:1fr} }
   .route{margin-top:clamp(44px,6vw,80px);border-top:1px solid var(--line)}
   .route a{
     display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:clamp(14px,3vw,40px);
@@ -278,7 +297,7 @@
 
 <nav class="nav" id="nav" aria-label="Шапка">
   <span class="nav__brand">Запад&nbsp;США</span>
-  <span class="nav__meta">30.09 – 18.10 · 3 400 км</span>
+  <span class="nav__meta">30.09 – 16.10 · 3 000 км</span>
 </nav>
 
 <header class="hero">
@@ -292,9 +311,9 @@
       <h1>Запад США</h1>
       <p class="hero__sub">Сан-Франциско, Биг-Сур, Лос-Анджелес, Сан-Диего, Лас-Вегас, Зайон и Гранд-Каньон. Семь остановок от Тихого океана до края пустыни.</p>
       <div class="badges">
-        <span class="badge">30 сентября – 18 октября</span>
+        <span class="badge">30 сентября – 16 октября</span>
         <span class="badge">7 остановок</span>
-        <span class="badge">≈ 3 400 км</span>
+        <span class="badge">≈ 3 000 км</span>
       </div>
     </div>
   </div>
@@ -312,8 +331,8 @@
       <a href="#s03"><span class="route__n">03</span><span class="route__name">Лос-Анджелес<small>Пляжи, холмы и кино</small></span><span class="route__date">6–8 окт</span></a>
       <a href="#s04"><span class="route__n">04</span><span class="route__name">Сан-Диего<small>Тёплый юг у океана</small></span><span class="route__date">8–10 окт</span></a>
       <a href="#s05"><span class="route__n">05</span><span class="route__name">Лас-Вегас<small>Огни города и пустыня</small></span><span class="route__date">10–12 окт</span></a>
-      <a href="#s06"><span class="route__n">06</span><span class="route__name">Зайон и Гранд-Каньон<small>Огромные каньоны</small></span><span class="route__date">12–15 окт</span></a>
-      <a href="#s07"><span class="route__n">07</span><span class="route__name">Долина Смерти и Джошуа-Три<small>Пустыни и вылет домой</small></span><span class="route__date">16–18 окт</span></a>
+      <a href="#s06"><span class="route__n">06</span><span class="route__name">Зайон и Гранд-Каньон<small>Огромные каньоны</small></span><span class="route__date">12–14 окт</span></a>
+      <a href="#s07"><span class="route__n">07</span><span class="route__name">Джошуа-Три<small>Последняя пустыня и вылет домой</small></span><span class="route__date">14–16 окт</span></a>
     </nav>
     <p class="hint">Нажмите на любое фото, чтобы открыть его крупно.</p>
     <p class="hint">Температуры на каждой остановке — примерные, обычные для начала и середины октября.</p>
@@ -356,8 +375,9 @@
       <div class="act"><h3>Остров-тюрьма Алькатрас</h3><p>Бывшая тюрьма на острове посреди залива. Вечерняя экскурсия — самая интересная.</p></div>
       <div class="act"><h3>Велосипед по красному мосту</h3><p>Проехать по знаменитому мосту Золотые Ворота, обратно — на пароме.</p></div>
       <div class="act"><h3>Лес гигантских секвой</h3><p>Деревья высотой с дом, в получасе от города. Лучше приехать утром.</p></div>
-      <div class="act"><h3>Матч по бейсболу</h3><p>Американский бейсбол на стадионе у воды — шумно и весело.</p></div>
+      <div class="act"><h3>Бейсбол: решающие матчи</h3><p>В начале октября идут решающие матчи сезона. Если повезёт и дома играет местная команда, на стадионе у воды невероятно шумно и весело.</p></div>
       <div class="act"><h3>Рынок с едой у воды</h3><p>Старое здание с часами, внутри — морепродукты, сыры и кофе.</p></div>
+      <div class="act"><h3>Сезон молодого вина</h3><p>Сентябрь и октябрь — сбор урожая на винодельнях под городом. Хорошее время заехать на дегустацию.</p></div>
     </div>
   </div>
 </section>
@@ -371,7 +391,7 @@
         <p class="kicker">Остановка вторая</p>
         <h2>Биг-Сур</h2>
         <p class="stop-meta">5 октября · 1 ночь · дорога вдоль океана</p>
-        <p class="stop-leg">Перегон от Сан-Франциско · ≈ 200 км · ~3 часа</p>
+        <p class="stop-leg">Перегон от Сан-Франциско · ≈ 210 км · ~2 ч 45 мин</p>
         <p class="stop-lede">Самая красивая дорога вдоль океана: скалы, мосты над обрывами и пляжи. Городов почти нет — только природа.</p>
         <div class="stop-facts">
           <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 20°, ночью около 11°</span>
@@ -404,7 +424,7 @@
         <p class="kicker">Остановка третья</p>
         <h2>Лос-Анджелес</h2>
         <p class="stop-meta">6–8 октября · 2 ночи</p>
-        <p class="stop-leg">Перегон через Биг-Сур · ≈ 330 км · ~5 часов</p>
+        <p class="stop-leg">Перегон через Биг-Сур · ≈ 490 км · ~6 ч 30 мин</p>
         <p class="stop-lede">Огромный город кино и пляжей: знаменитая надпись на холме и набережные с аттракционами.</p>
         <div class="stop-facts">
           <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 27°, ночью около 16°</span>
@@ -436,7 +456,7 @@
         <p class="kicker">Остановка четвёртая</p>
         <h2>Сан-Диего</h2>
         <p class="stop-meta">8–10 октября · 2 ночи</p>
-        <p class="stop-leg">Перегон от Лос-Анджелеса · ≈ 195 км · ~2 часа</p>
+        <p class="stop-leg">Перегон от Лос-Анджелеса · ≈ 195 км · ~2 ч 30 мин</p>
         <p class="stop-lede">Самый южный и тёплый город маршрута: спокойный океан, морские львы и длинные пляжи.</p>
         <div class="stop-facts">
           <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 25°, ночью около 17°</span>
@@ -468,7 +488,7 @@
         <p class="kicker">Остановка пятая</p>
         <h2>Лас-Вегас</h2>
         <p class="stop-meta">10–12 октября · 2 ночи</p>
-        <p class="stop-leg">Перегон от Сан-Диего · ≈ 540 км · ~5 часов</p>
+        <p class="stop-leg">Перегон от Сан-Диего · ≈ 535 км · ~6 часов</p>
         <p class="stop-lede">Город огней и шоу посреди пустыни, а в часе езды — красные скалы, будто с другой планеты.</p>
         <div class="stop-facts">
           <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 31°, ночью около 17°</span>
@@ -485,6 +505,7 @@
       <div class="act"><h3>Шоу фонтанов</h3><p>Танцующие под музыку фонтаны у отеля «Белладжо». Бесплатно, каждый вечер.</p></div>
       <div class="act"><h3>Автогонки под Вегасом</h3><p>Большие американские гонки на автодроме за городом. Дата заезда зависит от расписания — стоит проверить на свои числа.</p></div>
       <div class="act"><h3>Долина красных скал</h3><p>Парк причудливых камней в часе езды; есть и древние рисунки на скалах.</p></div>
+      <div class="act"><h3>Золотые осины на горе Чарлстон</h3><p>В часе от Вегаса прохладные горы, где осины золотеют с конца сентября до середины октября. К нашему приезду золото ещё держится на высоте — неожиданный лес рядом с пустыней.</p></div>
       <div class="act"><h3>Огромное колесо обозрения</h3><p>Самое большое в мире — весь город как на ладони.</p></div>
     </div>
   </div>
@@ -498,8 +519,8 @@
       <div class="stop-titles">
         <p class="kicker">Остановка шестая</p>
         <h2>Зайон и Гранд-Каньон</h2>
-        <p class="stop-meta">12–15 октября · 2–3 ночи · национальные парки</p>
-        <p class="stop-leg">Перегон от Лас-Вегаса · ≈ 260 км · ~2 ч 45 мин</p>
+        <p class="stop-meta">12–14 октября · 2 ночи · национальные парки</p>
+        <p class="stop-leg">Перегон от Лас-Вегаса · ≈ 270 км · ~3 ч 20 мин</p>
         <p class="stop-lede">Два парка с огромными каньонами: Зайон — узкое ущелье с рекой, Гранд-Каньон — самая известная пропасть мира.</p>
         <div class="stop-facts">
           <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Зайон: днём около 27°, ночью около 12°</span>
@@ -517,7 +538,7 @@
       <div class="act"><h3>Прогулка по реке в ущелье</h3><p>Идёшь прямо по мелкой реке между высокими отвесными стенами.</p></div>
       <div class="act"><h3>Тропа к вершине</h3><p>Крутой подъём по гребню с цепями и видом на всю долину. Разрешение берут заранее.</p></div>
       <div class="act"><h3>Смотровая площадка</h3><p>Короткая тропа к лучшему виду на каньон, особенно на закате.</p></div>
-      <div class="act"><h3>Гранд-Каньон</h3><p>Самый известный каньон мира — пропасть глубиной полтора километра.</p></div>
+      <div class="act"><h3>Гранд-Каньон</h3><p>Самый известный каньон мира — пропасть глубиной полтора километра. От Зайона это дальняя поездка: около 4,5 часов в одну сторону, лучше выделить на неё отдельный день.</p></div>
     </div>
   </div>
 </section>
@@ -529,31 +550,56 @@
       <span class="stop-num">07</span>
       <div class="stop-titles">
         <p class="kicker">Остановка седьмая</p>
-        <h2>Долина Смерти и Джошуа-Три</h2>
-        <p class="stop-meta">16–18 октября · пустыни по пути домой</p>
-        <p class="stop-leg">Возвращение через Лас-Вегас · дорога разбита на два дня</p>
-        <p class="stop-lede">Вместо океана — два пустынных парка по дороге в аэропорт: самая жаркая долина страны и причудливые деревья среди огромных валунов.</p>
+        <h2>Джошуа-Три</h2>
+        <p class="stop-meta">14–16 октября · последняя пустыня и дорога домой</p>
+        <p class="stop-leg">От каньонов до Лос-Анджелеса · ~2 дня в дороге</p>
+        <p class="stop-lede">Последняя остановка — пустынный парк с причудливыми деревьями-юкками и огромными валунами. Дальше спокойная дорога в Лос-Анджелес и вылет домой.</p>
         <div class="stop-facts">
-          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Долина Смерти: очень жарко, около 37°</span>
-          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Джошуа-Три: днём около 29°, ночью около 14°</span>
-          <span class="fact fact--end"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15.5 13 11V4.5a1.5 1.5 0 0 0-3 0V11l-8 4.5v1.8l8-2.3v3.6l-2.2 1.5v1.3L12 21l3.2.9v-1.3L13 18.6V15l8 2.3z"/></svg>Вылет домой из Лос-Анджелеса (~4–5 ч от Долины Смерти)</span>
+          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 29°, ночью около 14°</span>
+          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.5 5.7 6.2.5-4.7 4.1 1.4 6.1L12 16.8 6.4 20l1.4-6.1-4.7-4.1 6.2-.5z"/></svg>Парк тёмного неба — ночью потрясающие звёзды</span>
+          <span class="fact fact--end"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15.5 13 11V4.5a1.5 1.5 0 0 0-3 0V11l-8 4.5v1.8l8-2.3v3.6l-2.2 1.5v1.3L12 21l3.2.9v-1.3L13 18.6V15l8 2.3z"/></svg>Вылет домой из Лос-Анджелеса (~3 ч от Джошуа-Три)</span>
         </div>
       </div>
     </header>
     <div class="collage reveal">
-      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/07-death-valley-dunes.jpg" width="2000" height="833" loading="lazy" decoding="async" alt="Песчаные дюны и горы на рассвете"><figcaption>Дюны Долины Смерти</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/07-death-valley-zabriskie.jpg" width="2000" height="1324" loading="lazy" decoding="async" alt="Складчатые золотые холмы пустыни"><figcaption>«Лунные» холмы</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/07-joshua-trees.jpg" width="2000" height="1335" loading="lazy" decoding="async" alt="Деревья-юкки в пустыне в вечернем свете"><figcaption>Деревья Джошуа</figcaption></figure>
       <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/07-joshua-boulders.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Огромные гладкие валуны и деревья-юкки"><figcaption>Валуны Джошуа-Три</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/07-joshua-trees.jpg" width="2000" height="1335" loading="lazy" decoding="async" alt="Деревья-юкки в пустыне в вечернем свете"><figcaption>Деревья-юкки</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/07-joshua-stars.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Млечный Путь и звёзды над деревом-юккой"><figcaption>Звёздное небо ночью</figcaption></figure>
     </div>
     <div class="acts stagger">
-      <div class="act"><h3>Соляные равнины</h3><p>Идём по белой соляной корке в самой низкой точке США — на 86 метров ниже уровня моря.</p></div>
-      <div class="act"><h3>Песчаные дюны</h3><p>Золотые дюны Долины Смерти, красивее всего на рассвете и закате.</p></div>
-      <div class="act"><h3>«Лунные» холмы</h3><p>Смотровая над складчатыми золотыми холмами необычной формы.</p></div>
-      <div class="act"><h3>Парк Джошуа-Три</h3><p>Рощи причудливых деревьев-юкк и огромные гладкие валуны, по которым лазают.</p></div>
+      <div class="act"><h3>Деревья-юкки и валуны</h3><p>Рощи причудливых деревьев и огромные гладкие валуны, по которым лазают.</p></div>
+      <div class="act"><h3>Звёздное небо</h3><p>Джошуа-Три — парк «тёмного неба». В октябре ночи длиннее, и звёзд видно особенно много.</p></div>
       <div class="act"><h3>Последняя ночь в Лос-Анджелесе</h3><p>Отель у моря в Санта-Монике или рядом с аэропортом: душ, отдых и спокойные сборы перед дорогой домой.</p></div>
       <div class="act"><h3>Сдаём машину и вылет</h3><p>Утром возвращаем машину в аэропорту Лос-Анджелеса и летим домой с пересадкой в Стамбуле.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="budget reveal" id="budget" aria-label="Смета поездки">
+  <div class="wrap">
+    <p class="kicker">Сколько стоит</p>
+    <h2>Смета поездки</h2>
+    <p class="note">Примерный бюджет на 3 человек: перелёты, машина, бензин и еда. Жильё, входные билеты в парки и активности сюда не входят.</p>
+    <div class="bud-rows">
+      <div class="bud-row"><span class="l">Перелёт туда<small>На человека</small></span><span class="v">50 000 ₽</span></div>
+      <div class="bud-row"><span class="l">Перелёт обратно<small>На человека · на выбор</small></span><span class="v">63 000 ₽ Катар<small>82 000 ₽ Туркиш</small></span></div>
+      <div class="bud-row"><span class="l">Аренда машины<small>На троих · 30 сент – 16 окт</small></span><span class="v">$3 000<small>≈ 225 000 ₽</small></span></div>
+      <div class="bud-row"><span class="l">Бензин<small>На троих · ~3 300 км пути</small></span><span class="v">~$450<small>≈ 34 000 ₽</small></span></div>
+      <div class="bud-row"><span class="l">Еда<small>~$50 на человека в день</small></span><span class="v">~$800 на человека<small>≈ 60 000 ₽</small></span></div>
+    </div>
+    <div class="bud-totals">
+      <div class="bud-total">
+        <p class="tl">На человека</p>
+        <div class="row"><span>Через Катар</span><span>~259 000 ₽</span></div>
+        <div class="row"><span>Через Туркиш</span><span>~278 000 ₽</span></div>
+      </div>
+      <div class="bud-total">
+        <p class="tl">На троих</p>
+        <div class="row"><span>Через Катар</span><span>~778 000 ₽</span></div>
+        <div class="row"><span>Через Туркиш</span><span>~835 000 ₽</span></div>
+      </div>
+    </div>
+    <p class="bud-foot">Курс ~75 ₽ за доллар (на июнь 2026). Цены на бензин и еду примерные: в Калифорнии бензин самый дорогой — около 6 долларов за галлон. Не входят жильё, входные билеты в парки и активности.</p>
   </div>
 </section>
 
@@ -561,9 +607,9 @@
 
 <footer class="foot">
   <div class="wrap">
-    <p class="foot__line reveal">Семь остановок. Около 3 400 километров. Ни одного повтора по пейзажу.</p>
+    <p class="foot__line reveal">Семь остановок. Около 3 000 километров. Ни одного повтора по пейзажу.</p>
     <div class="foot__meta">
-      <span>30 сент – 18 окт 2026</span>
+      <span>30 сент – 16 окт 2026</span>
       <span>7 остановок</span>
       <span>Сан-Франциско → Лос-Анджелес</span>
     </div>
@@ -593,10 +639,9 @@
         <li>Ущелье с рекой — Gillfoto · CC BY-SA 4.0</li>
         <li>Вид с вершины — KadenMP · CC BY-SA 4.0</li>
         <li>Гранд-Каньон — Dietmar Rabich · CC BY-SA 4.0</li>
-        <li>Дюны Долины Смерти — Mac H (media601) · CC BY-SA 2.0</li>
-        <li>«Лунные» холмы — King of Hearts · CC BY-SA 3.0</li>
-        <li>Деревья Джошуа — Joshua Tree National Park · общественное достояние</li>
+        <li>Деревья-юкки — Joshua Tree National Park · общественное достояние</li>
         <li>Валуны Джошуа-Три — Joshua Tree National Park · общественное достояние</li>
+        <li>Звёздное небо — Joshua Tree National Park · общественное достояние</li>
         <li>Карта: OpenStreetMap и CARTO</li>
       </ul>
       <p style="font-size:.72rem;color:rgba(239,231,218,.4);margin-top:16px">Все фото взяты из свободной библиотеки Wikimedia Commons. Имена авторов и коды лицензий приведены так, как требуют условия бесплатного использования снимков.</p>
@@ -666,19 +711,18 @@
 
 <script>
 (function(){
-  var ROUTE=[[37.775,-122.419],[37.614,-122.397],[37.408,-122.071],[37.312,-122.045],[37.255,-121.957],[36.99,-122.022],[36.971,-121.875],[36.894,-121.774],[36.753,-121.766],[36.513,-121.938],[36.371,-121.902],[36.303,-121.88],[36.168,-121.678],[36.024,-121.571],[36,-121.501],[35.887,-121.46],[35.782,-121.33],[35.671,-121.279],[35.636,-121.166],[35.474,-120.989],[35.452,-120.901],[35.374,-120.852],[35.306,-120.679],[35.174,-120.697],[35.003,-120.439],[34.89,-120.417],[34.758,-120.297],[34.589,-120.031],[34.528,-119.837],[34.43,-119.742],[34.401,-119.517],[34.227,-119.167],[34.138,-118.728],[34.174,-118.56],[34.154,-118.38],[34.052,-118.244],[33.596,-117.674],[33.47,-117.674],[33.168,-117.345],[32.716,-117.161],[33.065,-117.069],[33.261,-117.158],[33.39,-117.174],[33.452,-117.135],[33.551,-117.181],[33.684,-117.171],[33.943,-117.292],[33.994,-117.356],[34.055,-117.299],[34.128,-117.303],[34.254,-117.448],[34.336,-117.481],[34.883,-117.062],[34.928,-116.723],[35.078,-116.4],[35.103,-116.262],[35.367,-115.913],[35.473,-115.59],[35.47,-115.452],[35.745,-115.354],[35.944,-115.184],[36.131,-115.18],[36.17,-115.14],[36.263,-115.073],[36.329,-114.923],[36.469,-114.826],[36.743,-114.422],[36.779,-114.263],[36.764,-114.172],[36.83,-114.01],[36.954,-113.797],[36.988,-113.629],[37.086,-113.581],[37.159,-113.474],[37.177,-113.285],[37.227,-113.257],[37.161,-113.019],[37.268,-112.944],[37.21,-112.956],[37.263,-112.776],[37.228,-112.685],[37.152,-112.572],[37.049,-112.534],[37.023,-112.449],[37.042,-112.217],[37.186,-111.986],[37.124,-111.975],[37.084,-111.677],[36.932,-111.474],[36.597,-111.657],[36.216,-111.396],[35.863,-111.418],[35.939,-111.664],[35.924,-111.76],[36.039,-111.83],[35.968,-111.972],[36.059,-112.112],[35.478,-112.178],[35.261,-112.151],[35.22,-112.281],[35.221,-112.542],[35.323,-112.925],[35.287,-113.118],[35.19,-113.316],[35.159,-113.557],[35.217,-113.997],[35.191,-114.069],[35.242,-114.147],[35.784,-114.52],[36.009,-114.729],[35.967,-114.881],[36.034,-115.015],[36.043,-115.134],[36.033,-115.395],[35.994,-115.462],[36.024,-115.532],[36.005,-115.654],[36.188,-115.962],[36.264,-116.003],[36.264,-116.103],[36.35,-116.316],[36.302,-116.414],[36.307,-116.522],[36.372,-116.665],[36.366,-116.725],[36.461,-116.866],[36.557,-116.894],[36.64,-117.034],[36.564,-117.199],[36.347,-117.301],[36.34,-117.424],[36.169,-117.3],[36.035,-117.281],[35.982,-117.346],[35.685,-117.384],[35.647,-117.511],[35.424,-117.672],[35.364,-117.617],[34.572,-117.41],[34.566,-117.318],[34.454,-117.068],[34.444,-116.859],[34.37,-116.652],[34.368,-116.539],[34.258,-116.439],[34.121,-116.415],[34.12,-116.315],[34.012,-116.167],[34.12,-116.315],[34.121,-116.441],[34.036,-116.591],[33.916,-116.605],[33.927,-116.978],[34.062,-117.178],[34.087,-117.683],[34.066,-118],[33.915,-118.108],[33.943,-118.408]];
+  var ROUTE=[[37.775,-122.419],[37.614,-122.397],[37.408,-122.071],[37.312,-122.045],[37.255,-121.957],[36.99,-122.022],[36.971,-121.875],[36.894,-121.774],[36.753,-121.766],[36.513,-121.938],[36.371,-121.902],[36.303,-121.88],[36.168,-121.678],[36.024,-121.571],[36,-121.501],[35.887,-121.46],[35.782,-121.33],[35.671,-121.279],[35.636,-121.166],[35.474,-120.989],[35.452,-120.901],[35.374,-120.852],[35.306,-120.679],[35.174,-120.697],[35.003,-120.439],[34.89,-120.417],[34.758,-120.297],[34.589,-120.031],[34.528,-119.837],[34.43,-119.742],[34.401,-119.517],[34.227,-119.167],[34.138,-118.728],[34.174,-118.56],[34.154,-118.38],[34.052,-118.244],[33.596,-117.674],[33.47,-117.674],[33.168,-117.345],[32.716,-117.161],[33.065,-117.069],[33.261,-117.158],[33.39,-117.174],[33.452,-117.135],[33.551,-117.181],[33.684,-117.171],[33.943,-117.292],[33.994,-117.356],[34.055,-117.299],[34.128,-117.303],[34.254,-117.448],[34.336,-117.481],[34.883,-117.062],[34.928,-116.723],[35.078,-116.4],[35.103,-116.262],[35.367,-115.913],[35.473,-115.59],[35.47,-115.452],[35.745,-115.354],[35.944,-115.184],[36.131,-115.18],[36.17,-115.14],[36.263,-115.073],[36.329,-114.923],[36.469,-114.826],[36.743,-114.422],[36.779,-114.263],[36.764,-114.172],[36.83,-114.01],[36.954,-113.797],[36.988,-113.629],[37.086,-113.581],[37.159,-113.474],[37.177,-113.285],[37.227,-113.257],[37.161,-113.019],[37.268,-112.944],[37.21,-112.956],[37.263,-112.776],[37.228,-112.685],[37.152,-112.572],[37.049,-112.534],[37.023,-112.449],[37.042,-112.217],[37.186,-111.986],[37.124,-111.975],[37.084,-111.677],[36.932,-111.474],[36.597,-111.657],[36.216,-111.396],[35.863,-111.418],[35.939,-111.664],[35.924,-111.76],[36.039,-111.83],[35.968,-111.972],[36.059,-112.112],[35.478,-112.178],[35.261,-112.151],[35.22,-112.281],[35.221,-112.542],[35.323,-112.923],[35.287,-113.118],[35.19,-113.316],[35.159,-113.558],[35.215,-114.047],[35.11,-114.116],[34.795,-114.161],[34.733,-114.263],[34.717,-114.486],[34.77,-114.596],[34.373,-114.655],[34.234,-114.641],[34.189,-114.574],[34.108,-114.689],[34.08,-114.794],[34.108,-114.936],[34.087,-115.112],[34.047,-115.22],[34.117,-115.523],[34.073,-115.553],[34.136,-116.037],[34.02,-116.02],[33.991,-116.072],[34.012,-116.167],[34.12,-116.315],[34.121,-116.441],[34.036,-116.591],[33.916,-116.605],[33.927,-116.978],[34.062,-117.178],[34.087,-117.683],[34.066,-118],[33.915,-118.108],[33.943,-118.408]];
   var STOPS=[
     [37.7749,-122.4194,"Сан-Франциско","Старт маршрута","s01"],
-    [36.3715,-121.9018,"Биг-Сур","≈ 3 часа от Сан-Франциско","s02"],
-    [34.0522,-118.2437,"Лос-Анджелес","≈ 5 часов от Биг-Сура","s03"],
-    [32.7157,-117.1611,"Сан-Диего","≈ 2 часа от Лос-Анджелеса","s04"],
-    [36.1699,-115.1398,"Лас-Вегас","≈ 5 часов от Сан-Диего","s05"],
-    [37.2690,-112.9477,"Зайон и Гранд-Каньон","≈ 2 ч 45 мин от Лас-Вегаса","s06"],
-    [36.4614,-116.8656,"Долина Смерти и Джошуа-Три","Дорога из каньонов, 2 дня","s07"]
+    [36.3715,-121.9018,"Биг-Сур","≈ 2 ч 45 мин от Сан-Франциско","s02"],
+    [34.0522,-118.2437,"Лос-Анджелес","≈ 6 ч 30 мин от Биг-Сура","s03"],
+    [32.7157,-117.1611,"Сан-Диего","≈ 2 ч 30 мин от Лос-Анджелеса","s04"],
+    [36.1699,-115.1398,"Лас-Вегас","≈ 6 часов от Сан-Диего","s05"],
+    [37.2690,-112.9477,"Зайон и Гранд-Каньон","≈ 3 ч 20 мин от Лас-Вегаса","s06"],
+    [34.0117,-116.1667,"Джошуа-Три","Дорога от каньонов, ~2 дня","s07"]
   ];
   var SPOTS=[
     [36.0601,-112.1129,"Гранд-Каньон"],
-    [34.0117,-116.1667,"Джошуа-Три"],
     [33.9416,-118.4085,"Аэропорт · вылет домой"]
   ];
   var loaded=false;

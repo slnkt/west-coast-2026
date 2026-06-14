@@ -276,30 +276,6 @@
     "bytes": 11074259
   },
   {
-    "file": "07-death-valley-dunes.jpg",
-    "query": "Mesquite Flat Sand Dunes Death Valley sunrise",
-    "title": "File:Mesquite Dunes at sunrise (22471740508).jpg",
-    "width": 4896,
-    "height": 2039,
-    "url": "https://commons.wikimedia.org/wiki/File:Mesquite_Dunes_at_sunrise_(22471740508).jpg",
-    "descUrl": "https://commons.wikimedia.org/wiki/File:Mesquite_Dunes_at_sunrise_(22471740508).jpg",
-    "artist": "Mac H (media601)",
-    "license": "CC BY-SA 2.0",
-    "bytes": 262144
-  },
-  {
-    "file": "07-death-valley-zabriskie.jpg",
-    "query": "Zabriskie Point Death Valley",
-    "title": "File:Zabriskie Point Death Valley December 2013 001.jpg",
-    "width": 4928,
-    "height": 3264,
-    "url": "https://commons.wikimedia.org/wiki/File:Zabriskie_Point_Death_Valley_December_2013_001.jpg",
-    "descUrl": "https://commons.wikimedia.org/wiki/File:Zabriskie_Point_Death_Valley_December_2013_001.jpg",
-    "artist": "King of Hearts",
-    "license": "CC BY-SA 3.0",
-    "bytes": 1153434
-  },
-  {
     "file": "07-joshua-trees.jpg",
     "query": "Joshua Tree National Park sunset",
     "title": "File:Sunset at Joshua Tree National Park (20492887024).jpg",
@@ -322,5 +298,17 @@
     "artist": "Joshua Tree National Park",
     "license": "Public domain",
     "bytes": 819200
+  },
+  {
+    "file": "07-joshua-stars.jpg",
+    "query": "Joshua Tree night stars milky way",
+    "title": "File:Stars and Milky Way above a Joshua tree (53434249204).jpg",
+    "width": 8256,
+    "height": 5504,
+    "url": "https://commons.wikimedia.org/wiki/File:Stars_and_Milky_Way_above_a_Joshua_tree_(53434249204).jpg",
+    "descUrl": "https://commons.wikimedia.org/wiki/File:Stars_and_Milky_Way_above_a_Joshua_tree_(53434249204).jpg",
+    "artist": "Joshua Tree National Park",
+    "license": "Public domain",
+    "bytes": 917504
   }
 ]
