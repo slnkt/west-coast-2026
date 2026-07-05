@@ -198,6 +198,11 @@
     .day{grid-template-columns:1fr;gap:6px}
     .day .d small{display:inline;margin-left:.5em}
   }
+  /* ---------- ROADS ---------- */
+  .roads{padding:clamp(56px,9vw,120px) 0;border-top:1px solid var(--line);background:var(--paper-2)}
+  .roads h2{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(2rem,5vw,3.4rem);line-height:1;letter-spacing:-.015em;margin:.1em 0 .45em}
+  .roads .note{margin:0 0 clamp(10px,2vw,18px);color:var(--ink-soft);font-weight:300;max-width:56ch;font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.5}
+
   .flights{padding:clamp(56px,9vw,120px) 0;border-top:1px solid var(--line)}
   .flights h2{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(2rem,5vw,3.4rem);line-height:1;letter-spacing:-.015em;margin:.1em 0 .45em}
   .flights .note{margin:0 0 clamp(20px,3vw,34px);color:var(--ink-soft);font-weight:300;max-width:56ch;font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.5}
@@ -647,7 +652,7 @@
     <div class="day"><div class="d">30 сент<small>среда</small></div><div class="c"><p>Прилёт в Сан-Франциско в 14:15. Только заселение, ужин и сон — по внутренним часам будет глубокая ночь.</p></div></div>
     <div class="day"><div class="d">1 окт<small>четверг</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Сан-Франциско, лёгкий день: набережная, рынок у воды, ранний отбой.</p></div></div>
     <div class="day"><div class="d">2 окт<small>пятница</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Сан-Франциско: Алькатрас, велосипед по мосту Золотые Ворота.</p></div></div>
-    <div class="day"><div class="d">3 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>С утра — лес секвой (полчаса пути), к обеду назад в город. Вечером бейсбол, если повезёт с расписанием матчей.</p></div></div>
+    <div class="day"><div class="d">3 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>С утра — лес секвой (полчаса пути), к обеду назад в город. Обратный проезд по мосту платный, ~10 долларов с машины. Вечером бейсбол, если повезёт с расписанием матчей.</p></div></div>
     <div class="day"><div class="d">4 окт<small>воскресенье</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Свободный день в Сан-Франциско: холмы, парки или винодельни неподалёку.</p></div></div>
     <div class="day"><div class="d">5 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~9:00</span><p>В Биг-Сур (~3 часа с остановками). День на мост над обрывом, водопад и пляж. Ночь в Монтерее или Кармеле.</p></div></div>
     <div class="day"><div class="d">6 окт<small>вторник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: вдоль океана в Лос-Анджелес (~7–8 часов с фотоостановками). К вечеру в отеле.</p></div></div>
@@ -671,6 +676,22 @@
     </div></div>
     <div class="day"><div class="d">16 окт<small>пятница</small></div><div class="c"><span class="dep dep--calm">Без машины</span><p>Полный день отдыха у океана в Санта-Монике. Никаких планов. Вечером собрать чемоданы.</p></div></div>
     <div class="day"><div class="d">17 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Из отеля ~12:30</span><p>На такси в аэропорт к 13:20 — за три часа до рейса. Вылет домой в 16:20.</p></div></div>
+  </div>
+</section>
+
+<section class="roads reveal" id="roads" aria-label="Платные дороги и пробки">
+  <div class="wrap">
+    <p class="kicker">Полезно за рулём</p>
+    <h2>Платные дороги и пробки</h2>
+    <p class="note">Хорошая новость: почти весь маршрут по четырём штатам — бесплатные дороги. Вот всё, что нужно знать про оплату и заторы.</p>
+    <div class="acts stagger">
+      <div class="act"><h3>Единственный платный участок</h3><p>Мост Золотые Ворота при возвращении в Сан-Франциско: около 10 долларов с машины, только в одну сторону. Будок нет — камера фотографирует номер. У нас он случится один раз, в день поездки к секвойям.</p></div>
+      <div class="act"><h3>Как оплатить мост на прокатной машине</h3><p>Самим на сайте оплаты мостов залива (bayareafastrak.org) в течение двух суток после проезда — это дешевле. Либо через программу проката, но там комиссия около 5 долларов в день. Уточним на стойке при получении машины.</p></div>
+      <div class="act"><h3>Экспресс-полосы объезжаем</h3><p>В Лос-Анджелесе и Сан-Диего на шоссе есть платные скоростные полосы со знаками «Express Lanes» и «FasTrak». Они не нужны: бесплатные полосы всегда рядом. Просто не заезжаем под эти знаки.</p></div>
+      <div class="act"><h3>Въезд в парки — по абонементу</h3><p>С 2026 года иностранцам в Зайоне, Брайсе и на Гранд-Каньоне к билету добавляют по 100 долларов с человека. Выход: один годовой абонемент на парки за 250 долларов — действует на всех в машине и покрывает все наши парки. Экономит около 450 долларов.</p></div>
+      <div class="act"><h3>Пробки Лос-Анджелеса</h3><p>Худшее время за рулём: утром с 7 до 10 и вечером с 15:30 до 19:30. Наши выезды в плане подобраны между пиками; в день Диснейленда чем раньше выедем — тем свободнее.</p></div>
+      <div class="act"><h3>Дорога на Вегас и живые пробки</h3><p>Трасса из Калифорнии в Вегас стоит в пятницу вечером туда и в воскресенье днём обратно — мы едем в субботу утром, это удачно. Заторы смотрим в картах на телефоне; в пустыне и парках связи нет, поэтому заранее скачаем офлайн-карты.</p></div>
+    </div>
   </div>
 </section>
 
@@ -741,25 +762,26 @@
   <div class="wrap">
     <p class="kicker">Сколько стоит</p>
     <h2>Смета поездки</h2>
-    <p class="note">Примерный бюджет на 3 человек: перелёты, машина, бензин и еда. Жильё, входные билеты в парки и активности сюда не входят.</p>
+    <p class="note">Примерный бюджет на 3 человек: перелёты, машина, бензин, еда и въезды в парки. Жильё и платные развлечения сюда не входят.</p>
     <div class="bud-rows">
       <div class="bud-row"><span class="l">Перелёт туда-обратно<small>На человека · Катарские авиалинии</small></span><span class="v">117 897 ₽</span></div>
       <div class="bud-row"><span class="l">Места с простором для ног<small>Доплата на всех</small></span><span class="v">82 000 ₽</span></div>
       <div class="bud-row"><span class="l">Аренда машины<small>На троих · весь маршрут</small></span><span class="v">$3 000<small>≈ 225 000 ₽</small></span></div>
       <div class="bud-row"><span class="l">Бензин<small>На троих · ~3 300 км пути</small></span><span class="v">~$450<small>≈ 34 000 ₽</small></span></div>
+      <div class="bud-row"><span class="l">Парки и платный мост<small>Годовой абонемент на парки (на всю машину) + мост в Сан-Франциско</small></span><span class="v">~$260<small>≈ 19 500 ₽</small></span></div>
       <div class="bud-row"><span class="l">Еда<small>~$50 на человека в день</small></span><span class="v">~$850 на человека<small>≈ 64 000 ₽</small></span></div>
     </div>
     <div class="bud-totals">
       <div class="bud-total">
         <p class="tl">На человека</p>
-        <div class="row"><span>Перелёт, места, машина, бензин, еда</span><span>~295 000 ₽</span></div>
+        <div class="row"><span>Перелёт, места, машина, бензин, еда, парки</span><span>~302 000 ₽</span></div>
       </div>
       <div class="bud-total">
         <p class="tl">На троих</p>
-        <div class="row"><span>Всё вместе</span><span>~886 000 ₽</span></div>
+        <div class="row"><span>Всё вместе</span><span>~905 000 ₽</span></div>
       </div>
     </div>
-    <p class="bud-foot">Курс ~75 ₽ за доллар (на июнь 2026). Цены на бензин и еду примерные: в Калифорнии бензин самый дорогой — около 6 долларов за галлон. Не входят жильё, входные билеты в парки и активности.</p>
+    <p class="bud-foot">Курс ~75 ₽ за доллар (на июнь 2026). Цены на бензин и еду примерные: в Калифорнии бензин самый дорогой — около 6 долларов за галлон. Не входят жильё и платные развлечения — Диснейленд, Алькатрас, бейсбол.</p>
   </div>
 </section>
 
