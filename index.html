@@ -164,7 +164,26 @@
   .bud-foot{margin:clamp(24px,3vw,34px) 0 0;font-size:.82rem;color:var(--ink-soft);font-style:italic;line-height:1.6;max-width:62ch}
   @media(max-width:640px){ .bud-totals{grid-template-columns:1fr} }
 
-  /* ---------- FLIGHTS ---------- */
+  /* ---------- SCHEDULE ---------- */
+  .sched{padding:clamp(56px,9vw,120px) 0;border-top:1px solid var(--line)}
+  .sched h2{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(2rem,5vw,3.4rem);line-height:1;letter-spacing:-.015em;margin:.1em 0 .45em}
+  .sched .note{margin:0 0 clamp(24px,3.5vw,40px);color:var(--ink-soft);font-weight:300;max-width:56ch;font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.5}
+  .day{display:grid;grid-template-columns:clamp(96px,11vw,140px) 1fr;gap:clamp(12px,2.5vw,30px);padding:clamp(14px,1.8vw,19px) 0;border-bottom:1px solid var(--line)}
+  .day:first-of-type{border-top:1px solid var(--line)}
+  .day .d{font-family:"Fraunces",serif;font-size:clamp(1.05rem,1.9vw,1.35rem);line-height:1.1}
+  .day .d small{display:block;font-family:"Inter",sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:.35em}
+  .day .c{font-size:.95rem;font-weight:300;line-height:1.55;color:var(--ink)}
+  .day .c p{margin:0}
+  .dep{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--accent);color:var(--accent-deep);border-radius:100px;padding:.3em .85em;font-size:.76rem;font-weight:600;letter-spacing:.02em;margin:0 .4em .55em 0;background:rgba(167,106,60,.07);white-space:nowrap}
+  .dep svg{width:13px;height:13px;flex:none}
+  .dep--calm{border-color:var(--line);color:var(--ink-soft);background:transparent}
+  .day--fork{border-left:3px solid var(--accent);padding-left:clamp(12px,2vw,20px)}
+  .plan{margin:.6em 0 0;padding:11px 14px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.5);font-size:.92rem}
+  .plan b{font-weight:600;color:var(--accent-deep)}
+  @media(max-width:600px){
+    .day{grid-template-columns:1fr;gap:6px}
+    .day .d small{display:inline;margin-left:.5em}
+  }
   .flights{padding:clamp(56px,9vw,120px) 0;border-top:1px solid var(--line)}
   .flights h2{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(2rem,5vw,3.4rem);line-height:1;letter-spacing:-.015em;margin:.1em 0 .45em}
   .flights .note{margin:0 0 clamp(20px,3vw,34px);color:var(--ink-soft);font-weight:300;max-width:56ch;font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.5}
@@ -347,8 +366,8 @@
   <div class="wrap">
     <p class="intro__lead reveal">Один океан слева, пустыня впереди и <em>дорога</em>, которая ни разу не повторяется.</p>
     <nav class="route reveal" aria-label="Маршрут">
-      <a href="#s01"><span class="route__n">01</span><span class="route__name">Сан-Франциско<small>Город у океана, старт пути</small></span><span class="route__date">30 сент – 4 окт</span></a>
-      <a href="#s02"><span class="route__n">02</span><span class="route__name">Биг-Сур<small>Дикое побережье океана</small></span><span class="route__date">5 окт</span></a>
+      <a href="#s01"><span class="route__n">01</span><span class="route__name">Сан-Франциско<small>Город у океана, старт пути</small></span><span class="route__date">30 сент – 5 окт</span></a>
+      <a href="#s02"><span class="route__n">02</span><span class="route__name">Биг-Сур<small>Дикое побережье океана</small></span><span class="route__date">5–6 окт</span></a>
       <a href="#s03"><span class="route__n">03</span><span class="route__name">Лос-Анджелес<small>Пляжи, холмы и кино</small></span><span class="route__date">6–8 окт</span></a>
       <a href="#s04"><span class="route__n">04</span><span class="route__name">Сан-Диего<small>Тёплый юг у океана</small></span><span class="route__date">8–10 окт</span></a>
       <a href="#s05"><span class="route__n">05</span><span class="route__name">Лас-Вегас<small>Огни города и пустыня</small></span><span class="route__date">10–12 окт</span></a>
@@ -377,7 +396,7 @@
       <div class="stop-titles">
         <p class="kicker">Остановка первая</p>
         <h2>Сан-Франциско</h2>
-        <p class="stop-meta">30 сентября – 4 октября · 4 ночи</p>
+        <p class="stop-meta">30 сентября – 5 октября · 5 ночей</p>
         <p class="stop-leg">Старт маршрута</p>
         <p class="stop-lede">Холмистый город на берегу океана — отсюда начинается путешествие.</p>
         <div class="stop-facts">
@@ -411,7 +430,7 @@
       <div class="stop-titles">
         <p class="kicker">Остановка вторая</p>
         <h2>Биг-Сур</h2>
-        <p class="stop-meta">5 октября · 1 ночь · дорога вдоль океана</p>
+        <p class="stop-meta">5–6 октября · 1 ночь · дорога вдоль океана</p>
         <p class="stop-leg">Перегон от Сан-Франциско · ≈ 210 км · ~2 ч 45 мин</p>
         <p class="stop-lede">Самая красивая дорога вдоль океана: скалы, мосты над обрывами и пляжи. Городов почти нет — только природа.</p>
         <div class="stop-facts">
@@ -559,7 +578,8 @@
       <div class="act"><h3>Прогулка по реке в ущелье</h3><p>Идёшь прямо по мелкой реке между высокими отвесными стенами.</p></div>
       <div class="act"><h3>Тропа к вершине</h3><p>Крутой подъём по гребню с цепями и видом на всю долину. Разрешение берут заранее.</p></div>
       <div class="act"><h3>Смотровая площадка</h3><p>Короткая тропа к лучшему виду на каньон, особенно на закате.</p></div>
-      <div class="act"><h3>Гранд-Каньон</h3><p>Самый известный каньон мира — пропасть глубиной полтора километра. От Зайона это дальняя поездка: около 4,5 часов в одну сторону, лучше выделить на неё отдельный день.</p></div>
+      <div class="act"><h3>Гранд-Каньон</h3><p>Самый известный каньон мира — пропасть глубиной полтора километра. От Зайона это дальняя поездка (около 4,5 часов в одну сторону) — едем по плану-максимум.</p></div>
+      <div class="act"><h3>Брайс-Каньон — спокойная замена</h3><p>Амфитеатр из тысяч оранжевых каменных столбов всего в полутора-двух часах от Зайона. Выбираем его, если хотим меньше дороги.</p></div>
     </div>
   </div>
 </section>
@@ -574,7 +594,7 @@
         <h2>Джошуа-Три</h2>
         <p class="stop-meta">14–17 октября · последняя пустыня и дорога домой</p>
         <p class="stop-leg">От каньонов до Лос-Анджелеса · ~2 дня в дороге</p>
-        <p class="stop-lede">Последняя остановка — пустынный парк с причудливыми деревьями-юкками и огромными валунами. Дальше спокойная дорога в Лос-Анджелес и вылет домой.</p>
+        <p class="stop-lede">Последняя остановка — пустынный парк с причудливыми деревьями-юкками и огромными валунами. Это часть плана-максимум: если выберем спокойный путь, вернёмся в Лос-Анджелес через Вегас, а парк оставим на другой раз.</p>
         <div class="stop-facts">
           <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 29°, ночью около 14°</span>
           <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.5 5.7 6.2.5-4.7 4.1 1.4 6.1L12 16.8 6.4 20l1.4-6.1-4.7-4.1 6.2-.5z"/></svg>Парк тёмного неба — ночью потрясающие звёзды</span>
@@ -593,6 +613,42 @@
       <div class="act"><h3>Отдых в Лос-Анджелесе</h3><p>16 октября — спокойный день у океана в Санта-Монике: душ, отдых и сборы перед дальней дорогой домой.</p></div>
       <div class="act"><h3>Вылет домой, 17 октября</h3><p>Днём сдаём машину в аэропорту Лос-Анджелеса и рейсом Катарских авиалиний летим домой через Доху.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="sched reveal" id="schedule" aria-label="План по дням">
+  <div class="wrap">
+    <p class="kicker">Когда выезжаем</p>
+    <h2>План по дням</h2>
+    <p class="note">Время выезда примерное, везде местное. Длинные дороги помечены. На 13–15 октября два сценария: план-максимум — успеваем всё, и спокойный план — решаете утром 13-го по самочувствию.</p>
+
+    <div class="day"><div class="d">30 сент<small>среда</small></div><div class="c"><p>Прилёт в Сан-Франциско в 14:15. Только заселение, ужин и сон — по внутренним часам будет глубокая ночь.</p></div></div>
+    <div class="day"><div class="d">1 окт<small>четверг</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Сан-Франциско, лёгкий день: набережная, рынок у воды, ранний отбой.</p></div></div>
+    <div class="day"><div class="d">2 окт<small>пятница</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Сан-Франциско: Алькатрас, велосипед по мосту Золотые Ворота.</p></div></div>
+    <div class="day"><div class="d">3 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>С утра — лес секвой (полчаса пути), к обеду назад в город. Вечером бейсбол, если повезёт с расписанием матчей.</p></div></div>
+    <div class="day"><div class="d">4 окт<small>воскресенье</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Свободный день в Сан-Франциско: холмы, парки или винодельни неподалёку.</p></div></div>
+    <div class="day"><div class="d">5 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~9:00</span><p>В Биг-Сур (~3 часа с остановками). День на мост над обрывом, водопад и пляж. Ночь в Монтерее или Кармеле.</p></div></div>
+    <div class="day"><div class="d">6 окт<small>вторник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: вдоль океана в Лос-Анджелес (~7–8 часов с фотоостановками). К вечеру в отеле.</p></div></div>
+    <div class="day"><div class="d">7 окт<small>среда</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Лос-Анджелес: пирс Санта-Моника, пляж Венис, вечером смотровая и надпись Голливуд.</p></div></div>
+    <div class="day"><div class="d">8 окт<small>четверг</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~9:30</span><p>В Сан-Диего (~2,5–3 часа). После обеда — морские львы в бухте Ла-Хойя.</p></div></div>
+    <div class="day"><div class="d">9 окт<small>пятница</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Сан-Диего: пляжи, плавание с маской, закат на обрывах.</p></div></div>
+    <div class="day"><div class="d">10 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: через пустыню в Лас-Вегас (~7 часов с остановками). Вечером фонтаны и огни города.</p></div></div>
+    <div class="day"><div class="d">11 окт<small>воскресенье</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>С утра — Долина красных скал (час пути в одну сторону), к вечеру назад: Стрип или колесо обозрения.</p></div></div>
+    <div class="day"><div class="d">12 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>В Зайон (~3,5 часа; в Юте часы на час вперёд). К обеду на месте, после — лёгкие тропы и закатная смотровая. Ночь в Спрингдейле у входа в парк.</p></div></div>
+    <div class="day day--fork"><div class="d">13 окт<small>вторник</small></div><div class="c"><p>Утро — развилка, решаете по самочувствию:</p>
+      <div class="plan"><b>План-максимум.</b> Выезд ~8:00 — Гранд-Каньон (~6,5 ч с остановками; в Аризоне часы на час назад, на месте около 14:00). День и закат на краю каньона, ночь у парка.</div>
+      <div class="plan"><b>Спокойный план.</b> Остаёмся: целый день прогулка по реке в Зайоне или поездка в Брайс-Каньон — оранжевые каменные столбы в 1,5–2 часах. Ночь снова в Спрингдейле.</div>
+    </div></div>
+    <div class="day day--fork"><div class="d">14 окт<small>среда</small></div><div class="c">
+      <div class="plan"><b>План-максимум.</b> Рассвет на каньоне, выезд не позже 9:30 — Джошуа-Три (~9 ч с остановками, приезд к сумеркам). Вечером — звёздное небо. Если в дороге поймёте, что тяжело, — просто заночуйте в мотеле по трассе, это нормальный запасной ход.</div>
+      <div class="plan"><b>Спокойный план.</b> Выезд ~10:00 — Лас-Вегас (~3,5 часа), спокойный вечер без спешки.</div>
+    </div></div>
+    <div class="day day--fork"><div class="d">15 окт<small>четверг</small></div><div class="c"><p>Сдача машины — в любом сценарии до 15:00, бак заправить заранее по дороге, машину сфотографировать со всех сторон.</p>
+      <div class="plan"><b>План-максимум.</b> Утро среди валунов Джошуа-Три, выезд из парка не позже 10:30 — Лос-Анджелес (~3 часа), сдача машины, отель у океана.</div>
+      <div class="plan"><b>Спокойный план.</b> Выезд ~8:30 из Вегаса — Лос-Анджелес (~4,5 часа), сдача машины около 14:00.</div>
+    </div></div>
+    <div class="day"><div class="d">16 окт<small>пятница</small></div><div class="c"><span class="dep dep--calm">Без машины</span><p>Полный день отдыха у океана в Санта-Монике. Никаких планов. Вечером собрать чемоданы.</p></div></div>
+    <div class="day"><div class="d">17 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Из отеля ~12:30</span><p>На такси в аэропорт к 13:20 — за три часа до рейса. Вылет домой в 16:20.</p></div></div>
   </div>
 </section>
 
