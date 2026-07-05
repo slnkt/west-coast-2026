@@ -218,11 +218,6 @@
     .day{grid-template-columns:1fr;gap:6px}
     .day .d small{display:inline;margin-left:.5em}
   }
-  /* ---------- ROADS ---------- */
-  .roads{padding:clamp(56px,9vw,120px) 0;border-top:1px solid var(--line);background:var(--paper-2)}
-  .roads h2{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(2rem,5vw,3.4rem);line-height:1;letter-spacing:-.015em;margin:.1em 0 .45em}
-  .roads .note{margin:0 0 clamp(10px,2vw,18px);color:var(--ink-soft);font-weight:300;max-width:56ch;font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.5}
-
   .flights{padding:clamp(56px,9vw,120px) 0;border-top:1px solid var(--line)}
   .flights h2{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(2rem,5vw,3.4rem);line-height:1;letter-spacing:-.015em;margin:.1em 0 .45em}
   .flights .note{margin:0 0 clamp(20px,3vw,34px);color:var(--ink-soft);font-weight:300;max-width:56ch;font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.5}
@@ -378,7 +373,7 @@
   <span class="nav__brand">Запад&nbsp;США</span>
   <div class="nav__links">
     <div class="ndrop" id="ndrop">
-      <button class="ndrop__btn" id="ndropBtn" aria-expanded="false" aria-controls="stopsMenu">Места<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 9 7 7 7-7"/></svg></button>
+      <button class="ndrop__btn" id="ndropBtn" aria-expanded="false" aria-controls="stopsMenu">Остановки<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 9 7 7 7-7"/></svg></button>
       <div class="ndrop__menu" id="stopsMenu">
         <a class="all" href="#intro">Весь маршрут списком</a>
         <a href="#s01"><b>01</b>Сан-Франциско</a>
@@ -392,7 +387,6 @@
     </div>
     <a href="#map-section">Карта</a>
     <a href="#schedule">По дням</a>
-    <a href="#roads">Дороги</a>
     <a href="#flights">Рейсы</a>
     <a href="#budget">Смета</a>
   </div>
@@ -688,13 +682,13 @@
     <div class="day"><div class="d">3 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>С утра — лес секвой (полчаса пути), к обеду назад в город. Обратный проезд по мосту платный, ~10 долларов с машины. Вечером бейсбол, если повезёт с расписанием матчей.</p></div></div>
     <div class="day"><div class="d">4 окт<small>воскресенье</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Свободный день в Сан-Франциско: холмы, парки или винодельни неподалёку.</p></div></div>
     <div class="day"><div class="d">5 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~9:00</span><p>В Биг-Сур (~3 часа с остановками). День на мост над обрывом, водопад и пляж. Ночь в Монтерее или Кармеле.</p></div></div>
-    <div class="day"><div class="d">6 окт<small>вторник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: вдоль океана в Лос-Анджелес (~7–8 часов с фотоостановками). К вечеру в отеле.</p></div></div>
+    <div class="day"><div class="d">6 окт<small>вторник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: вдоль океана в Лос-Анджелес (~7–8 часов с фотоостановками). Выезжаем рано ещё и затем, чтобы въехать в город до вечерних пробок — с 15:30 до 19:30 дороги там стоят.</p></div></div>
     <div class="day"><div class="d">7 окт<small>среда</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Лос-Анджелес: пирс Санта-Моника, пляж Венис, вечером смотровая и надпись Голливуд.</p></div></div>
-    <div class="day"><div class="d">8 окт<small>четверг</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>Диснейленд — меньше часа от отеля, он как раз по дороге на юг. Целый день в парке, вечером ~1,5 часа до Сан-Диего.</p></div></div>
+    <div class="day"><div class="d">8 окт<small>четверг</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>Диснейленд — меньше часа от отеля, он как раз по дороге на юг. Целый день в парке, вечером ~1,5 часа до Сан-Диего. На шоссе не заезжаем в платные полосы со знаками «Express Lanes» — бесплатные всегда рядом.</p></div></div>
     <div class="day"><div class="d">9 окт<small>пятница</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Сан-Диего: морские львы в бухте Ла-Хойя, пляжи, плавание с маской, закат на обрывах.</p></div></div>
-    <div class="day"><div class="d">10 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: через пустыню в Лас-Вегас (~7 часов с остановками). Вечером фонтаны и огни города.</p></div></div>
+    <div class="day"><div class="d">10 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: через пустыню в Лас-Вегас (~7 часов с остановками). В субботу утром трасса свободна — стоит она по пятницам вечером и воскресеньям. Вечером фонтаны и огни города.</p></div></div>
     <div class="day"><div class="d">11 окт<small>воскресенье</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>С утра — Долина красных скал (час пути в одну сторону), к вечеру назад: Стрип или колесо обозрения.</p></div></div>
-    <div class="day"><div class="d">12 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>В Зайон (~3,5 часа; в Юте часы на час вперёд). К обеду на месте, после — лёгкие тропы и закатная смотровая. Ночь в Спрингдейле у входа в парк.</p></div></div>
+    <div class="day"><div class="d">12 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>В Зайон (~3,5 часа; в Юте часы на час вперёд). Связи в пустыне и парках почти нет — офлайн-карты скачиваем заранее. На въезде покупаем годовой абонемент на парки (250 долларов на машину — выгоднее разовых билетов). После обеда — лёгкие тропы и закатная смотровая, ночь в Спрингдейле.</p></div></div>
     <div class="day day--fork"><div class="d">13 окт<small>вторник</small></div><div class="c"><p>Утро — развилка, решаете по самочувствию:</p>
       <div class="plan"><b>План-максимум.</b> Выезд ~8:00 — Гранд-Каньон (~6,5 ч с остановками; в Аризоне часы на час назад, на месте около 14:00). День и закат на краю каньона, ночь у парка.</div>
       <div class="plan"><b>Спокойный план.</b> Остаёмся: целый день прогулка по реке в Зайоне или поездка в Брайс-Каньон — оранжевые каменные столбы в 1,5–2 часах. Ночь снова в Спрингдейле.</div>
@@ -709,22 +703,6 @@
     </div></div>
     <div class="day"><div class="d">16 окт<small>пятница</small></div><div class="c"><span class="dep dep--calm">Без машины</span><p>Полный день отдыха у океана в Санта-Монике. Никаких планов. Вечером собрать чемоданы.</p></div></div>
     <div class="day"><div class="d">17 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Из отеля ~12:30</span><p>На такси в аэропорт к 13:20 — за три часа до рейса. Вылет домой в 16:20.</p></div></div>
-  </div>
-</section>
-
-<section class="roads reveal" id="roads" aria-label="Платные дороги и пробки">
-  <div class="wrap">
-    <p class="kicker">Полезно за рулём</p>
-    <h2>Платные дороги и пробки</h2>
-    <p class="note">Хорошая новость: почти весь маршрут по четырём штатам — бесплатные дороги. Вот всё, что нужно знать про оплату и заторы.</p>
-    <div class="acts stagger">
-      <div class="act"><h3>Единственный платный участок</h3><p>Мост Золотые Ворота при возвращении в Сан-Франциско: около 10 долларов с машины, только в одну сторону. Будок нет — камера фотографирует номер. У нас он случится один раз, в день поездки к секвойям.</p></div>
-      <div class="act"><h3>Как оплатить мост на прокатной машине</h3><p>Самим на сайте оплаты мостов залива (bayareafastrak.org) в течение двух суток после проезда — это дешевле. Либо через программу проката, но там комиссия около 5 долларов в день. Уточним на стойке при получении машины.</p></div>
-      <div class="act"><h3>Экспресс-полосы объезжаем</h3><p>В Лос-Анджелесе и Сан-Диего на шоссе есть платные скоростные полосы со знаками «Express Lanes» и «FasTrak». Они не нужны: бесплатные полосы всегда рядом. Просто не заезжаем под эти знаки.</p></div>
-      <div class="act"><h3>Въезд в парки — по абонементу</h3><p>С 2026 года иностранцам в Зайоне, Брайсе и на Гранд-Каньоне к билету добавляют по 100 долларов с человека. Выход: один годовой абонемент на парки за 250 долларов — действует на всех в машине и покрывает все наши парки. Экономит около 450 долларов.</p></div>
-      <div class="act"><h3>Пробки Лос-Анджелеса</h3><p>Худшее время за рулём: утром с 7 до 10 и вечером с 15:30 до 19:30. Наши выезды в плане подобраны между пиками; в день Диснейленда чем раньше выедем — тем свободнее.</p></div>
-      <div class="act"><h3>Дорога на Вегас и живые пробки</h3><p>Трасса из Калифорнии в Вегас стоит в пятницу вечером туда и в воскресенье днём обратно — мы едем в субботу утром, это удачно. Заторы смотрим в картах на телефоне; в пустыне и парках связи нет, поэтому заранее скачаем офлайн-карты.</p></div>
-    </div>
   </div>
 </section>
 
@@ -941,9 +919,9 @@
   var STOPS=[
     [37.7749,-122.4194,"Сан-Франциско","Старт маршрута","s01"],
     [36.3715,-121.9018,"Биг-Сур","≈ 2 ч 45 мин от Сан-Франциско","s02"],
-    [34.0522,-118.2437,"Лос-Анджелес","≈ 6 ч 30 мин от Биг-Сура","s03"],
-    [32.7157,-117.1611,"Сан-Диего","≈ 2 ч 30 мин от Лос-Анджелеса","s04"],
-    [36.1699,-115.1398,"Лас-Вегас","≈ 6 часов от Сан-Диего","s05"],
+    [34.0522,-118.2437,"Лос-Анджелес","≈ 6 ч 30 мин от Биг-Сура. Вечером в городе пробки — въезжаем до 15:30","s03"],
+    [32.7157,-117.1611,"Сан-Диего","≈ 2 ч 30 мин от Лос-Анджелеса, по дороге Диснейленд. Платные полосы Express Lanes объезжаем — бесплатные рядом","s04"],
+    [36.1699,-115.1398,"Лас-Вегас","≈ 6 часов от Сан-Диего. В субботу утром трасса свободна (стоит она по пятницам вечером и воскресеньям)","s05"],
     [37.2690,-112.9477,"Зайон и Гранд-Каньон","≈ 3 ч 20 мин от Лас-Вегаса","s06"],
     [34.0117,-116.1667,"Джошуа-Три","Дорога от каньонов, ~2 дня","s07"]
   ];
@@ -967,6 +945,9 @@
     SPOTS.forEach(function(s){
       L.circleMarker([s[0],s[1]],{radius:5,color:'#fff',weight:2,fillColor:'#7c4d29',fillOpacity:1}).addTo(map).bindTooltip(s[2],{direction:'top'});
     });
+    var toll=L.circleMarker([37.8199,-122.4783],{radius:7,color:'#fff',weight:2,fillColor:'#b3452c',fillOpacity:1}).addTo(map);
+    toll.bindTooltip('Платный мост · ~10 $',{direction:'top'});
+    toll.bindPopup('<div class="mp"><strong>Мост Золотые Ворота — платный</strong><span>Единственный платный участок всего маршрута: ~10 $ с машины, только при въезде в город. Будок нет — камера снимает номер. Оплатить самим на сайте моста в течение двух суток (дешевле) или через программу проката (+5 $ в день). У нас — один раз, в день секвой.</span></div>');
     map.fitBounds(line.getBounds(),{padding:[30,30]});
   }
   function loadMap(){
