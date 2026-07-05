@@ -6,6 +6,10 @@
 <title>Запад США — путеводитель по маршруту</title>
 <meta name="description" content="Дорожное путешествие по западу США: Сан-Франциско, Биг-Сур, Лос-Анджелес, Сан-Диего, Лас-Вегас, Зайон и Гранд-Каньон. 30 сентября – 17 октября, около 3 000 км.">
 <meta name="theme-color" content="#1b1714">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="https://slnkt.github.io/west-coast-2026/">
 
 <meta property="og:type" content="website">
@@ -72,13 +76,23 @@
     padding:clamp(14px,2.4vw,22px) clamp(20px,5vw,64px);
     color:#fff;transition:background .5s var(--ease),color .5s var(--ease),box-shadow .5s var(--ease),padding .5s var(--ease);
   }
-  .nav__brand{font-size:.78rem;letter-spacing:.34em;text-transform:uppercase;font-weight:600}
-  .nav__meta{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+  .nav{flex-wrap:wrap;row-gap:8px}
+  .nav__brand{font-size:.78rem;letter-spacing:.34em;text-transform:uppercase;font-weight:600;white-space:nowrap}
+  .nav__links{display:flex;align-items:center;gap:clamp(14px,2.2vw,30px)}
+  .nav__links a{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+    text-decoration:none;color:inherit;opacity:.82;white-space:nowrap;transition:opacity .3s var(--ease),color .3s var(--ease)}
+  .nav__links a:hover{opacity:1}
   .nav.scrolled{
     background:rgba(247,243,236,.86);backdrop-filter:saturate(140%) blur(12px);
     color:var(--ink);box-shadow:0 1px 0 var(--line);padding-top:12px;padding-bottom:12px;
   }
-  @media(max-width:640px){ .nav__meta{display:none} }
+  .nav.scrolled .nav__links a:hover{color:var(--accent-deep)}
+  @media(max-width:760px){
+    .nav{padding-top:11px;padding-bottom:9px}
+    .nav__links{flex-basis:100%;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px;gap:12px;justify-content:space-between}
+    .nav__links a{font-size:.65rem;letter-spacing:.11em}
+    .nav__links::-webkit-scrollbar{display:none}
+  }
 
   /* ---------- HERO ---------- */
   .hero{position:relative;height:100svh;min-height:560px;overflow:hidden;display:flex;align-items:flex-end}
@@ -143,7 +157,7 @@
   .mp strong{display:block;font-family:"Fraunces",serif;font-size:1.08rem;font-weight:500;line-height:1.15;margin-bottom:4px}
   .mp span{display:block;color:var(--ink-soft);font-size:.82rem;margin-bottom:8px}
   .mp a{color:var(--accent-deep);font-weight:600;font-size:.82rem;text-decoration:none;border-bottom:1px solid var(--accent)}
-  .stop,.mapsec,#intro,#budget{scroll-margin-top:74px}
+  .stop,.mapsec,.sched,.flights,#intro,#budget{scroll-margin-top:92px}
 
   /* ---------- BUDGET ---------- */
   .budget{padding:clamp(56px,9vw,120px) 0;border-top:1px solid var(--line)}
@@ -337,7 +351,13 @@
 
 <nav class="nav" id="nav" aria-label="Шапка">
   <span class="nav__brand">Запад&nbsp;США</span>
-  <span class="nav__meta">30.09 – 17.10 · 3 000 км</span>
+  <div class="nav__links">
+    <a href="#intro">Маршрут</a>
+    <a href="#map-section">Карта</a>
+    <a href="#schedule">По дням</a>
+    <a href="#flights">Рейсы</a>
+    <a href="#budget">Смета</a>
+  </div>
 </nav>
 
 <header class="hero">
@@ -476,13 +496,15 @@
       <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-santa-monica.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Пирс с колесом обозрения на закате"><figcaption>Пирс Санта-Моника</figcaption></figure>
       <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-venice.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Скейтер в прыжке на закате"><figcaption>Пляж Венис</figcaption></figure>
       <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-hollywood.jpg" width="2000" height="1360" loading="lazy" decoding="async" alt="Надпись Голливуд на склоне холма"><figcaption>Надпись Голливуд</figcaption></figure>
-      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-el-matador.jpg" width="2000" height="1335" loading="lazy" decoding="async" alt="Скала с аркой на диком пляже"><figcaption>Дикий пляж Малибу</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-el-matador.jpg" width="2000" height="1335" loading="lazy" decoding="async" alt="Скала с аркой на диком пляже"><figcaption>Дикий пляж Малибу</figcaption></figure>
+      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/03-la-disneyland.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Розовый замок Спящей красавицы в Диснейленде"><figcaption>Диснейленд</figcaption></figure>
     </div>
     <div class="acts stagger">
       <div class="act"><h3>Пирс с колесом обозрения</h3><p>Парк аттракционов прямо над океаном на длинном деревянном пирсе.</p></div>
       <div class="act"><h3>Пляж с уличной жизнью</h3><p>Набережная с артистами, скейт-парком и уличными тренажёрами.</p></div>
       <div class="act"><h3>Закат среди скал</h3><p>Дикий пляж Малибу с большими камнями и гротами — лучшее место для заката.</p></div>
       <div class="act"><h3>Смотровая над городом</h3><p>Площадка на холме: вид на весь город и надпись Голливуд.</p></div>
+      <div class="act"><h3>Диснейленд</h3><p>Целый день в самом первом парке Диснея — по дороге в Сан-Диего. Билеты покупают заранее онлайн, примерно 120–180 долларов с человека в зависимости от дня.</p></div>
     </div>
   </div>
 </section>
@@ -496,7 +518,7 @@
         <p class="kicker">Остановка четвёртая</p>
         <h2>Сан-Диего</h2>
         <p class="stop-meta">8–10 октября · 2 ночи</p>
-        <p class="stop-leg">Перегон от Лос-Анджелеса · ≈ 195 км · ~2 ч 30 мин</p>
+        <p class="stop-leg">Перегон от Лос-Анджелеса через Диснейленд · ≈ 200 км</p>
         <p class="stop-lede">Самый южный и тёплый город маршрута: спокойный океан, морские львы и длинные пляжи.</p>
         <div class="stop-facts">
           <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 25°, ночью около 17°</span>
@@ -630,8 +652,8 @@
     <div class="day"><div class="d">5 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~9:00</span><p>В Биг-Сур (~3 часа с остановками). День на мост над обрывом, водопад и пляж. Ночь в Монтерее или Кармеле.</p></div></div>
     <div class="day"><div class="d">6 окт<small>вторник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: вдоль океана в Лос-Анджелес (~7–8 часов с фотоостановками). К вечеру в отеле.</p></div></div>
     <div class="day"><div class="d">7 окт<small>среда</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Лос-Анджелес: пирс Санта-Моника, пляж Венис, вечером смотровая и надпись Голливуд.</p></div></div>
-    <div class="day"><div class="d">8 окт<small>четверг</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~9:30</span><p>В Сан-Диего (~2,5–3 часа). После обеда — морские львы в бухте Ла-Хойя.</p></div></div>
-    <div class="day"><div class="d">9 окт<small>пятница</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Сан-Диего: пляжи, плавание с маской, закат на обрывах.</p></div></div>
+    <div class="day"><div class="d">8 окт<small>четверг</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>Диснейленд — меньше часа от отеля, он как раз по дороге на юг. Целый день в парке, вечером ~1,5 часа до Сан-Диего.</p></div></div>
+    <div class="day"><div class="d">9 окт<small>пятница</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Сан-Диего: морские львы в бухте Ла-Хойя, пляжи, плавание с маской, закат на обрывах.</p></div></div>
     <div class="day"><div class="d">10 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: через пустыню в Лас-Вегас (~7 часов с остановками). Вечером фонтаны и огни города.</p></div></div>
     <div class="day"><div class="d">11 окт<small>воскресенье</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>С утра — Долина красных скал (час пути в одну сторону), к вечеру назад: Стрип или колесо обозрения.</p></div></div>
     <div class="day"><div class="d">12 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>В Зайон (~3,5 часа; в Юте часы на час вперёд). К обеду на месте, после — лёгкие тропы и закатная смотровая. Ночь в Спрингдейле у входа в парк.</p></div></div>
@@ -767,6 +789,7 @@
         <li>Пляж Венис — Matteo Paganelli · CC0</li>
         <li>Надпись Голливуд — Thomas Wolf · CC BY-SA 3.0</li>
         <li>Дикий пляж Малибу — Sitao Xiang · CC BY-SA 4.0</li>
+        <li>Диснейленд — Carterhawk · CC BY-SA 3.0</li>
         <li>Пляж у отеля (Коронадо) — Dirk Hansen · CC BY-SA 3.0</li>
         <li>Бухта с морскими львами — Rhododendrites · CC BY-SA 4.0</li>
         <li>Обрывы на закате — Taylor L. Spurgeon · CC0</li>
@@ -861,6 +884,7 @@
   ];
   var SPOTS=[
     [36.0601,-112.1129,"Гранд-Каньон"],
+    [33.8121,-117.9190,"Диснейленд"],
     [33.9416,-118.4085,"Аэропорт · вылет домой"]
   ];
   var loaded=false;

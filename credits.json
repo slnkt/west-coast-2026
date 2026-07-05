@@ -310,5 +310,17 @@
     "artist": "Joshua Tree National Park",
     "license": "Public domain",
     "bytes": 917504
+  },
+  {
+    "file": "03-la-disneyland.jpg",
+    "query": "Sleeping Beauty Castle Disneyland",
+    "title": "File:Sleeping Beauty Castle DLR.jpg",
+    "width": 4272,
+    "height": 2848,
+    "url": "https://commons.wikimedia.org/wiki/File:Sleeping_Beauty_Castle_DLR.jpg",
+    "descUrl": "https://commons.wikimedia.org/wiki/File:Sleeping_Beauty_Castle_DLR.jpg",
+    "artist": "Carterhawk",
+    "license": "CC BY-SA 3.0",
+    "bytes": 610304
   }
 ]
