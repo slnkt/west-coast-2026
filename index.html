@@ -196,6 +196,16 @@
   .bud-total .row span:first-child{color:var(--ink-soft);font-size:.92rem}
   .bud-total .row span:last-child{font-family:"Fraunces",serif;font-size:clamp(1.25rem,2.6vw,1.8rem);font-weight:500;white-space:nowrap}
   .bud-foot{margin:clamp(24px,3vw,34px) 0 0;font-size:.82rem;color:var(--ink-soft);font-style:italic;line-height:1.6;max-width:62ch}
+  .calc{margin:clamp(20px,3vw,30px) 0 0;border-top:1px solid var(--line);padding-top:16px}
+  .calc summary{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep);font-weight:600;cursor:pointer;list-style:none}
+  .calc summary::-webkit-details-marker{display:none}
+  .calc summary::before{content:"+ ";color:var(--accent)}
+  .calc[open] summary::before{content:"− "}
+  .calc ul{margin:15px 0 0;padding:0;list-style:none;font-size:.92rem;color:var(--ink);line-height:1.8;max-width:60ch}
+  .calc li{padding-left:16px;position:relative}
+  .calc li::before{content:"·";position:absolute;left:3px;color:var(--accent);font-weight:700}
+  .calc li b{font-weight:600;color:var(--accent-deep)}
+  .calc li.total{margin-top:8px;padding-top:10px;border-top:1px solid var(--line)}
   @media(max-width:640px){ .bud-totals{grid-template-columns:1fr} }
 
   /* ---------- SCHEDULE ---------- */
@@ -686,18 +696,18 @@
     <div class="day"><div class="d">7 окт<small>среда</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Лос-Анджелес: пирс Санта-Моника, пляж Венис, вечером смотровая и надпись Голливуд.</p></div></div>
     <div class="day"><div class="d">8 окт<small>четверг</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>Диснейленд — меньше часа от отеля, он как раз по дороге на юг. Целый день в парке, вечером ~1,5 часа до Сан-Диего. На шоссе не заезжаем в платные полосы со знаками «Express Lanes» — бесплатные всегда рядом.</p></div></div>
     <div class="day"><div class="d">9 окт<small>пятница</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Сан-Диего: морские львы в бухте Ла-Хойя, пляжи, плавание с маской, закат на обрывах.</p></div></div>
-    <div class="day"><div class="d">10 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: через пустыню в Лас-Вегас (~7 часов с остановками). В субботу утром трасса свободна — стоит она по пятницам вечером и воскресеньям. Вечером фонтаны и огни города.</p></div></div>
+    <div class="day"><div class="d">10 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: через пустыню в Лас-Вегас (~7 часов с остановками). Перед выездом заправляемся под завязку — дальше заправки редкие, а в Неваде бензин дешевле калифорнийского. В субботу утром трасса свободна. Вечером фонтаны и огни города.</p></div></div>
     <div class="day"><div class="d">11 окт<small>воскресенье</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>С утра — Долина красных скал (час пути в одну сторону), к вечеру назад: Стрип или колесо обозрения.</p></div></div>
-    <div class="day"><div class="d">12 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>В Зайон (~3,5 часа; в Юте часы на час вперёд). Связи в пустыне и парках почти нет — офлайн-карты скачиваем заранее. На въезде покупаем годовой абонемент на парки (250 долларов на машину — выгоднее разовых билетов). После обеда — лёгкие тропы и закатная смотровая, ночь в Спрингдейле.</p></div></div>
+    <div class="day"><div class="d">12 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>В Зайон (~3,5 часа; в Юте часы на час вперёд). Заправляемся полным баком и качаем офлайн-карты заранее — связи в пустыне и парках почти нет. На въезде покупаем годовой абонемент на парки (250 долларов на машину — выгоднее разовых билетов). После обеда — лёгкие тропы и закатная смотровая, ночь в Спрингдейле.</p></div></div>
     <div class="day day--fork"><div class="d">13 окт<small>вторник</small></div><div class="c"><p>Утро — развилка, решаете по самочувствию:</p>
-      <div class="plan"><b>План-максимум.</b> Выезд ~8:00 — Гранд-Каньон (~6,5 ч с остановками; в Аризоне часы на час назад, на месте около 14:00). День и закат на краю каньона, ночь у парка.</div>
+      <div class="plan"><b>План-максимум.</b> Выезд ~8:00, с полным баком — Гранд-Каньон (~6,5 ч с остановками; в Аризоне часы на час назад, на месте около 14:00). Длинный пустынный перегон, заправки редкие. День и закат на краю каньона, ночь у парка.</div>
       <div class="plan"><b>Спокойный план.</b> Остаёмся: целый день прогулка по реке в Зайоне или поездка в Брайс-Каньон — оранжевые каменные столбы в 1,5–2 часах. Ночь снова в Спрингдейле.</div>
     </div></div>
     <div class="day day--fork"><div class="d">14 окт<small>среда</small></div><div class="c">
       <div class="plan"><b>План-максимум.</b> Рассвет на каньоне, выезд не позже 9:30 — Джошуа-Три (~9 ч с остановками, приезд к сумеркам). Вечером — звёздное небо. Если в дороге поймёте, что тяжело, — просто заночуйте в мотеле по трассе, это нормальный запасной ход.</div>
       <div class="plan"><b>Спокойный план.</b> Выезд ~10:00 — Лас-Вегас (~3,5 часа), спокойный вечер без спешки.</div>
     </div></div>
-    <div class="day day--fork"><div class="d">15 окт<small>четверг</small></div><div class="c"><p>Приезжаем в Лос-Анджелес, машину пока оставляем при себе — сдаём завтра к 15:00.</p>
+    <div class="day day--fork"><div class="d">15 окт<small>четверг</small></div><div class="c"><p>Приезжаем в Лос-Анджелес, машину пока оставляем при себе — сдаём завтра к 15:00. Последнюю заправку делаем ещё в пустыне и неполную — чтобы приехать почти пустыми и не отдавать бензин даром (если по брони он оплачен заранее — сверьте в ваучере Sixt).</p>
       <div class="plan"><b>План-максимум.</b> Утро среди валунов Джошуа-Три, выезд из парка не позже 10:30 — Лос-Анджелес (~3 часа), заселяемся у океана.</div>
       <div class="plan"><b>Спокойный план.</b> Выезд ~8:30 из Вегаса — Лос-Анджелес (~4,5 часа), заселяемся у океана.</div>
     </div></div>
@@ -778,21 +788,31 @@
       <div class="bud-row"><span class="l">Перелёт туда-обратно<small>На человека · Катарские авиалинии</small></span><span class="v">117 897 ₽</span></div>
       <div class="bud-row"><span class="l">Места с простором для ног<small>Доплата на всех</small></span><span class="v">82 000 ₽</span></div>
       <div class="bud-row"><span class="l">Аренда машины<small>На троих · 30 сент – 16 окт</small></span><span class="v">$2 182<small>≈ 164 000 ₽</small></span></div>
-      <div class="bud-row"><span class="l">Бензин<small>На троих · ~3 300 км пути</small></span><span class="v">~$450<small>≈ 34 000 ₽</small></span></div>
+      <div class="bud-row"><span class="l">Бензин<small>На троих · ~3 300 км · GMC Acadia</small></span><span class="v">~$460<small>≈ 35 000 ₽</small></span></div>
       <div class="bud-row"><span class="l">Парки и платный мост<small>Годовой абонемент на парки (на всю машину) + мост в Сан-Франциско</small></span><span class="v">~$260<small>≈ 19 500 ₽</small></span></div>
       <div class="bud-row"><span class="l">Еда<small>~$50 на человека в день</small></span><span class="v">~$850 на человека<small>≈ 64 000 ₽</small></span></div>
     </div>
     <div class="bud-totals">
       <div class="bud-total">
         <p class="tl">На человека</p>
-        <div class="row"><span>Перелёт, места, машина, бензин, еда, парки</span><span>~281 000 ₽</span></div>
+        <div class="row"><span>Перелёт, места, машина, бензин, еда, парки</span><span>~282 000 ₽</span></div>
       </div>
       <div class="bud-total">
         <p class="tl">На троих</p>
-        <div class="row"><span>Всё вместе</span><span>~844 000 ₽</span></div>
+        <div class="row"><span>Всё вместе</span><span>~845 000 ₽</span></div>
       </div>
     </div>
     <p class="bud-foot">Курс ~75 ₽ за доллар (на июнь 2026). Цены на бензин и еду примерные: в Калифорнии бензин самый дорогой — около 6 долларов за галлон. Не входят жильё и платные развлечения — Диснейленд, Алькатрас, бейсбол.</p>
+    <details class="calc">
+      <summary>Как считали бензин</summary>
+      <ul>
+        <li>Машина — <b>GMC Acadia</b>: бак ~77 литров, реальный расход ~10,5 литра на 100 км, полного бака хватает примерно на 700 км.</li>
+        <li>Весь путь — <b>~3 300 км</b> (маршрут ~3 000 км плюс поездки по городам и паркам).</li>
+        <li>Нужно бензина: 3 300 × 10,5 ÷ 100 ≈ <b>350 литров</b> — это около 5 полных баков, заправимся примерно 4–5 раз (первый бак уже полный).</li>
+        <li>Цена — ~1,30 доллара за литр в среднем: в Калифорнии дороже (~1,55), в Неваде, Юте и Аризоне дешевле (~1,20) — там и заправляемся под завязку.</li>
+        <li class="total">Итого: 350 литров × ~1,30 ≈ <b>$450–470</b> — в смете округлили до ~$460.</li>
+      </ul>
+    </details>
   </div>
 </section>
 
