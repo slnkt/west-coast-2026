@@ -87,11 +87,31 @@
     color:var(--ink);box-shadow:0 1px 0 var(--line);padding-top:12px;padding-bottom:12px;
   }
   .nav.scrolled .nav__links a:hover{color:var(--accent-deep)}
+  .ndrop{position:relative}
+  .ndrop__btn{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:0;cursor:pointer;
+    font-family:"Inter",sans-serif;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+    color:inherit;opacity:.82;white-space:nowrap;transition:opacity .3s var(--ease)}
+  .ndrop__btn:hover{opacity:1}
+  .ndrop__btn svg{width:9px;height:9px;transition:transform .3s var(--ease)}
+  .ndrop.open .ndrop__btn svg{transform:rotate(180deg)}
+  .ndrop__menu{position:absolute;top:calc(100% + 12px);left:-10px;min-width:250px;z-index:60;
+    background:rgba(247,243,236,.97);backdrop-filter:saturate(140%) blur(12px);
+    border:1px solid var(--line);border-radius:10px;padding:8px;box-shadow:0 18px 44px rgba(31,26,21,.14);
+    opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s}
+  .ndrop.open .ndrop__menu{opacity:1;visibility:visible;transform:none}
+  .ndrop__menu a{display:flex;align-items:baseline;gap:10px;padding:9px 12px;border-radius:6px;
+    text-decoration:none;color:var(--ink);font-size:.88rem;font-weight:400;letter-spacing:0;text-transform:none;opacity:1}
+  .ndrop__menu a b{font-family:"Fraunces",serif;font-weight:500;font-size:.8rem;color:var(--accent);width:2ch;flex:none}
+  .ndrop__menu a:hover{background:var(--paper-2);color:var(--accent-deep)}
+  .ndrop__menu a.all{border-bottom:1px solid var(--line);border-radius:6px 6px 0 0;margin-bottom:4px;color:var(--ink-soft);font-size:.8rem}
   @media(max-width:760px){
     .nav{padding-top:11px;padding-bottom:9px}
-    .nav__links{flex-basis:100%;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px;gap:12px;justify-content:space-between}
-    .nav__links a{font-size:.65rem;letter-spacing:.11em}
+    .nav__links{flex-basis:100%;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px;gap:11px;justify-content:space-between}
+    .nav__links a,.ndrop__btn{font-size:.63rem;letter-spacing:.09em}
     .nav__links::-webkit-scrollbar{display:none}
+    .ndrop{position:static}
+    .ndrop__menu{left:clamp(12px,4vw,40px);right:clamp(12px,4vw,40px);min-width:0;top:calc(100% + 4px)}
+    .ndrop__menu a{font-size:.95rem;padding:11px 12px}
   }
 
   /* ---------- HERO ---------- */
@@ -357,9 +377,22 @@
 <nav class="nav" id="nav" aria-label="Шапка">
   <span class="nav__brand">Запад&nbsp;США</span>
   <div class="nav__links">
-    <a href="#intro">Маршрут</a>
+    <div class="ndrop" id="ndrop">
+      <button class="ndrop__btn" id="ndropBtn" aria-expanded="false" aria-controls="stopsMenu">Места<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 9 7 7 7-7"/></svg></button>
+      <div class="ndrop__menu" id="stopsMenu">
+        <a class="all" href="#intro">Весь маршрут списком</a>
+        <a href="#s01"><b>01</b>Сан-Франциско</a>
+        <a href="#s02"><b>02</b>Биг-Сур</a>
+        <a href="#s03"><b>03</b>Лос-Анджелес</a>
+        <a href="#s04"><b>04</b>Сан-Диего</a>
+        <a href="#s05"><b>05</b>Лас-Вегас</a>
+        <a href="#s06"><b>06</b>Зайон и Гранд-Каньон</a>
+        <a href="#s07"><b>07</b>Джошуа-Три</a>
+      </div>
+    </div>
     <a href="#map-section">Карта</a>
     <a href="#schedule">По дням</a>
+    <a href="#roads">Дороги</a>
     <a href="#flights">Рейсы</a>
     <a href="#budget">Смета</a>
   </div>
@@ -852,6 +885,16 @@
   var nav=document.getElementById('nav');
   var onScroll=function(){ nav.classList.toggle('scrolled', window.scrollY>40); };
   onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  // Stops dropdown in nav
+  var drop=document.getElementById('ndrop'), dropBtn=document.getElementById('ndropBtn');
+  if(drop&&dropBtn){
+    var setDrop=function(open){ drop.classList.toggle('open',open); dropBtn.setAttribute('aria-expanded',open?'true':'false'); };
+    dropBtn.addEventListener('click',function(e){ e.stopPropagation(); setDrop(!drop.classList.contains('open')); });
+    document.addEventListener('click',function(e){ if(!drop.contains(e.target)) setDrop(false); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') setDrop(false); });
+    drop.querySelectorAll('.ndrop__menu a').forEach(function(a){ a.addEventListener('click',function(){ setDrop(false); }); });
+  }
 
   // Reveal on scroll
   var io;
