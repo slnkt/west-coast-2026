@@ -327,6 +327,22 @@
   .act p{margin:0;color:var(--ink-soft);font-size:.98rem;font-weight:300;max-width:42ch}
   @media(max-width:680px){ .acts{grid-template-columns:1fr} }
 
+  /* ---------- CHECKLIST ---------- */
+  .chk{margin-top:clamp(40px,6vw,70px);border:1px solid var(--line);border-radius:10px;padding:clamp(22px,3vw,34px);background:rgba(255,255,255,.45)}
+  .chk__t{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.1;margin:0 0 .5em}
+  .chk__n{margin:0 0 clamp(20px,2.5vw,28px);color:var(--ink-soft);font-weight:300;font-size:.95rem;line-height:1.55;max-width:56ch}
+  .chk__gh{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep);font-weight:600;margin:clamp(20px,2.5vw,28px) 0 .7em}
+  .chk__gh:first-of-type{margin-top:0}
+  .chk__i{display:flex;gap:12px;align-items:flex-start;padding:9px 0;cursor:pointer;border-bottom:1px solid var(--line-soft)}
+  .chk__i:last-child{border-bottom:0}
+  .chk__i input{appearance:none;-webkit-appearance:none;flex:none;width:19px;height:19px;margin:2px 0 0;border:1.5px solid var(--line);border-radius:5px;background:#fff;cursor:pointer;position:relative;transition:background .2s,border-color .2s}
+  .chk__i input:checked{background:var(--accent);border-color:var(--accent)}
+  .chk__i input:checked::after{content:"";position:absolute;left:5.5px;top:2px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+  .chk__i span{font-size:.95rem;line-height:1.5;color:var(--ink)}
+  .chk__i b{font-weight:600}
+  .chk__i em{font-style:normal;color:var(--ink-soft);font-size:.86rem}
+  .chk__i input:checked+span b{color:var(--accent-deep)}
+
   /* ---------- FOOTER ---------- */
   .foot{background:var(--ink);color:#efe7da;padding:clamp(80px,13vw,180px) 0 clamp(40px,6vw,70px);text-align:center}
   .foot__line{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(1.7rem,5vw,3.6rem);
@@ -477,9 +493,34 @@
       <div class="act"><h3>Остров-тюрьма Алькатрас</h3><p>Бывшая тюрьма на острове посреди залива. Вечерняя экскурсия — самая интересная.</p></div>
       <div class="act"><h3>Велосипед по красному мосту</h3><p>Проехать по знаменитому мосту Золотые Ворота, обратно — на пароме.</p></div>
       <div class="act"><h3>Лес гигантских секвой</h3><p>Деревья высотой с дом, ~40 минут от города через мост Золотые Ворота. Парковку бронируют заранее онлайн. Лучше приехать утром.</p></div>
-      <div class="act"><h3>Бейсбол: решающие матчи</h3><p>В начале октября идут решающие матчи сезона. Если повезёт и дома играет местная команда, на стадионе у воды невероятно шумно и весело.</p></div>
+      <div class="act"><h3>Американский футбол</h3><p>4 октября — крупный матч лиги НФЛ на стадионе в Санта-Кларе, в часе езды от города. Самое большое спортивное событие за наши дни у залива.</p></div>
       <div class="act"><h3>Рынок с едой у воды</h3><p>Старое здание с часами, внутри — морепродукты, сыры и кофе.</p></div>
       <div class="act"><h3>Сезон молодого вина</h3><p>Сентябрь и октябрь — сбор урожая на винодельнях под городом. Хорошее время заехать на дегустацию.</p></div>
+    </div>
+
+    <div class="chk reveal">
+      <h3 class="chk__t">Чек-лист: что успеть в Сан-Франциско</h3>
+      <p class="chk__n">Отметьте галочками, что действительно хотите — так проще решить, чем занимать дни. Галочки сохраняются в вашем телефоне, у каждого свои. Свободные окна: вечер 1 октября, вторая половина 2-го, вторая половина и вечер 3-го, вечер 4-го после футбола.</p>
+
+      <p class="chk__gh">Уже стоит в плане</p>
+      <label class="chk__i"><input type="checkbox" data-k="sf1" checked><span><b>Мост Золотые Ворота</b> — пешком или на велосипеде до Саусалито, обратно паромом. <em>1 октября, полдня. Билеты не нужны.</em></span></label>
+      <label class="chk__i"><input type="checkbox" data-k="sf2" checked><span><b>Остров-тюрьма Алькатрас</b> — паром и экскурсия. <em>2 октября, около 3 часов. Билеты берут за 2–3 недели.</em></span></label>
+      <label class="chk__i"><input type="checkbox" data-k="sf3" checked><span><b>Лес гигантских секвой</b> — деревья высотой с дом. <em>3 октября утром, ~4 часа с дорогой. Нужна бронь парковки.</em></span></label>
+      <label class="chk__i"><input type="checkbox" data-k="sf5" checked><span><b>Американский футбол</b> — крупный матч в Санта-Кларе. <em>4 октября, занимает почти весь день.</em></span></label>
+      <label class="chk__i"><input type="checkbox" data-k="sf6" checked><span><b>Рынок с едой у воды</b> — морепродукты, сыры, кофе. <em>Любой вечер, 1–2 часа.</em></span></label>
+
+      <p class="chk__gh">Хорошо ложится в свободные окна</p>
+      <label class="chk__i"><input type="checkbox" data-k="sf7"><span><b>Канатный трамвай</b> — старинные вагончики по крутым холмам, символ города. <em>30–40 минут. На конечной бывает очередь.</em></span></label>
+      <label class="chk__i"><input type="checkbox" data-k="sf8"><span><b>Пирс 39 и морские львы</b> — колония львов лежит прямо на понтонах, рядом набережная. <em>1–2 часа, вечером.</em></span></label>
+      <label class="chk__i"><input type="checkbox" data-k="sf9"><span><b>Художественный дворец</b> — колоннада у пруда с лебедями, очень красиво. <em>30 минут. Совсем рядом с мостом — можно совместить 1 октября.</em></span></label>
+      <label class="chk__i"><input type="checkbox" data-k="sf10"><span><b>Ломбард-стрит</b> — самая извилистая улица в мире, восемь крутых поворотов. <em>20 минут, по пути.</em></span></label>
+      <label class="chk__i"><input type="checkbox" data-k="sf11"><span><b>Китайский квартал</b> — самый большой за пределами Азии, хорошее место пообедать. <em>1–2 часа.</em></span></label>
+
+      <p class="chk__gh">Если захочется больше</p>
+      <label class="chk__i"><input type="checkbox" data-k="sf12"><span><b>Парк Золотые Ворота</b> — японский чайный сад и оранжерея с цветами. <em>2–3 часа.</em></span></label>
+      <label class="chk__i"><input type="checkbox" data-k="sf13"><span><b>Смотровая на холмах Твин-Пикс</b> — весь город и залив с высоты, лучше на закате. <em>1 час, на машине.</em></span></label>
+      <label class="chk__i"><input type="checkbox" data-k="sf14"><span><b>Пляж Бейкер</b> — вид на мост снизу, самые эффектные фотографии. <em>1 час.</em></span></label>
+      <label class="chk__i"><input type="checkbox" data-k="sf15"><span><b>Винодельни Напы</b> — дегустация в сезон урожая. <em>Целый день — сейчас свободного дня нет, только вместо чего-то.</em></span></label>
     </div>
   </div>
 </section>
@@ -689,8 +730,8 @@
     <div class="day"><div class="d">30 сент<small>среда</small></div><div class="c"><p>Прилёт в Сан-Франциско в 14:15. Только заселение, ужин и сон — по внутренним часам будет глубокая ночь.</p></div></div>
     <div class="day"><div class="d">1 окт<small>четверг</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Мост Золотые Ворота: пешком или на велосипеде до городка Саусалито на той стороне, обратно — на пароме. Билеты не нужны, идём в своём темпе. После перелёта проснётесь рано — это как раз лучшее время на мосту. Вечером набережная и рынок у воды, ранний отбой.</p></div></div>
     <div class="day"><div class="d">2 окт<small>пятница</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Алькатрас: паром на остров и экскурсия по бывшей тюрьме (~3 часа). Билеты с точным временем — берём заранее, недели за две-три. Вечерняя экскурсия самая интересная. Остаток дня — холмы, канатный трамвай, кафе.</p></div></div>
-    <div class="day"><div class="d">3 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>С утра — лес секвой: ~40 минут через мост Золотые Ворота по серпантину. Парковку бронируем заранее онлайн — без брони не пускают. Обратный проезд по мосту платный, ~10 долларов с машины. К обеду назад в город; вечером — бейсбол, если совпадёт с расписанием.</p></div></div>
-    <div class="day"><div class="d">4 окт<small>воскресенье</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~11:00</span><p>Американский футбол, крупный матч лиги НФЛ: команда Сан-Франциско («Форти-Найнерс») против Денвера («Бронкос»). Начало в 13:25 на стадионе «Ливайс» в Санта-Кларе (~1 час от города). Самое большое спортивное событие за все дни у залива — билеты берут заранее онлайн.</p></div></div>
+    <div class="day"><div class="d">3 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>С утра — лес секвой: ~40 минут через мост Золотые Ворота по серпантину. Парковку бронируем заранее онлайн — без брони не пускают. Обратный проезд по мосту платный, ~10 долларов с машины. К обеду назад в город. Вторая половина дня свободна: канатный трамвай, Ломбард-стрит или Пирс 39 с морскими львами — выбирайте по чек-листу ниже.</p></div></div>
+    <div class="day"><div class="d">4 окт<small>воскресенье</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~11:00</span><p>Американский футбол, крупный матч лиги НФЛ: команда Сан-Франциско («Форти-Найнерс») против Денвера («Бронкос»). Начало в 13:25 на стадионе «Ливайс» в Санта-Кларе (~1 час от города). Билеты берут заранее онлайн. Матч заканчивается около 16:30, с учётом пробок после игры вернёмся в город к 18:00. Вечером — спокойный ужин у воды и огни набережной, без длинных переездов.</p></div></div>
     <div class="day"><div class="d">5 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~9:00</span><p>В Биг-Сур (~3 часа с остановками). День на мост над обрывом, водопад и пляж. Ночь в Монтерее или Кармеле.</p></div></div>
     <div class="day"><div class="d">6 окт<small>вторник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: вдоль океана в Лос-Анджелес (~7–8 часов с фотоостановками). Выезжаем рано ещё и затем, чтобы въехать в город до вечерних пробок — с 15:30 до 19:30 дороги там стоят.</p></div></div>
     <div class="day"><div class="d">7 окт<small>среда</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Лос-Анджелес: пирс Санта-Моника, пляж Венис, вечером смотровая и надпись Голливуд.</p></div></div>
@@ -802,7 +843,7 @@
         <div class="row"><span>Всё вместе</span><span>~845 000 ₽</span></div>
       </div>
     </div>
-    <p class="bud-foot">Курс ~75 ₽ за доллар (на июнь 2026). Цены на бензин и еду примерные: в Калифорнии бензин самый дорогой — около 6 долларов за галлон. Не входят жильё и платные развлечения — Диснейленд, Алькатрас, бейсбол.</p>
+    <p class="bud-foot">Курс ~75 ₽ за доллар (на июнь 2026). Цены на бензин и еду примерные: в Калифорнии бензин самый дорогой — около 6 долларов за галлон. Не входят жильё и платные развлечения — Диснейленд, Алькатрас, футбол.</p>
     <details class="calc">
       <summary>Как считали бензин</summary>
       <ul>
@@ -883,6 +924,16 @@
   var nav=document.getElementById('nav');
   var onScroll=function(){ nav.classList.toggle('scrolled', window.scrollY>40); };
   onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  // Checklist state saved on the device
+  try{
+    document.querySelectorAll('.chk__i input[data-k]').forEach(function(box){
+      var key='wc26-'+box.getAttribute('data-k');
+      var saved=localStorage.getItem(key);
+      if(saved!==null) box.checked=(saved==='1');
+      box.addEventListener('change',function(){ try{ localStorage.setItem(key, box.checked?'1':'0'); }catch(e){} });
+    });
+  }catch(e){}
 
   // Stops dropdown in nav
   var drop=document.getElementById('ndrop'), dropBtn=document.getElementById('ndropBtn');
