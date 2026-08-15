@@ -322,5 +322,17 @@
     "artist": "Carterhawk",
     "license": "CC BY-SA 3.0",
     "bytes": 610304
+  },
+  {
+    "file": "06-bryce-canyon.jpg",
+    "query": "Bryce Canyon amphitheater hoodoos",
+    "title": "File:Bryce Canyon National Park, (35023972375).jpg",
+    "width": 5520,
+    "height": 2560,
+    "url": "https://commons.wikimedia.org/wiki/File:Bryce_Canyon_National_Park,_(35023972375).jpg",
+    "descUrl": "https://commons.wikimedia.org/wiki/File:Bryce_Canyon_National_Park,_(35023972375).jpg",
+    "artist": "Bernard Spragg. NZ",
+    "license": "CC0",
+    "bytes": 892928
   }
 ]
