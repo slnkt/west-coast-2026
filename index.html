@@ -338,7 +338,11 @@
   @media(max-width:680px){ .acts{grid-template-columns:1fr} }
 
   /* ---------- CHECKLIST ---------- */
-  .chk{margin-top:clamp(40px,6vw,70px);border:1px solid var(--line);border-radius:10px;padding:clamp(22px,3vw,34px);background:rgba(255,255,255,.45)}
+  .chk,.stay{margin-top:clamp(40px,6vw,70px);border:1px solid var(--line);border-radius:10px;padding:clamp(22px,3vw,34px);background:rgba(255,255,255,.45)}
+  .stay__g{margin:clamp(16px,2vw,22px) 0 0;border-top:1px solid var(--line)}
+  .stay__r{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:9px 0;border-bottom:1px solid var(--line-soft,rgba(31,26,21,.08));font-size:.92rem}
+  .stay__r span{color:var(--ink)}
+  .stay__r b{font-weight:600;color:var(--accent-deep);white-space:nowrap;font-variant-numeric:tabular-nums}
   .chk__t{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.1;margin:0 0 .5em}
   .chk__n{margin:0 0 clamp(20px,2.5vw,28px);color:var(--ink-soft);font-weight:300;font-size:.95rem;line-height:1.55;max-width:56ch}
   .chk__gh{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep);font-weight:600;margin:clamp(20px,2.5vw,28px) 0 .7em}
@@ -507,6 +511,24 @@
       <div class="act"><h3>Городской парк Золотые Ворота</h3><p>Большой парк на западе города — это не мост, а именно парк. Японский чайный сад, оранжерея с цветами, тихие дорожки. Удобно заехать 3 октября, возвращаясь от секвой.</p></div>
       <div class="act"><h3>Рынок с едой у воды</h3><p>Старое здание с часами, внутри — морепродукты, сыры и кофе.</p></div>
       <div class="act"><h3>Сезон молодого вина</h3><p>Сентябрь и октябрь — сбор урожая на винодельнях под городом. Хорошее время заехать на дегустацию.</p></div>
+    </div>
+
+    <div class="stay reveal">
+      <h3 class="chk__t">Где живём</h3>
+      <p class="chk__n">Район Экселсиор на юге города — спальный и тихий. Точный адрес и данные для заселения держим в семейной переписке: эта страница открыта всем, у кого есть ссылка. Сколько ехать от дома на машине:</p>
+      <div class="stay__g">
+        <div class="stay__r"><span>Городской парк Золотые Ворота</span><b>17 минут</b></div>
+        <div class="stay__r"><span>Пирс с паромами и рынок у воды</span><b>17 минут</b></div>
+        <div class="stay__r"><span>Мост Золотые Ворота</span><b>24 минуты</b></div>
+        <div class="stay__r"><span>Лес гигантских секвой</span><b>45 минут</b></div>
+        <div class="stay__r"><span>Стадион в Санта-Кларе</span><b>53 минуты</b></div>
+        <div class="stay__r"><span>Винная долина Напа</span><b>около 1,5 часов</b></div>
+      </div>
+      <ul class="tips">
+        <li><b>Удобно для выездов на юг.</b> Рядом шоссе, поэтому 4 октября на футбол и 5 октября в Биг-Сур выезжаем не через весь город.</li>
+        <li><b>Уточните парковку у хозяина.</b> В спальном районе обычно есть бесплатная уличная — это экономит 60–85 долларов за ночь по сравнению с центром.</li>
+        <li>Ценные вещи в машине не оставляем даже днём: взломы в городе — частая история.</li>
+      </ul>
     </div>
 
     <div class="chk reveal">
