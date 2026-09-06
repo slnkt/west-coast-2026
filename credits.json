@@ -24,18 +24,6 @@
     "bytes": 487424
   },
   {
-    "file": "01-sf-alcatraz.jpg",
-    "query": "Alcatraz Island aerial",
-    "title": "File:Alcatraz 2020 01.jpg",
-    "width": 5462,
-    "height": 3638,
-    "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Alcatraz_2020_01.jpg",
-    "descUrl": "https://commons.wikimedia.org/wiki/File:Alcatraz_2020_01.jpg",
-    "artist": "Christopher Michel",
-    "license": "CC BY-SA 4.0",
-    "bytes": 11186766
-  },
-  {
     "file": "01-sf-muir-woods.jpg",
     "query": "Muir Woods redwood trees",
     "title": "File:California Muir Woods Trees.jpg",
@@ -334,5 +322,17 @@
     "artist": "Bernard Spragg. NZ",
     "license": "CC0",
     "bytes": 892928
+  },
+  {
+    "file": "01-sf-napa-vineyard.jpg",
+    "query": "Napa Valley vineyard autumn",
+    "title": "File:Napa valley vineyard and winery.jpg",
+    "width": 3738,
+    "height": 3267,
+    "url": "https://commons.wikimedia.org/wiki/File:Napa_valley_vineyard_and_winery.jpg",
+    "descUrl": "https://commons.wikimedia.org/wiki/File:Napa_valley_vineyard_and_winery.jpg",
+    "artist": "Brocken Inaglory",
+    "license": "CC BY-SA 3.0",
+    "bytes": 1992294
   }
 ]
