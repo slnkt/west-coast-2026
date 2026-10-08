@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Запад США — путеводитель по маршруту</title>
-<meta name="description" content="Дорожное путешествие по западу США: Сан-Франциско, Биг-Сур, Лос-Анджелес, Сан-Диего, Лас-Вегас, Зайон и Гранд-Каньон. 30 сентября – 17 октября, около 3 000 км.">
+<meta name="description" content="Дорожное путешествие по западу США: Сан-Франциско, Биг-Сур, Лос-Анджелес, Лас-Вегас, Зайон и Гранд-Каньон. 30 сентября – 17 октября, около 3 000 км.">
 <meta name="theme-color" content="#1b1714">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
@@ -171,6 +171,9 @@
   .mapsec .note{margin:0 0 clamp(24px,3vw,38px);color:var(--ink-soft);font-weight:300;max-width:50ch;font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.5}
   #map{height:clamp(400px,64vh,640px);width:100%;border-radius:8px;border:1px solid var(--line);background:var(--paper-2);overflow:hidden}
   .pin span{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-family:"Fraunces",serif;font-size:14px;font-weight:600;border:2px solid #fff;box-shadow:0 2px 7px rgba(0,0,0,.35)}
+  .pin--nb span{background:#b3452c}
+  .mp .nb{display:inline-block;margin-top:2px;padding:2px 8px;border-radius:999px;font-size:.72rem;font-weight:600;letter-spacing:.04em;background:rgba(179,69,44,.12);color:#b3452c}
+  .mp .ok{display:inline-block;margin-top:2px;padding:2px 8px;border-radius:999px;font-size:.72rem;font-weight:600;letter-spacing:.04em;background:rgba(122,140,90,.16);color:#5b6b3f}
   .leaflet-container{font-family:"Inter",system-ui,sans-serif;font-size:13px;background:#eee9e0}
   .leaflet-tooltip{font-weight:500}
   .leaflet-popup-content{margin:13px 16px;font-family:"Inter",system-ui,sans-serif}
@@ -223,6 +226,12 @@
   .tips li::before{content:"";position:absolute;left:1px;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.6}
   .tips li b{color:var(--accent-deep);font-weight:600}
   .plan .tips{margin-top:.6em}
+  .night{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:.8em 0 0;padding-top:.7em;border-top:1px solid var(--line)}
+  .night .nl{font-size:.84rem;color:var(--ink)}
+  .night .nl b{font-weight:600}
+  .night .nb{padding:2px 9px;border-radius:999px;font-size:.72rem;font-weight:600;letter-spacing:.03em;background:rgba(179,69,44,.12);color:#b3452c;white-space:nowrap}
+  .night .ok{padding:2px 9px;border-radius:999px;font-size:.72rem;font-weight:600;letter-spacing:.03em;background:rgba(91,107,63,.14);color:#5b6b3f;white-space:nowrap}
+  .drv{font-size:.78rem;color:var(--ink-soft);letter-spacing:.02em}
   .dep{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--accent);color:var(--accent-deep);border-radius:100px;padding:.3em .85em;font-size:.76rem;font-weight:600;letter-spacing:.02em;margin:0 .4em .55em 0;background:rgba(167,106,60,.07);white-space:nowrap}
   .dep svg{width:13px;height:13px;flex:none}
   .dep--calm{border-color:var(--line);color:var(--ink-soft);background:transparent}
@@ -419,10 +428,9 @@
         <a href="#s01"><b>01</b>Сан-Франциско</a>
         <a href="#s02"><b>02</b>Биг-Сур</a>
         <a href="#s03"><b>03</b>Лос-Анджелес</a>
-        <a href="#s04"><b>04</b>Сан-Диего</a>
-        <a href="#s05"><b>05</b>Лас-Вегас</a>
-        <a href="#s06"><b>06</b>Зайон и Гранд-Каньон</a>
-        <a href="#s07"><b>07</b>Джошуа-Три</a>
+        <a href="#s04"><b>04</b>Лас-Вегас</a>
+        <a href="#s05"><b>05</b>Зайон и Гранд-Каньон</a>
+        <a href="#s06"><b>06</b>Джошуа-Три</a>
       </div>
     </div>
     <a href="#map-section">Карта</a>
@@ -441,10 +449,10 @@
     <div class="wrap">
       <p class="hero__kicker">Дорожное путешествие · Калифорния — Невада — Юта — Аризона</p>
       <h1>Запад США</h1>
-      <p class="hero__sub">Сан-Франциско, Биг-Сур, Лос-Анджелес, Сан-Диего, Лас-Вегас, Зайон и Гранд-Каньон. Семь остановок от Тихого океана до края пустыни.</p>
+      <p class="hero__sub">Сан-Франциско, Биг-Сур, Лос-Анджелес, Лас-Вегас, Зайон и Гранд-Каньон. Шесть остановок от Тихого океана до края пустыни.</p>
       <div class="badges">
         <span class="badge">30 сентября – 17 октября</span>
-        <span class="badge">7 остановок</span>
+        <span class="badge">6 остановок</span>
         <span class="badge">≈ 3 000 км</span>
       </div>
     </div>
@@ -460,11 +468,10 @@
     <nav class="route reveal" aria-label="Маршрут">
       <a href="#s01"><span class="route__n">01</span><span class="route__name">Сан-Франциско<small>Город у океана, старт пути</small></span><span class="route__date">30 сент – 5 окт</span></a>
       <a href="#s02"><span class="route__n">02</span><span class="route__name">Биг-Сур<small>Дикое побережье океана</small></span><span class="route__date">5–6 окт</span></a>
-      <a href="#s03"><span class="route__n">03</span><span class="route__name">Лос-Анджелес<small>Пляжи, холмы и кино</small></span><span class="route__date">6–8 окт</span></a>
-      <a href="#s04"><span class="route__n">04</span><span class="route__name">Сан-Диего<small>Тёплый юг у океана</small></span><span class="route__date">8–10 окт</span></a>
-      <a href="#s05"><span class="route__n">05</span><span class="route__name">Лас-Вегас<small>Огни города и пустыня</small></span><span class="route__date">10–12 окт</span></a>
-      <a href="#s06"><span class="route__n">06</span><span class="route__name">Зайон и Гранд-Каньон<small>Огромные каньоны</small></span><span class="route__date">12–14 окт</span></a>
-      <a href="#s07"><span class="route__n">07</span><span class="route__name">Джошуа-Три<small>Последняя пустыня и вылет домой</small></span><span class="route__date">14–17 окт</span></a>
+      <a href="#s03"><span class="route__n">03</span><span class="route__name">Лос-Анджелес<small>Пляжи, холмы и кино</small></span><span class="route__date">6–10 окт</span></a>
+      <a href="#s04"><span class="route__n">04</span><span class="route__name">Лас-Вегас<small>Огни города и пустыня</small></span><span class="route__date">10–12 окт</span></a>
+      <a href="#s05"><span class="route__n">05</span><span class="route__name">Зайон и Гранд-Каньон<small>Огромные каньоны</small></span><span class="route__date">12–14 окт</span></a>
+      <a href="#s06"><span class="route__n">06</span><span class="route__name">Джошуа-Три<small>Последняя пустыня и вылет домой</small></span><span class="route__date">14–17 окт</span></a>
     </nav>
     <p class="hint">Нажмите на любое фото, чтобы открыть его крупно.</p>
     <p class="hint">Температуры на каждой остановке — примерные, обычные для начала и середины октября.</p>
@@ -475,7 +482,7 @@
   <div class="wrap">
     <p class="kicker">Весь путь на карте</p>
     <h2>Карта маршрута</h2>
-    <p class="note">Реальная дорога по западу США: от Сан-Франциско вдоль океана на юг, затем через пустыни и каньоны и обратно к аэропорту. Карту можно двигать и приближать. Нарисован план-максимум — с заездом на Гранд-Каньон и в Джошуа-Три.</p>
+    <p class="note">Весь маршрут по дням: каждая линия — отдельный день, цифры на метках — номера ночёвок. Нажмите на метку, чтобы увидеть город, дорогу за день и статус брони. Карту можно двигать и приближать.</p>
     <div id="map"></div>
   </div>
 </section>
@@ -629,7 +636,7 @@
       <div class="stop-titles">
         <p class="kicker">Остановка третья</p>
         <h2>Лос-Анджелес</h2>
-        <p class="stop-meta">6–8 октября · 2 ночи</p>
+        <p class="stop-meta">6–10 октября · 4 ночи</p>
         <p class="stop-leg">Перегон через Биг-Сур · ≈ 490 км · ~6 ч 30 мин</p>
         <p class="stop-lede">Огромный город кино и пляжей: знаменитая надпись на холме и набережные с аттракционами.</p>
         <div class="stop-facts">
@@ -651,7 +658,7 @@
       <div class="act"><h3>Закат среди скал</h3><p>Дикий пляж Малибу с большими камнями и гротами — лучшее место для заката.</p></div>
       <div class="act"><h3>Смотровая над городом</h3><p>Площадка на холме: вид на весь город и надпись Голливуд.</p></div>
       <div class="act"><h3>Музей Гетти</h3><p>Белый дворец на холме с садами и видом на весь город, внутри — картины старых мастеров. Вход бесплатный, платная только парковка. Хороший вариант на нежаркий день.</p></div>
-      <div class="act"><h3>Диснейленд</h3><p>Целый день в самом первом парке Диснея — по дороге в Сан-Диего. Билеты покупают заранее онлайн, примерно 120–180 долларов с человека в зависимости от дня.</p></div>
+      <div class="act"><h3>Диснейленд</h3><p>Целый день в самом первом парке Диснея, 8 октября. Билеты покупают заранее онлайн, примерно 120–180 долларов с человека в зависимости от дня.</p></div>
     </div>
 
     <div class="chk reveal">
@@ -677,67 +684,17 @@
   </div>
 </section>
 
+
 <!-- 04 -->
-<section class="stop alt reveal" id="s04">
+<section class="stop reveal" id="s04">
   <div class="wrap">
     <header class="stop-head">
       <span class="stop-num">04</span>
       <div class="stop-titles">
         <p class="kicker">Остановка четвёртая</p>
-        <h2>Сан-Диего</h2>
-        <p class="stop-meta">8–10 октября · 2 ночи</p>
-        <p class="stop-leg">Перегон от Лос-Анджелеса через Диснейленд · ≈ 200 км</p>
-        <p class="stop-lede">Самый южный и тёплый город маршрута: спокойный океан, морские львы и длинные пляжи.</p>
-        <div class="stop-facts">
-          <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 25°, ночью около 17°</span>
-          <span class="fact fact--swim"><svg viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c1.8 0 1.8 1.4 3.6 1.4S7.4 6 9.2 6s1.8 1.4 3.6 1.4S14.6 6 16.4 6 18.2 7.4 20 7.4"/><path d="M2 11.5c1.8 0 1.8 1.4 3.6 1.4S7.4 11.5 9.2 11.5s1.8 1.4 3.6 1.4S14.6 11.5 16.4 11.5 18.2 12.9 20 12.9"/><path d="M2 17c1.8 0 1.8 1.4 3.6 1.4S7.4 17 9.2 17s1.8 1.4 3.6 1.4S14.6 17 16.4 17 18.2 18.4 20 18.4"/></svg>Лучшее место купаться · вода около 20°</span>
-        </div>
-      </div>
-    </header>
-    <div class="collage reveal">
-      <figure class="cell wide"><button class="zoom" aria-label="Открыть фото"></button><img src="img/04-sd-coronado.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt="Старинный отель отражается в мокром песке"><figcaption>Золотой пляж у отеля</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/04-sd-la-jolla.jpg" width="2000" height="1500" loading="lazy" decoding="async" alt="Морские львы на скалах у бухты"><figcaption>Бухта с морскими львами</figcaption></figure>
-      <figure class="cell"><button class="zoom" aria-label="Открыть фото"></button><img src="img/04-sd-sunset-cliffs.jpg" width="2000" height="1335" loading="lazy" decoding="async" alt="Закат на высоких обрывах над океаном"><figcaption>Обрывы на закате</figcaption></figure>
-    </div>
-    <div class="acts stagger">
-      <div class="act"><h3>Морские львы у бухты</h3><p>Десятки морских львов лежат на камнях в паре метров от людей.</p></div>
-      <div class="act"><h3>Плавание с маской</h3><p>Прозрачная тёплая бухта, где под водой хорошо видно рыбу.</p></div>
-      <div class="act"><h3>Обрывы на закате</h3><p>Высокие скалы над океаном, особенно красивые вечером.</p></div>
-      <div class="act"><h3>Золотой пляж у отеля</h3><p>Широкий песчаный пляж рядом со старинным знаменитым отелем.</p></div>
-      <div class="act"><h3>Старый город и тако</h3><p>Исторический квартал: рыбные тако и местное пиво.</p></div>
-    </div>
-
-    <div class="chk reveal">
-      <h3 class="chk__t">Чек-лист: что успеть в Сан-Диего</h3>
-      <p class="chk__n">У нас тут один полный день, 9 октября. Город расслабленный — это передышка между дорогами.</p>
-
-      <p class="chk__gh">Уже стоит в плане</p>
-      <label class="chk__i"><input type="checkbox" data-k="sd1" checked><span><b>Морские львы у бухты</b> — лежат на камнях в паре метров от людей. <em>Утро 9 октября, 1–2 часа.</em></span></label>
-      <label class="chk__i"><input type="checkbox" data-k="sd2" checked><span><b>Плавание с маской</b> — прозрачная вода, рыбы и скаты в бухте. <em>Прокат снаряжения на месте.</em></span></label>
-      <label class="chk__i"><input type="checkbox" data-k="sd3" checked><span><b>Обрывы на закате</b> — скалы над океаном, лучшее место вечером. <em>1 час.</em></span></label>
-      <label class="chk__i"><input type="checkbox" data-k="sd4" checked><span><b>Старый город и тако</b> — мексиканский квартал, рыбные тако. <em>Ужин, 1,5 часа.</em></span></label>
-
-      <p class="chk__gh">Хорошо ложится в свободные окна</p>
-      <label class="chk__i"><input type="checkbox" data-k="sd5"><span><b>Парк Бальбоа</b> — зелёный квартал с музеями, садами и старинной архитектурой. <em>2–3 часа, вход в парк бесплатный.</em></span></label>
-      <label class="chk__i"><input type="checkbox" data-k="sd6"><span><b>Золотой пляж у отеля</b> — широкий песок у знаменитого деревянного отеля. <em>1–2 часа.</em></span></label>
-      <label class="chk__i"><input type="checkbox" data-k="sd7"><span><b>Зоопарк</b> — один из лучших в мире, внутри парка Бальбоа. <em>Полдня, билет около 70 долларов.</em></span></label>
-
-      <p class="chk__gh">Если захочется больше</p>
-      <label class="chk__i"><input type="checkbox" data-k="sd8"><span><b>Авианосец-музей</b> — огромный корабль у набережной, можно ходить по палубам. <em>2 часа.</em></span></label>
-    </div>
-  </div>
-</section>
-
-<!-- 05 -->
-<section class="stop reveal" id="s05">
-  <div class="wrap">
-    <header class="stop-head">
-      <span class="stop-num">05</span>
-      <div class="stop-titles">
-        <p class="kicker">Остановка пятая</p>
         <h2>Лас-Вегас</h2>
         <p class="stop-meta">10–12 октября · 2 ночи</p>
-        <p class="stop-leg">Перегон от Сан-Диего · ≈ 535 км · ~6 часов</p>
+        <p class="stop-leg">Перегон от Анахайма · ≈ 436 км · ~5,5 часов</p>
         <p class="stop-lede">Город огней и шоу посреди пустыни, а в часе езды — красные скалы, будто с другой планеты.</p>
         <div class="stop-facts">
           <span class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0Z"/></svg>Днём около 31°, ночью около 17°</span>
@@ -784,13 +741,13 @@
   </div>
 </section>
 
-<!-- 06 -->
-<section class="stop alt reveal" id="s06">
+<!-- 05 -->
+<section class="stop alt reveal" id="s05">
   <div class="wrap">
     <header class="stop-head">
-      <span class="stop-num">06</span>
+      <span class="stop-num">05</span>
       <div class="stop-titles">
-        <p class="kicker">Остановка шестая</p>
+        <p class="kicker">Остановка пятая</p>
         <h2>Зайон и Гранд-Каньон</h2>
         <p class="stop-meta">12–14 октября · 2 ночи · национальные парки</p>
         <p class="stop-leg">Перегон от Лас-Вегаса · ≈ 270 км · ~3 ч 20 мин</p>
@@ -834,13 +791,13 @@
   </div>
 </section>
 
-<!-- 07 -->
-<section class="stop reveal" id="s07">
+<!-- 06 -->
+<section class="stop reveal" id="s06">
   <div class="wrap">
     <header class="stop-head">
-      <span class="stop-num">07</span>
+      <span class="stop-num">06</span>
       <div class="stop-titles">
-        <p class="kicker">Остановка седьмая</p>
+        <p class="kicker">Остановка шестая</p>
         <h2>Джошуа-Три</h2>
         <p class="stop-meta">14–17 октября · последняя пустыня и дорога домой</p>
         <p class="stop-leg">От каньонов до Лос-Анджелеса · ~2 дня в дороге</p>
@@ -871,6 +828,7 @@
     <p class="kicker">Когда выезжаем</p>
     <h2>План по дням</h2>
     <p class="note">Время выезда примерное, везде местное. Длинные дороги помечены. На 13–15 октября два сценария: основной — план-максимум, успеваем всё. Спокойный вариант спрятан, нажмите, чтобы раскрыть. Решаете утром 13-го по самочувствию. Последние два дня, 16 и 17 октября, одинаковые в любом случае.</p>
+    <div class="chk reveal" style="margin:clamp(20px,3vw,30px) 0 0"><h3 class="chk__t">Важно: пропуск в парки</h3><p class="chk__n">Годовой пропуск в национальные парки у нас есть — отдельно платить за въезд в Зайон и на Гранд-Каньон не нужно.</p><ul class="tips"><li><b>Держатель пропуска едет с паспортом.</b> На въезде сверяют пропуск с документом владельца, без паспорта могут не пропустить.</li><li>Пропуск действует на всех в машине, отдельных билетов остальным не нужно.</li><li>Держите его не в багаже, а под рукой: на въезде в парк его спрашивают сразу.</li></ul></div>
 
     <div class="day"><div class="d">30 сент<small>среда</small></div><div class="c"><p>Прилёт в Сан-Франциско в 14:15. Только заселение, ужин и сон — по внутренним часам будет глубокая ночь.</p><ul class="tips"><li><b>Машину забираем сразу в аэропорту.</b> Рейс садится в 14:15, получение по брони с 15:00 — совпадает. До жилья ещё минут 15–20.</li><li><b>Продукты.</b> Прямо в нашем районе главная улица Мишн — там подряд идут небольшие латиноамериканские и азиатские лавки с дешёвыми фруктами и зеленью. Из больших магазинов ближайший Safeway, а за качеством получше — Trader Joe’s или Whole Foods, оба в 10–15 минутах на машине.</li><li><b>Ужин.</b> В первый вечер лучше поесть рядом с домом и лечь спать: по домашним часам будет глубокая ночь. Если сил хватит — до Пирса 39 с морскими львами 17 минут на машине.</li><li>На самом пирсе кормят туристически и дороговато. Классика места — густой суп из моллюсков, налитый в круглый хлеб. За хорошей едой лучше пройти 10 минут в соседний итальянский квартал.</li></ul></div></div>
     <div class="day"><div class="d">1 окт<small>четверг</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Мост Золотые Ворота и городок Саусалито на той стороне. Два способа — выбираем по настроению.</p><div class="plan"><b>На велосипедах.</b> Едем на машине к Рыбацкой пристани и оставляем её там. Прокатов на пристани несколько, велосипед берут на день, шлем и замок дают с ним. Дальше по набережной до моста (20–30 минут), через мост (3 км, минут 15), потом вниз в Саусалито (3 км, почти всё под горку). Обедаем там и возвращаемся паромом. Всего 3–4 часа.<ul class="tips"><li><b>Важно про паром в 2026 году:</b> он больше не приходит на пристань, где осталась машина, а причаливает у рынка с едой. Оттуда до машины 2 км: можно пройтись по набережной или проехать одну ветку старинного трамвая.</li><li>Билет на паром около 15 долларов с человека, берут прямо в Саусалито.</li><li>Подъём к мосту — единственное тяжёлое место. Если не хочется упираться, берите велосипеды с электромотором, их дают почти везде.</li></ul></div><div class="plan"><b>На машине, без нагрузки.</b> Подъезжаем к мосту и проходим пешком по нему сколько захочется — вход свободный. Потом переезжаем на смотровую в холмах за мостом, откуда его снимают целиком, и спускаемся в Саусалито обедать. Обратно тоже на машине. Куда спокойнее и занимает полдня.</div><ul class="tips"><li>После перелёта проснётесь рано — это как раз лучшее время на мосту, пока нет ни толп, ни тумана.</li><li>Вечером — набережная и рынок у воды, ранний отбой.</li></ul></div></div>
@@ -880,25 +838,16 @@
     <div class="day"><div class="d">5 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~9:00</span><p>В Биг-Сур (~3 часа с остановками). День на мост над обрывом, водопад и пляж. Ночь в Монтерее или Кармеле.</p></div></div>
     <div class="day"><div class="d">6 окт<small>вторник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: вдоль океана в Лос-Анджелес, 7–8 часов с фотоостановками.</p><ul class="tips"><li>Выезжаем рано ещё и затем, чтобы въехать в город до вечерних пробок — с 15:30 до 19:30 дороги там стоят.</li></ul></div></div>
     <div class="day"><div class="d">7 окт<small>среда</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Лос-Анджелес: пирс Санта-Моника, пляж Венис, вечером смотровая и надпись Голливуд.</p></div></div>
-    <div class="day"><div class="d">8 окт<small>четверг</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>Диснейленд — меньше часа от отеля, он как раз по дороге на юг. Целый день в парке, вечером ~1,5 часа до Сан-Диего.</p><ul class="tips"><li>На шоссе не заезжаем в платные полосы со знаками «Express Lanes» — бесплатные всегда рядом.</li></ul></div></div>
-    <div class="day"><div class="d">9 окт<small>пятница</small></div><div class="c"><span class="dep dep--calm">Без переездов</span><p>Утро — бухта Ла-Хойя: морские львы лежат на камнях в паре метров, там же прозрачная вода для плавания с маской.</p><ul class="tips"><li><b>Днём</b> на выбор: золотой пляж у старинного отеля или парк Бальбоа — зелёный квартал с музеями, садами и зоопарком.</li><li><b>Вечером</b> — закат на обрывах, ужин с рыбными тако в старом городе.</li></ul></div></div>
-    <div class="day"><div class="d">10 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>День дороги: через пустыню в Лас-Вегас, около 7 часов с остановками. Вечером — фонтаны, огни города и Сфера: снаружи смотреть бесплатно.</p><ul class="tips"><li><b>Заправка.</b> Перед выездом под завязку — дальше заправки редкие, а в Неваде бензин дешевле калифорнийского.</li><li>В субботу утром трасса свободна.</li></ul></div></div>
-    <div class="day"><div class="d">11 окт<small>воскресенье</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>С утра — Долина красных скал (час пути в одну сторону), к вечеру назад в город: прогулка по главной улице с казино и огнями или колесо обозрения.</p></div></div>
-    <div class="day"><div class="d">12 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:30</span><p>В Зайон, около 3,5 часов. В Юте часы переводим на час вперёд. После обеда — лёгкие тропы и закатная смотровая, ночь в Спрингдейле.</p><ul class="tips"><li><b>Заправка и карты.</b> Полный бак и офлайн-карты заранее: связи в пустыне и парках почти нет.</li><li>Абонемент на парки уже с собой — купили у секвой.</li></ul></div></div>
-    <div class="day day--fork"><div class="d">13 окт<small>вторник</small></div><div class="c"><p>Утро — развилка, решаете по самочувствию:</p>
-      <div class="plan"><b>План-максимум.</b> Выезд ~8:00 с полным баком — Гранд-Каньон, около 6,5 часов с остановками. В Аризоне часы на час назад, на месте примерно в 14:00. День и закат на краю каньона, ночь у парка.<ul class="tips"><li>Длинный пустынный перегон, заправки редкие.</li></ul></div>
-      <details class="plan"><summary>Спокойный план</summary>Остаёмся: целый день прогулка по реке в Зайоне или поездка в Брайс-Каньон — оранжевые каменные столбы в 1,5–2 часах. Ночь снова в Спрингдейле.</details>
-    </div></div>
-    <div class="day day--fork"><div class="d">14 окт<small>среда</small></div><div class="c">
-      <div class="plan"><b>План-максимум.</b> Рассвет на каньоне, выезд не позже 9:30 — Джошуа-Три, около 9 часов с остановками, приезд к сумеркам. Вечером — звёздное небо.<ul class="tips"><li>Если в дороге поймёте, что тяжело, — просто заночуйте в мотеле по трассе. Это нормальный запасной ход.</li></ul></div>
-      <details class="plan"><summary>Спокойный план</summary>Выезд ~10:00 — Лас-Вегас (~3,5 часа), спокойный вечер без спешки.</details>
-    </div></div>
-    <div class="day day--fork"><div class="d">15 окт<small>четверг</small></div><div class="c"><p>Приезжаем в Лос-Анджелес, машину пока оставляем при себе — сдаём завтра к 15:00.</p><ul class="tips"><li><b>Заправка.</b> Бензин оплачен заранее, поэтому последнюю заправку делаем ещё в пустыне и неполную: приезжаем почти пустыми, лишнее при сдаче пропадёт.</li><li><b>Шопинг.</b> Примерно через час пути будет большой центр распродаж у городка Кабазон — удобное место закупиться перед домом.</li></ul>
-      <div class="plan"><b>План-максимум.</b> Утро среди валунов Джошуа-Три, выезд из парка не позже 10:30 — Лос-Анджелес, около 3 часов. Заселяемся у океана.</div>
-      <details class="plan"><summary>Спокойный план</summary>Выезд ~8:30 из Вегаса — Лос-Анджелес (~4,5 часа), заселяемся у океана.</details>
-    </div></div>
-    <div class="day"><div class="d">16 окт<small>пятница</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Сдать машину до 15:00</span><p>С утра последняя вылазка на машине — пляж Малибу или Санта-Моника. Дальше отдых у океана без машины, вечером собрать чемоданы.</p><ul class="tips"><li><b>Сдача машины</b> до 15:00, почти пустой — бензин оплачен заранее, не доливаем.</li><li>Перед сдачей сфотографируйте машину со всех сторон.</li></ul></div></div>
-    <div class="day"><div class="d">17 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Из отеля ~12:30</span><p>На такси в аэропорт к 13:20 — за три часа до рейса. Вылет домой в 16:20.</p></div></div>
+    <div class="day"><div class="d">8 окт<small>четверг</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд без спешки</span><p>Утро свободное: высыпаемся и спокойно завтракаем. По дороге на юг заезжаем на пляж — какой именно, решаем утром. К 15:00 в Диснейленде, вечером шоу «Фантазмик» и фейерверк примерно с 21:00 до 22:30.</p><ul class="tips"><li><b>Пляж на выбор.</b> По умолчанию Хантингтон — он прямо по пути. Альтернативы: Лагуна-Бич южнее и живописнее, Манхэттен-Бич ближе к городу, но в стороне от маршрута.</li><li><b>Время шоу сверьте в приложении парка</b> — оно меняется изо дня в день, иногда шоу отменяют из-за ветра.</li><li>Отель у самого парка, после фейерверка идём пешком — машину можно оставить на парковке парка до утра.</li></ul><div class="night"><span class="nl">Ночуем: <b>Анахайм</b></span><span class="nb">Брони нет</span><span class="drv">за день 102 км, 1 ч 42 мин</span></div></div></div>
+    <div class="day"><div class="d">9 окт<small>пятница</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>План уточняется</span><p>Этот день пока не решён — выбираем из двух вариантов.</p><div class="plan"><b>Вариант первый: сразу в Вегас.</b> Выезжаем из Анахайма, около 5 часов дороги — и получаем в Вегасе три вечера вместо двух. Тогда 10 октября становится полноценным днём в Вегасе, а не переездом.</div><div class="plan"><b>Вариант второй: ещё день в Лос-Анджелесе.</b> Киностудия Уорнер или Юниверсал — целый день. Ночуем в Бёрбанке или Пасадене, поближе к студиям, а в Вегас едем 10-го, как и было.</div><div class="night"><span class="nl">Ночуем: <b>Вегас или Бёрбанк — решаем</b></span><span class="nb">План уточняется</span><span class="drv">за день Брони нет</span></div></div></div>
+    <div class="day"><div class="d">10 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~7:30</span><p>Переезд в Лас-Вегас из Анахайма, около 4 часов чистой дороги. По пути город-призрак Калико — час на прогулку, и Семь волшебных гор, цветные каменные столбы посреди пустыни, минут двадцать на фото. Вечером фонтаны Белладжио и главная улица.</p><ul class="tips"><li><b>Этот день зависит от 9 октября.</b> Если накануне уже уехали в Вегас, то 10-го никакого переезда нет — это свободный день в городе, а Калико и Семь гор смотрите по дороге 9-го.</li><li><b>Заправка.</b> Полный бак перед пустыней: дальше заправки редкие, а в Неваде бензин дешевле калифорнийского.</li></ul><div class="night"><span class="nl">Ночуем: <b>Лас-Вегас</b></span><span class="nb">Брони нет</span><span class="drv">за день 436 км, 5 ч 36 мин</span></div></div></div>
+    <div class="day"><div class="d">11 окт<small>воскресенье</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>Долина Огня: красные скалы и Огненная волна — полдня с дорогой в обе стороны. Вечером колесо обозрения или прогулка по главной улице с казино и огнями.</p><ul class="tips"><li>Воды берите с собой: в долине нет ни тени, ни магазинов.</li><li>К Огненной волне ведёт короткая тропа по песку, обувь лучше закрытая.</li></ul><div class="night"><span class="nl">Ночуем: <b>Лас-Вегас</b></span><span class="nb">Брони нет</span><span class="drv">за день 201 км, 3 ч 11 мин</span></div></div></div>
+    <div class="day"><div class="d">12 окт<small>понедельник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~13:00</span><p>Утро на шопинг: аутлеты Премиум-Норт, 2–3 часа. Около 13:00 выезжаем в Спрингдейл по трассе 15. В Зайоне — тропа Парус вдоль реки и закат у моста Каньон-Джанкшен.</p><ul class="tips"><li><b>Часы вперёд на час</b> — в Юте другое время.</li><li><b>Считайте время.</b> Выезд в 13:00 означает приезд около 17:50 по местному, а темнеет в начале седьмого. На тропу и закат остаётся меньше часа — если хочется спокойно, уезжайте из аутлетов к 12:00.</li></ul><div class="night"><span class="nl">Ночуем: <b>Спрингдейл</b></span><span class="nb">Брони нет</span><span class="drv">за день 280 км, 3 ч 50 мин</span></div></div></div>
+    <div class="day"><div class="d">13 окт<small>вторник</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд 10:00</span><p>В 7:30 едем на парковом шаттле на прибрежную тропу — полтора часа вдоль реки между отвесных стен. В 10:00 выезжаем через тоннель Зайон — Маунт-Кармел. По дороге Подкова у городка Пейдж, час на спуск и фото. К вечеру Гранд-Каньон: смотровая Дезерт-Вью, закат на Мазер-Пойнте.</p><ul class="tips"><li><b>Часы назад на час</b> — в Аризоне своё время, она не переходит на летнее.</li><li>Тоннель старый и узкий, движение в нём иногда реверсивное — заложите запас.</li><li>По дороге от Подковы до каньона заправок почти нет, залейтесь в Пейдже.</li></ul><div class="night"><span class="nl">Ночуем: <b>Гранд-Каньон или Тусаян</b></span><span class="nb">Брони нет</span><span class="drv">за день 425 км, 6 ч 19 мин</span></div></div></div>
+    <div class="day"><div class="d">14 окт<small>среда</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~7:30</span><p>Рассвет на краю каньона, а дальше самый тяжёлый переезд поездки: Селигман на старой трассе 66, заправка и фотографии в Эмбое, к закату приезжаем в Джошуа-Три.</p><ul class="tips"><li><b>Это 8,5 часов за рулём</b> — заметно больше, чем в любой другой день. Считайте, что день целиком дорожный.</li><li>Выезжать сразу после рассвета. Если задержитесь, закат в парке не застанете.</li><li>Селигман и Эмбой — короткие остановки на 30–40 минут каждая, иначе не успеть.</li><li>Если в дороге станет тяжело, ночуйте в мотеле по трассе: это нормальный запасной ход.</li></ul><div class="night"><span class="nl">Ночуем: <b>Твентинайн-Палмс</b></span><span class="nb">Брони нет</span><span class="drv">за день 659 км, 8 ч 30 мин</span></div></div></div>
+    <div class="day"><div class="d">15 окт<small>четверг</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Выезд ~8:00</span><p>Утро в Джошуа-Три: Скала-череп, сад кактусов чолья и смотровая Кис-Вью. Потом на запад: обед в Палм-Спрингс и фотография у динозавров Кабазона. К вечеру в Лос-Анджелесе.</p><ul class="tips"><li>Порядок точек в парке уже оптимальный — я проверял обратный, он выходит на 15 минут длиннее.</li><li><b>Заправка.</b> Бензин оплачен заранее, поэтому последнюю заправку делаем в пустыне и неполную: приезжаем почти пустыми, лишнее при сдаче пропадёт.</li><li>У Кабазона рядом большой центр распродаж, если останутся силы на шопинг.</li></ul><div class="night"><span class="nl">Ночуем: <b>Лос-Анджелес</b></span><span class="nb">Брони нет</span><span class="drv">за день 328 км, 5 ч 17 мин</span></div></div></div>
+    <div class="day"><div class="d">16 окт<small>пятница</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Сдать машину до 15:00</span><p>Последний полный день, и он с ограничением: машину сдаём к 15:00, дальше передвигаемся на такси и метро. Поэтому на машине делаем то, что далеко, а пешее оставляем на вечер.</p><ul class="tips"><li><b>Всё сразу не поместится</b> — на день реально два-три пункта. Выбирайте: пирс Санта-Моника с пляжем Венис (полдня), музей Гетти (2–3 часа, вход бесплатный), Беверли-Хиллз (час), центр города с рынком и музеем Броуд (2–3 часа).</li><li><b>Про парк аттракционов.</b> Студия Юниверсал или экскурсия по студии Уорнер — это целый день, и тогда больше ничего не успеть. Плюс к студии удобнее ехать на машине, а её сдавать в 15:00.</li><li>Перед сдачей заправляться не надо, но машину сфотографируйте со всех сторон.</li></ul><div class="night"><span class="nl">Ночуем: <b>Лос-Анджелес</b></span><span class="nb">Брони нет</span><span class="drv">за день 108 км за два дня, 1 ч 52 мин</span></div></div></div>
+    <div class="day"><div class="d">17 окт<small>суббота</small></div><div class="c"><span class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Из отеля ~12:30</span><p>Утро без машины — что-то рядом с отелем пешком. На такси в аэропорт к 13:20, за три часа до рейса. Вылет домой в 16:20.</p><ul class="tips"><li>Машины уже нет, в аэропорт только на такси — закажите заранее, в субботу днём спрос высокий.</li></ul></div></div>
   </div>
 </section>
 
@@ -1009,10 +958,10 @@
 
 <footer class="foot">
   <div class="wrap">
-    <p class="foot__line reveal">Семь остановок. Около 3 000 километров. Ни одного повтора по пейзажу.</p>
+    <p class="foot__line reveal">Шесть остановок. Около 3 000 километров. Ни одного повтора по пейзажу.</p>
     <div class="foot__meta">
       <span>30 сент – 17 окт 2026</span>
-      <span>7 остановок</span>
+      <span>6 остановок</span>
       <span>Сан-Франциско → Лос-Анджелес</span>
     </div>
     <details>
@@ -1032,9 +981,7 @@
         <li>Надпись Голливуд — Thomas Wolf · CC BY-SA 3.0</li>
         <li>Дикий пляж Малибу — Sitao Xiang · CC BY-SA 4.0</li>
         <li>Диснейленд — Carterhawk · CC BY-SA 3.0</li>
-        <li>Пляж у отеля (Коронадо) — Dirk Hansen · CC BY-SA 3.0</li>
         <li>Бухта с морскими львами — Rhododendrites · CC BY-SA 4.0</li>
-        <li>Обрывы на закате — Taylor L. Spurgeon · CC0</li>
         <li>Долина красных скал — Mike McBey · CC BY 2.0</li>
         <li>Скала «огненная волна» — Fabio Achilli · CC BY 2.0</li>
         <li>Лас-Вегас вечером — Matt Kieffer · CC BY-SA 2.0</li>
@@ -1134,41 +1081,98 @@
 
 <script>
 (function(){
-  var ROUTE=[[37.775,-122.419],[37.614,-122.397],[37.408,-122.071],[37.312,-122.045],[37.255,-121.957],[36.99,-122.022],[36.971,-121.875],[36.894,-121.774],[36.753,-121.766],[36.513,-121.938],[36.371,-121.902],[36.303,-121.88],[36.168,-121.678],[36.024,-121.571],[36,-121.501],[35.887,-121.46],[35.782,-121.33],[35.671,-121.279],[35.636,-121.166],[35.474,-120.989],[35.452,-120.901],[35.374,-120.852],[35.306,-120.679],[35.174,-120.697],[35.003,-120.439],[34.89,-120.417],[34.758,-120.297],[34.589,-120.031],[34.528,-119.837],[34.43,-119.742],[34.401,-119.517],[34.227,-119.167],[34.138,-118.728],[34.174,-118.56],[34.154,-118.38],[34.052,-118.244],[33.596,-117.674],[33.47,-117.674],[33.168,-117.345],[32.716,-117.161],[33.065,-117.069],[33.261,-117.158],[33.39,-117.174],[33.452,-117.135],[33.551,-117.181],[33.684,-117.171],[33.943,-117.292],[33.994,-117.356],[34.055,-117.299],[34.128,-117.303],[34.254,-117.448],[34.336,-117.481],[34.883,-117.062],[34.928,-116.723],[35.078,-116.4],[35.103,-116.262],[35.367,-115.913],[35.473,-115.59],[35.47,-115.452],[35.745,-115.354],[35.944,-115.184],[36.131,-115.18],[36.17,-115.14],[36.263,-115.073],[36.329,-114.923],[36.469,-114.826],[36.743,-114.422],[36.779,-114.263],[36.764,-114.172],[36.83,-114.01],[36.954,-113.797],[36.988,-113.629],[37.086,-113.581],[37.159,-113.474],[37.177,-113.285],[37.227,-113.257],[37.161,-113.019],[37.268,-112.944],[37.21,-112.956],[37.263,-112.776],[37.228,-112.685],[37.152,-112.572],[37.049,-112.534],[37.023,-112.449],[37.042,-112.217],[37.186,-111.986],[37.124,-111.975],[37.084,-111.677],[36.932,-111.474],[36.597,-111.657],[36.216,-111.396],[35.863,-111.418],[35.939,-111.664],[35.924,-111.76],[36.039,-111.83],[35.968,-111.972],[36.059,-112.112],[35.478,-112.178],[35.261,-112.151],[35.22,-112.281],[35.221,-112.542],[35.323,-112.923],[35.287,-113.118],[35.19,-113.316],[35.159,-113.558],[35.215,-114.047],[35.11,-114.116],[34.795,-114.161],[34.733,-114.263],[34.717,-114.486],[34.77,-114.596],[34.373,-114.655],[34.234,-114.641],[34.189,-114.574],[34.108,-114.689],[34.08,-114.794],[34.108,-114.936],[34.087,-115.112],[34.047,-115.22],[34.117,-115.523],[34.073,-115.553],[34.136,-116.037],[34.02,-116.02],[33.991,-116.072],[34.012,-116.167],[34.12,-116.315],[34.121,-116.441],[34.036,-116.591],[33.916,-116.605],[33.927,-116.978],[34.062,-117.178],[34.087,-117.683],[34.066,-118],[33.915,-118.108],[33.943,-118.408]];
-  var STOPS=[
-    [37.7749,-122.4194,"Сан-Франциско","Старт маршрута","s01"],
-    [36.3715,-121.9018,"Биг-Сур","≈ 2 ч 45 мин от Сан-Франциско","s02"],
-    [34.0522,-118.2437,"Лос-Анджелес","≈ 6 ч 30 мин от Биг-Сура. Вечером в городе пробки — въезжаем до 15:30","s03"],
-    [32.7157,-117.1611,"Сан-Диего","≈ 2 ч 30 мин от Лос-Анджелеса, по дороге Диснейленд. Платные полосы Express Lanes объезжаем — бесплатные рядом","s04"],
-    [36.1699,-115.1398,"Лас-Вегас","≈ 6 часов от Сан-Диего. В субботу утром трасса свободна (стоит она по пятницам вечером и воскресеньям)","s05"],
-    [37.2690,-112.9477,"Зайон и Гранд-Каньон","≈ 3 ч 20 мин от Лас-Вегаса","s06"],
-    [34.0117,-116.1667,"Джошуа-Три","Дорога от каньонов, ~2 дня","s07"]
-  ];
-  var SPOTS=[
-    [36.0601,-112.1129,"Гранд-Каньон"],
-    [33.8121,-117.9190,"Диснейленд"],
-    [33.9416,-118.4085,"Аэропорт · вылет домой"]
-  ];
-  var loaded=false;
-  function initMap(){
-    if(typeof L==='undefined') return;
-    var map=L.map('map',{scrollWheelZoom:false}).setView([36.3,-117],6);
-    map.attributionControl.setPrefix(false);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:18,attribution:'© OpenStreetMap · © CARTO'}).addTo(map);
-    var line=L.polyline(ROUTE,{color:'#a76a3c',weight:3,opacity:.9}).addTo(map);
-    STOPS.forEach(function(s,i){
-      var m=L.marker([s[0],s[1]],{icon:L.divIcon({className:'pin',html:'<span>'+(i+1)+'</span>',iconSize:[30,30],iconAnchor:[15,15]})}).addTo(map);
-      m.bindTooltip(s[2],{direction:'top',offset:[0,-14]});
-      m.bindPopup('<div class="mp"><strong>'+(i+1)+' · '+s[2]+'</strong><span>'+s[3]+'</span><a href="#'+s[4]+'">Открыть остановку →</a></div>');
-    });
-    SPOTS.forEach(function(s){
-      L.circleMarker([s[0],s[1]],{radius:5,color:'#fff',weight:2,fillColor:'#7c4d29',fillOpacity:1}).addTo(map).bindTooltip(s[2],{direction:'top'});
-    });
-    var toll=L.circleMarker([37.8199,-122.4783],{radius:7,color:'#fff',weight:2,fillColor:'#b3452c',fillOpacity:1}).addTo(map);
-    toll.bindTooltip('Платный мост · ~10 $',{direction:'top'});
-    toll.bindPopup('<div class="mp"><strong>Мост Золотые Ворота — платный</strong><span>Единственный платный участок всего маршрута: ~10 $ с машины, только при въезде в город. Будок нет — камера снимает номер. Оплатить самим на сайте моста в течение двух суток (дешевле) или через программу проката (+5 $ в день). У нас — один раз, в день секвой.</span></div>');
-    map.fitBounds(line.getBounds(),{padding:[30,30]});
+  var DAYS=[
+  {d:"8 окт",t:"Пляж и Диснейленд",km:102,drive:"1 ч 42 мин",booked:false,
+   night:[33.8366,-117.9143,"Анахайм"],
+   pts:[[34.1392,-118.2089,"Игл-Рок, выезд"],[33.6553,-117.9988,"Пляж Хантингтон"],[33.8121,-117.919,"Диснейленд"]],
+   geo:[[34.1392,-118.2089],[34.1428,-118.2281],[34.1221,-118.2294],[34.1071,-118.25],[34.0904,-118.2391],[34.0777,-118.2196],[34.0508,-118.2141],[34.0333,-118.2213],[34.011,-118.1609],[33.9434,-118.0985],[33.9224,-118.1046],[33.8826,-118.1043],[33.8212,-118.0816],[33.8038,-118.0817],[33.7816,-118.0919],[33.7754,-118.0879],[33.7735,-118.0745],[33.7594,-118.0778],[33.7408,-118.0956],[33.6782,-118.0302],[33.6532,-117.9956],[33.6551,-117.999],[33.6576,-117.9882],[33.6721,-117.9885],[33.6722,-117.9712],[33.7649,-117.9723],[33.767,-117.9203],[33.7782,-117.9147],[33.8126,-117.9152],[33.8122,-117.9192],[33.8094,-117.9153],[33.832,-117.9188],[33.8366,-117.9143]]},
+  {d:"9 окт",t:"План уточняется",km:424,drive:"4 ч 53 мин",booked:false,dashed:true,
+   night:[36.1699,-115.1398,"Вегас или Бёрбанк — решаем"],
+   pts:[[33.8366,-117.9143,"Анахайм"]],
+   geo:[[33.8366,-117.9143],[33.8615,-117.8766],[33.9384,-117.8771],[34.0239,-117.8104],[34.0228,-117.5498],[34.0977,-117.5411],[34.2207,-117.41],[34.2544,-117.4488],[34.3358,-117.4811],[34.3477,-117.4415],[34.478,-117.3401],[34.6453,-117.2171],[34.7218,-117.1943],[34.8079,-117.099],[34.8825,-117.0628],[34.9083,-116.9707],[34.901,-116.8979],[34.9279,-116.7234],[35.0784,-116.4001],[35.1028,-116.2617],[35.1926,-116.1544],[35.2,-116.1218],[35.2541,-116.0876],[35.3673,-115.9128],[35.4733,-115.5899],[35.4699,-115.4519],[35.7449,-115.3542],[35.9442,-115.1839],[36.131,-115.1803],[36.1716,-115.1569],[36.1697,-115.1399]]},
+  {d:"10 окт",t:"Через пустыню в Вегас",km:436,drive:"5 ч 36 мин",booked:false,
+   night:[36.1699,-115.1398,"Лас-Вегас"],
+   pts:[[33.8366,-117.9143,"Анахайм"],[34.9483,-116.8639,"Калико, город-призрак"],[35.8419,-115.2733,"Семь волшебных гор"],[36.1126,-115.1767,"Фонтаны Белладжио"]],
+   geo:[[33.8366,-117.9143],[33.8615,-117.8766],[33.9384,-117.8771],[34.0239,-117.8104],[34.0228,-117.5498],[34.0977,-117.5411],[34.2207,-117.41],[34.2544,-117.4488],[34.3363,-117.4808],[34.3477,-117.4415],[34.4794,-117.339],[34.6453,-117.2171],[34.7235,-117.1931],[34.809,-117.0982],[34.8681,-117.0792],[34.9082,-116.9714],[34.9019,-116.8867],[34.9483,-116.865],[34.9079,-116.8368],[34.9279,-116.7234],[35.0784,-116.4001],[35.1028,-116.2617],[35.1926,-116.1544],[35.2,-116.1218],[35.2541,-116.0876],[35.3673,-115.9128],[35.4735,-115.589],[35.4632,-115.4631],[35.6139,-115.3882],[35.7435,-115.3549],[35.8414,-115.2727],[35.9465,-115.183],[36.1115,-115.1767],[36.1707,-115.1577],[36.1697,-115.1399]]},
+  {d:"11 окт",t:"Долина Огня",km:201,drive:"3 ч 11 мин",booked:false,
+   night:[36.1699,-115.1398,"Лас-Вегас"],
+   pts:[[36.1699,-115.1398,"Лас-Вегас"],[36.4769,-114.5214,"Долина Огня, Огненная волна"],[36.1175,-115.168,"Колесо обозрения"]],
+   geo:[[36.1697,-115.1399],[36.1886,-115.143],[36.2297,-115.1145],[36.2662,-115.0687],[36.3118,-114.948],[36.3279,-114.925],[36.3526,-114.9046],[36.3639,-114.902],[36.4435,-114.8523],[36.4704,-114.8236],[36.5009,-114.7638],[36.4904,-114.7511],[36.4594,-114.7339],[36.4421,-114.6477],[36.4303,-114.6281],[36.4158,-114.6172],[36.4171,-114.5942],[36.411,-114.5856],[36.4066,-114.5865],[36.4062,-114.5617],[36.4116,-114.5496],[36.426,-114.5406],[36.4265,-114.5137],[36.4304,-114.5184],[36.453,-114.5151],[36.465,-114.5241],[36.4884,-114.5289],[36.4785,-114.5268],[36.453,-114.5151],[36.4304,-114.5184],[36.4265,-114.5137],[36.426,-114.5406],[36.4116,-114.5496],[36.4057,-114.5672],[36.4067,-114.5867],[36.411,-114.5856],[36.4176,-114.5962],[36.4158,-114.6172],[36.4303,-114.6281],[36.4428,-114.6497],[36.4594,-114.7339],[36.5029,-114.7621],[36.4718,-114.8219],[36.4407,-114.855],[36.352,-114.9053],[36.3286,-114.9245],[36.3121,-114.9481],[36.2667,-115.0685],[36.2289,-115.1157],[36.1341,-115.1796],[36.1132,-115.1825],[36.1145,-115.1679],[36.1175,-115.168],[36.115,-115.1798],[36.134,-115.1793],[36.1547,-115.1614],[36.1716,-115.1569],[36.1755,-115.1446],[36.1734,-115.1384],[36.1697,-115.1399]]},
+  {d:"12 окт",t:"Аутлеты и Зайон",km:280,drive:"3 ч 50 мин",booked:false,
+   night:[37.1889,-112.9981,"Спрингдейл"],
+   pts:[[36.1699,-115.1398,"Лас-Вегас"],[36.1676,-115.1565,"Аутлеты Премиум-Норт, шопинг"],[37.2001,-112.9871,"Тропа Парус, Зайон"],[37.2089,-112.9553,"Мост Каньон-Джанкшен, закат"]],
+   geo:[[36.1697,-115.1399],[36.1681,-115.1569],[36.2279,-115.1163],[36.264,-115.0723],[36.3118,-114.948],[36.3286,-114.9241],[36.4404,-114.8548],[36.4685,-114.826],[36.5058,-114.7545],[36.58,-114.6565],[36.6619,-114.5725],[36.6714,-114.5199],[36.6983,-114.4951],[36.7437,-114.4211],[36.7786,-114.2635],[36.7643,-114.1703],[36.8031,-114.107],[36.8303,-114.0081],[36.8608,-113.9777],[36.9165,-113.875],[36.9223,-113.8546],[36.9154,-113.8359],[36.9388,-113.8246],[36.9545,-113.7965],[36.971,-113.7509],[36.9723,-113.6892],[36.9874,-113.6302],[37.0479,-113.5892],[37.0834,-113.5829],[37.1132,-113.5559],[37.1659,-113.4523],[37.1602,-113.4367],[37.1684,-113.403],[37.1613,-113.3913],[37.1762,-113.3342],[37.1766,-113.2856],[37.227,-113.2558],[37.2106,-113.2416],[37.2038,-113.178],[37.1685,-113.1034],[37.1708,-113.0699],[37.161,-113.0518],[37.161,-113.0183],[37.2003,-112.9867],[37.2176,-112.9756],[37.21,-112.9557],[37.2135,-112.9405],[37.2176,-112.9757],[37.189,-112.9981]]},
+  {d:"13 окт",t:"К Гранд-Каньону",km:425,drive:"6 ч 19 мин",booked:false,
+   night:[35.9772,-112.1277,"Гранд-Каньон / Тусаян"],
+   pts:[[37.285,-112.9478,"Прибрежная тропа, Зайон"],[37.2135,-112.9402,"Тоннель Зайон — Маунт-Кармел"],[36.8791,-111.5104,"Подкова, Пейдж"],[36.0441,-111.8264,"Дезерт-Вью"],[36.0614,-112.1077,"Мазер-Пойнт, закат"]],
+   geo:[[37.2849,-112.9478],[37.2175,-112.9745],[37.2136,-112.9404],[37.2625,-112.7724],[37.1532,-112.5734],[37.0485,-112.5344],[37.0229,-112.4441],[37.0423,-112.2173],[37.1859,-111.9857],[37.1239,-111.9745],[37.0732,-111.6531],[36.9322,-111.4735],[36.8711,-111.5113],[36.7867,-111.5286],[36.7776,-111.5534],[36.6665,-111.6323],[36.5961,-111.657],[36.5075,-111.5845],[36.347,-111.5038],[36.2156,-111.3957],[35.9936,-111.3929],[35.8639,-111.417],[35.859,-111.4784],[35.9192,-111.5696],[35.9393,-111.6636],[35.9239,-111.7602],[36.0421,-111.8259],[35.9682,-111.9722],[36.012,-112.0647],[36.0605,-112.1086],[35.9769,-112.127]]},
+  {d:"14 окт",t:"По 66-й в Джошуа-Три",km:659,drive:"8 ч 30 мин",booked:false,
+   night:[34.1356,-116.0542,"Твентинайн-Палмс"],
+   pts:[[36.0614,-112.1077,"Рассвет на краю каньона"],[35.3258,-112.8733,"Селигман, трасса 66"],[34.5583,-115.7444,"Эмбой, заправка"],[34.0117,-116.1667,"Джошуа-Три, закат"]],
+   geo:[[36.0605,-112.1086],[35.959,-112.1319],[35.7115,-112.1314],[35.4777,-112.1775],[35.3453,-112.1665],[35.2971,-112.1415],[35.2611,-112.1509],[35.2633,-112.1841],[35.2251,-112.2395],[35.2196,-112.2812],[35.2213,-112.5429],[35.2411,-112.6652],[35.2915,-112.8214],[35.3258,-112.8733],[35.287,-113.1174],[35.1902,-113.3167],[35.195,-113.412],[35.1589,-113.5584],[35.1595,-113.6987],[35.194,-113.8329],[35.2136,-114.0507],[35.1096,-114.1164],[34.9005,-114.1553],[34.8127,-114.148],[34.7335,-114.2621],[34.7181,-114.5283],[34.7674,-114.5778],[34.8298,-114.6006],[34.8806,-114.6658],[34.8831,-114.7849],[34.8296,-115.0274],[34.8035,-115.3709],[34.7335,-115.5587],[34.722,-115.6785],[34.6425,-115.6748],[34.5602,-115.6423],[34.5583,-115.7444],[34.4492,-115.7407],[34.357,-115.6903],[34.167,-115.7382],[34.1657,-115.9313],[34.1366,-115.9312],[34.1359,-116.0367],[34.0199,-116.0203],[33.9909,-116.0725],[34.0103,-116.1023],[33.9886,-116.1569],[34.0119,-116.1669],[33.9886,-116.1569],[34.0103,-116.1023],[33.9909,-116.0725],[34.0209,-116.0193],[34.1295,-116.0367],[34.1356,-116.0542]]},
+  {d:"15 окт",t:"Джошуа-Три и обратно в ЛА",km:328,drive:"5 ч 17 мин",booked:false,
+   night:[34.0522,-118.2437,"Лос-Анджелес"],
+   pts:[[34.0206,-116.0506,"Скала-череп"],[33.9281,-115.9267,"Сад кактусов чолья"],[33.9264,-116.1869,"Кис-Вью"],[33.8303,-116.5453,"Палм-Спрингс, обед"],[33.9242,-116.7764,"Динозавры Кабазона"]],
+   geo:[[34.0095,-116.0558],[34.0032,-116.0508],[34.0206,-116.0196],[33.9864,-116.0222],[33.9684,-115.9902],[33.934,-115.9624],[33.9272,-115.9055],[33.9252,-115.9274],[33.9342,-115.9627],[33.9684,-115.9902],[33.9864,-116.0222],[34.0206,-116.0196],[33.9912,-116.0702],[34.0103,-116.1023],[33.9915,-116.1637],[33.9285,-116.1734],[33.927,-116.187],[33.9286,-116.1734],[34.0126,-116.1616],[34.081,-116.2426],[34.0937,-116.2655],[34.0953,-116.2977],[34.1204,-116.3151],[34.1207,-116.4409],[34.1138,-116.4685],[34.0798,-116.5366],[34.0348,-116.5919],[34.0047,-116.5763],[33.9849,-116.5452],[33.8303,-116.5453],[33.8607,-116.5598],[33.9227,-116.6787],[33.9192,-116.7808],[33.9253,-116.7764],[33.9193,-116.7963],[33.9317,-116.8277],[33.9244,-116.8626],[33.9276,-116.981],[33.9766,-117.0479],[34.0111,-117.0701],[34.0364,-117.1486],[34.0558,-117.1651],[34.0667,-117.2043],[34.0677,-117.5962],[34.0869,-117.6409],[34.0873,-117.6828],[34.064,-117.8122],[34.0719,-117.8704],[34.0641,-118.0082],[34.0728,-118.0537],[34.0718,-118.1441],[34.0556,-118.1853],[34.0523,-118.2436]]},
+  {d:"16–17 окт",t:"Лос-Анджелес",km:108,drive:"1 ч 52 мин",booked:false,
+   night:[34.0522,-118.2437,"Лос-Анджелес"],
+   pts:[[34.0094,-118.4973,"Пирс Санта-Моника"],[33.985,-118.4695,"Пляж Венис"],[34.078,-118.4741,"Музей Гетти"],[34.0696,-118.4016,"Беверли-Хиллз"],[34.0506,-118.2487,"Рынок и музей Броуд"],[33.9416,-118.4085,"Аэропорт, вылет"]],
+   geo:[[34.0101,-118.4972],[34.011,-118.4983],[34.0127,-118.4977],[33.9982,-118.4798],[33.9873,-118.4707],[33.9874,-118.4686],[33.9863,-118.468],[33.985,-118.4695],[34.0129,-118.4171],[34.0111,-118.4158],[34.0113,-118.4176],[34.0315,-118.4336],[34.0346,-118.4373],[34.0487,-118.4479],[34.0541,-118.4506],[34.0807,-118.473],[34.093,-118.4759],[34.0956,-118.475],[34.0967,-118.4777],[34.0832,-118.4746],[34.0793,-118.4721],[34.054,-118.4519],[34.0552,-118.4529],[34.0574,-118.4489],[34.0615,-118.4339],[34.066,-118.4305],[34.0677,-118.4271],[34.067,-118.4104],[34.0717,-118.4037],[34.0696,-118.4016],[34.0671,-118.3991],[34.0605,-118.3991],[34.0551,-118.3954],[34.0494,-118.3953],[34.0445,-118.3768],[34.0363,-118.3777],[34.0362,-118.3791],[34.0339,-118.3635],[34.0352,-118.3278],[34.0368,-118.3133],[34.0366,-118.2859],[34.0379,-118.2763],[34.0374,-118.2722],[34.0327,-118.2648],[34.0505,-118.2485],[34.0567,-118.2557],[34.0523,-118.2596],[34.0448,-118.2716],[34.039,-118.2749],[34.0372,-118.2851],[34.0375,-118.3114],[34.0355,-118.3274],[34.0339,-118.3606],[34.0353,-118.3678],[34.0344,-118.3699],[34.0304,-118.3721],[34.0193,-118.3726],[34.0149,-118.3743],[34.0041,-118.373],[33.9938,-118.3688],[33.9864,-118.3708],[33.9787,-118.3704],[33.9577,-118.3939],[33.9572,-118.3963],[33.9455,-118.3963],[33.9448,-118.4079],[33.9425,-118.4078],[33.944,-118.3974],[33.9432,-118.3965],[33.9309,-118.3962],[33.9311,-118.3818],[33.9298,-118.3687],[33.9335,-118.3535],[33.9321,-118.3478],[33.9262,-118.3388],[33.9247,-118.3337],[33.9253,-118.3106],[33.9283,-118.2951],[33.9287,-118.281],[33.9305,-118.2799],[33.9475,-118.2793],[33.9552,-118.2806],[34.0143,-118.2807],[34.0276,-118.2745],[34.0414,-118.2734],[34.0449,-118.2711],[34.0478,-118.2659],[34.0416,-118.255],[34.0452,-118.25],[34.0523,-118.2436]]}
+];
+
+  var loaded=false, map=null, bounds=null;
+
+  function sizeFix(){
+    if(!map) return;
+    map.invalidateSize();
+    if(bounds) map.fitBounds(bounds,{padding:[28,28]});
   }
+
+  function initMap(){
+    if(typeof L==='undefined' || map) return;
+    map=L.map('map',{scrollWheelZoom:false}).setView([35.5,-115.5],6);
+    map.attributionControl.setPrefix(false);
+    // подложка Esri: светло-серая, без ключа. CARTO с 2026 требует ключ и отдаёт заглушку
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+      {maxZoom:16,attribution:'Esri, HERE, Garmin, © OpenStreetMap'}).addTo(map);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}',
+      {maxZoom:16,pane:'overlayPane',opacity:.9}).addTo(map);
+
+    var all=[];
+    DAYS.forEach(function(day,i){
+      if(day.geo && day.geo.length){
+        var style={color:'#a76a3c',weight:3,opacity:(i%2?0.5:0.9)};
+        if(day.dashed){ style.dashArray='7,8'; style.opacity=0.65; }
+        L.polyline(day.geo,style).addTo(map)
+         .bindTooltip(day.d+' · '+day.km+' км, '+day.drive+(day.dashed?' · план уточняется':''),{sticky:true});
+        day.geo.forEach(function(c){ all.push(c); });
+      }
+      day.pts.forEach(function(pt){
+        L.circleMarker([pt[0],pt[1]],{radius:4,color:'#fff',weight:1.5,fillColor:'#7c4d29',fillOpacity:1})
+         .addTo(map).bindTooltip(pt[2],{direction:'top'});
+        all.push([pt[0],pt[1]]);
+      });
+      var st = day.dashed ? 'план уточняется' : (day.booked ? 'бронь есть' : 'брони нет');
+      var badge = day.dashed ? '<i class="nb">План уточняется</i>'
+                : (day.booked ? '<i class="ok">Бронь есть</i>' : '<i class="nb">Брони нет</i>');
+      var mk=L.marker([day.night[0],day.night[1]],{
+        icon:L.divIcon({className:(day.booked?'pin':'pin pin--nb'),html:'<span>'+(i+1)+'</span>',iconSize:[30,30],iconAnchor:[15,15]})
+      }).addTo(map);
+      mk.bindTooltip(day.d+' · ночуем в '+day.night[2]+' — '+st,{direction:'top',offset:[0,-14]});
+      mk.bindPopup('<div class="mp"><strong>'+day.d+' · '+day.t+'</strong><span>Ночуем: '+day.night[2]
+        +'<br>За день за рулём: '+day.km+' км, '+day.drive+'<br>'+badge
+        +'</span><a href="#schedule">Открыть план по дням →</a></div>');
+      all.push([day.night[0],day.night[1]]);
+    });
+
+    bounds=L.latLngBounds(all);
+    map.fitBounds(bounds,{padding:[28,28]});
+    setTimeout(sizeFix,250);
+    setTimeout(sizeFix,1200);
+    window.addEventListener('resize',sizeFix,{passive:true});
+    window.addEventListener('orientationchange',function(){ setTimeout(sizeFix,300); });
+  }
+
   function loadMap(){
     if(loaded) return; loaded=true;
     var css=document.createElement('link'); css.rel='stylesheet'; css.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
@@ -1178,12 +1182,24 @@
     js.onerror=function(){var m=document.getElementById('map'); if(m) m.innerHTML='<p style="padding:28px;color:#6a6055;font-size:.95rem">Карта не загрузилась — для неё нужен интернет.</p>';};
     document.body.appendChild(js);
   }
+
   var mapEl=document.getElementById('map');
   if(mapEl){
+    var near=function(){
+      var r=mapEl.getBoundingClientRect();
+      return r.top < (window.innerHeight||0)+400 && r.bottom > -400;
+    };
+    var tryLoad=function(){ if(!loaded && near()) loadMap(); };
     if('IntersectionObserver' in window){
-      var mo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){loadMap();mo.disconnect();}});},{rootMargin:'250px'});
+      var mo=new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting){ loadMap(); mo.disconnect(); } });
+      },{rootMargin:'250px'});
       mo.observe(mapEl);
-    } else { loadMap(); }
+    }
+    // запасные пути: если наблюдатель не сработал (скрытая вкладка, старый браузер)
+    window.addEventListener('scroll',tryLoad,{passive:true});
+    setTimeout(tryLoad,1500);
+    setTimeout(tryLoad,4000);
   }
 })();
 </script>

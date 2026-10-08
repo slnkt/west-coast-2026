@@ -144,42 +144,6 @@
     "bytes": 3367781
   },
   {
-    "file": "04-sd-la-jolla.jpg",
-    "query": "La Jolla Cove sea lions",
-    "title": "File:California sea lions in La Jolla (70581).jpg",
-    "width": 4608,
-    "height": 3456,
-    "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/California_sea_lions_in_La_Jolla_%2870581%29.jpg",
-    "descUrl": "https://commons.wikimedia.org/wiki/File:California_sea_lions_in_La_Jolla_(70581).jpg",
-    "artist": "Rhododendrites",
-    "license": "CC BY-SA 4.0",
-    "bytes": 10553958
-  },
-  {
-    "file": "04-sd-sunset-cliffs.jpg",
-    "query": "Sunset Cliffs San Diego",
-    "title": "File:Sunset Cliffs, San Diego, United States (Unsplash 5L1Axt2xVik).jpg",
-    "width": 6952,
-    "height": 4640,
-    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Sunset_Cliffs%2C_San_Diego%2C_United_States_%28Unsplash_5L1Axt2xVik%29.jpg",
-    "descUrl": "https://commons.wikimedia.org/wiki/File:Sunset_Cliffs,_San_Diego,_United_States_(Unsplash_5L1Axt2xVik).jpg",
-    "artist": "Taylor L. Spurgeon tsphotography",
-    "license": "CC0",
-    "bytes": 19214785
-  },
-  {
-    "file": "04-sd-coronado.jpg",
-    "query": "Hotel del Coronado from the beach",
-    "title": "File:Coronado del Hotel from the beach.jpg",
-    "width": 2755,
-    "height": 1837,
-    "url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Coronado_del_Hotel_from_the_beach.jpg",
-    "descUrl": "https://commons.wikimedia.org/wiki/File:Coronado_del_Hotel_from_the_beach.jpg",
-    "artist": "Dirk Hansen",
-    "license": "CC BY-SA 3.0",
-    "bytes": 614400
-  },
-  {
     "file": "05-vegas-fire-wave.jpg",
     "query": "Valley of Fire Fire Wave",
     "title": "File:Fire Wave Trail, Valley of Fire (45749032941).jpg",
