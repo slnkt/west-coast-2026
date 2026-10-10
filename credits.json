@@ -264,18 +264,6 @@
     "bytes": 917504
   },
   {
-    "file": "03-la-disneyland.jpg",
-    "query": "Sleeping Beauty Castle Disneyland",
-    "title": "File:Sleeping Beauty Castle DLR.jpg",
-    "width": 4272,
-    "height": 2848,
-    "url": "https://commons.wikimedia.org/wiki/File:Sleeping_Beauty_Castle_DLR.jpg",
-    "descUrl": "https://commons.wikimedia.org/wiki/File:Sleeping_Beauty_Castle_DLR.jpg",
-    "artist": "Carterhawk",
-    "license": "CC BY-SA 3.0",
-    "bytes": 610304
-  },
-  {
     "file": "06-bryce-canyon.jpg",
     "query": "Bryce Canyon amphitheater hoodoos",
     "title": "File:Bryce Canyon National Park, (35023972375).jpg",
@@ -298,5 +286,17 @@
     "artist": "Brocken Inaglory",
     "license": "CC BY-SA 3.0",
     "bytes": 1992294
+  },
+  {
+    "file": "03-la-universal.jpg",
+    "query": "Universal Studios Hollywood park",
+    "title": "File:Universal Studios Hollywood 2012 59.jpg",
+    "width": 5184,
+    "height": 3456,
+    "url": "https://commons.wikimedia.org/wiki/File:Universal_Studios_Hollywood_2012_59.jpg",
+    "descUrl": "https://commons.wikimedia.org/wiki/File:Universal_Studios_Hollywood_2012_59.jpg",
+    "artist": "Mike Peel",
+    "license": "CC BY-SA 4.0",
+    "bytes": 1150000
   }
 ]
